@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Forum";
+  src: url("font/Forum-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("font/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("font/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("font/Roboto-ExtraLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200;
+}
+header #line nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main #welcome h1 {
+  color: white;
+  font-family: Forum, serif;
+}
+main #welcome h4 {
+  color: white;
+}
+main #welcome button {
+  background: rgb(113, 7, 7);
+  color: white;
+  transition: background-color 0.4s ease;
+}
+main #welcome button:hover {
+  background: rgb(157, 134, 101);
+  cursor: pointer;
+}
+main h2 {
+  text-transform: uppercase;
+  font-family: Forum, serif;
+}
+main #welcome, main #explore, main #gallery {
+  background: rgb(3, 3, 3);
+}
+main #welcome h2, main #welcome p, main #explore h2, main #explore p, main #gallery h2, main #gallery p {
+  color: white;
+}
+main #visiting, main #video, main #tickets, main #contacts {
+  background: white;
+}
+main #visiting h2, main #video h2, main #tickets h2, main #contacts h2 {
+  color: rgb(157, 134, 101);
+}
+main #visiting p, main #video p, main #tickets p, main #contacts p {
+  color: black;
+}
+
+/*# sourceMappingURL=common.css.map */

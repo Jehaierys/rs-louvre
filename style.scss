@@ -1,0 +1,277 @@
+@media (min-width: 1920px) {
+  header {
+    height: 150px;
+    width: 100%;
+    background: rgba(3, 3, 3, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    #line {
+      height: 100%;
+      width: 1440px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      #logo {
+        width: 215px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        img.pyramid {
+          width: 49px;
+          height: 26px;
+        }
+
+        h3 {
+          color: white;
+          font-family: Forum, serif;
+          font-weight: 200;
+          font-size: 28px;
+          line-height: 100%;
+          letter-spacing: 5px;
+          text-transform: uppercase;
+        }
+      }
+
+      nav {
+        height: 100%;
+        width: 775px;
+
+        ul {
+          height: 100%;
+          width: 100%;
+          list-style: none;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+
+          li {
+            a {
+              text-decoration: none;
+              font-family: Roboto, serif;
+              font-weight: 200;
+              font-size: 22px;
+              line-height: 100%;
+              letter-spacing: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  main {
+    section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      div.bar {
+        background-color: rgba(113, 7, 7, 1);
+        height: 3px;
+        width: 100%;
+        margin-top: 25px;
+      }
+
+      div.content {
+        width: 1440px;
+        height: 100%;
+      }
+
+      h2 {
+        font-family: Forum, serif;
+        font-weight: 400;
+        font-size: 80px;
+        line-height: 90px;
+        letter-spacing: 5px;
+      }
+
+      p {
+        font-family: Roboto, serif;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 38.5px;
+      }
+    }
+
+    #welcome {
+      height: 810px;
+
+      div.content {
+        position: relative;
+
+        div.text-content {
+          position: absolute;
+          top: 150px;
+
+          h1 {
+            position: relative;
+            font-weight: 400;
+            font-size: 80px;
+            line-height: 90px;
+            letter-spacing: 5px;
+            z-index: 2;
+          }
+
+          h4 {
+            width: 445px;
+            height: 33px;
+            position: absolute;
+            top: 205px;
+            font-family: Roboto, serif;
+            font-weight: 300;
+            font-size: 28px;
+            line-height: 100%;
+            letter-spacing: 2px;
+            z-index: 2;
+          }
+
+          button {
+            width: 360px;
+            height: 75px;
+            position: absolute;
+            top: 313px;
+            border-radius: 10px;
+            z-index: 2;
+            font-family: Roboto, serif;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 100%;
+            letter-spacing: 2px;
+            text-align: center;
+            vertical-align: middle;
+          }
+        }
+
+        img {
+          z-index: 1;
+          width: 1000px;
+          top: 0;
+          right: 0;
+          position: absolute;
+        }
+      }
+    }
+
+
+    #visiting {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 75px;
+
+      div.content {
+        height: 1116px;
+        width: 1440px;
+        margin-top: 75px;
+
+        h2 {
+          width: 100%;
+          height: 90px;
+        }
+
+        .panorama-container {
+          margin-top: 75px;
+          display: grid;
+          justify-content: space-between;
+          align-content: space-evenly;
+          grid-template-columns: repeat(3, 440px);
+          grid-template-rows: repeat(2, 424px);
+          row-gap: 75px;
+
+          .panorama {
+            img {
+              width: 440px;
+              height: 285px;
+            }
+
+            h3 {
+              margin-top: 25px;
+              font-family: Forum, serif;
+              font-weight: 400;
+              font-size: 32px;
+              line-height: 100%;
+              letter-spacing: 5px;
+              text-transform: uppercase;
+            }
+
+            div.bar {
+              margin-top: 10px;
+              width: 300px;
+            }
+            p {
+              font-family: Roboto, sans-serif;
+              line-height: 100%;
+              font-weight: 200;
+              color: rgba(0, 0, 0, 1);
+              margin-top: 10px;
+            }
+            p.top {
+              font-size: 22px;
+            }
+            p.bottom {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+
+    #explore {
+      height: 865px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .content {
+        height: 715px;
+        display: grid;
+        grid-template-columns: 660px 720px;
+        grid-template-rows: 700px;
+        .text-content {
+          position: relative;
+          p {
+            position: absolute;
+            width: 100%;
+          }
+          .first {
+            top: 193px;
+          }
+          .second {
+            top: 295px;
+          }
+          .third {
+            top: 397px;
+          }
+        }
+
+        .slide-content {
+          position: relative;
+          .cleaned-container {
+            border: 2px solid red ;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+          }
+          .yellow-container {
+            border: 2px solid red ;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 440px;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+}

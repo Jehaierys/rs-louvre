@@ -1,0 +1,3 @@
+sass style.scss style.css
+
+sass --watch style.scss:style.css common.scss:common.css
