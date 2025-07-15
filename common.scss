@@ -17,9 +17,9 @@ body {
 
 @font-face {
   font-family: 'Roboto';
-  src: url('font/Roboto-Regular.ttf') format('truetype');
+  src: url('font/Roboto-ExtraLight.ttf') format('truetype');
   font-style: normal;
-  font-weight: 400; // Normal
+  font-weight: 200; // Extra Light (Ultra Light)
 }
 
 @font-face {
@@ -31,15 +31,28 @@ body {
 
 @font-face {
   font-family: 'Roboto';
-  src: url('font/Roboto-ExtraLight.ttf') format('truetype');
+  src: url('font/Roboto-Regular.ttf') format('truetype');
   font-style: normal;
-  font-weight: 200; // Extra Light (Ultra Light)
+  font-weight: 400; // Normal
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('font/Roboto-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500; // Medium
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('font/Roboto-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700; // Bold
 }
 
 header {
   #line {
     #logo {
-
     }
     nav {
       ul {
@@ -59,47 +72,103 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-
-  #welcome {
-    h1 {
-      color: white;
-      font-family: Forum, serif;
-    }
-
-    h4 {
-      color: white;
-    }
-
-    button {
-      background: rgba(113, 7, 7, 1);
-      color: white;
-      transition: background-color 0.4s ease;
-    }
-    button:hover {
-      background: rgba(157, 134, 101, 1);
-      cursor: pointer;
-    }
-  }
-
   h2 {
     text-transform: uppercase;
     font-family: Forum, serif;
   }
+}
 
-  #welcome, #explore, #gallery {
-    background: rgba(3, 3, 3, 1);
-    h2, p {
+
+#welcome {
+  h1 {
+    color: white;
+    font-family: Forum, serif;
+  }
+  h4 {
+    color: white;
+  }
+  button {
+    background: rgba(113, 7, 7, 1);
+    transition: background-color 0.4s ease;
+    a {
+      text-decoration: none;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      font-family: Roboto, sans-serif;
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 100%;
+      letter-spacing: 2px;
       color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+
+      }
     }
   }
+  button:hover {
+    background: rgba(157, 134, 101, 1);
+    cursor: pointer;
+  }
+}
 
-  #visiting, #video, #tickets, #contacts {
-    background: white; // rgba(219, 219, 219, 1)
-    h2 {
-      color: rgba(157, 134, 101, 1);
+
+#video {
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+  .scroller {
+    img {
+      width: 100%;
+      height: 100%;
     }
-    p {
-      color: black;
+  }
+}
+
+
+#gallery {
+  .container {
+    .column {
+      .item {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
+  }
+}
+
+
+#tickets {
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+
+#welcome, #explore, #gallery, footer {
+  background: rgba(3, 3, 3, 1);
+  h2, p {
+    color: white;
+  }
+}
+
+#visiting, #video, #tickets, #contacts {
+  background: white; // rgba(219, 219, 219, 1)
+  h2 {
+    color: rgba(157, 134, 101, 1);
+  }
+  p {
+    color: black;
   }
 }
