@@ -531,6 +531,48 @@
     color: white;
     text-decoration: none;
   }
+  footer .content .social {
+    position: absolute;
+    width: 340px;
+    height: 48px;
+    top: 162px;
+    left: 1100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .content .social img {
+    height: 100%;
+    display: block;
+  }
+  footer .content .bar {
+    height: 3px;
+    width: 1940px;
+    top: 265px;
+    left: -250px;
+    position: absolute;
+    background-color: rgb(102, 102, 102);
+  }
+  footer .content .bottom {
+    position: absolute;
+    top: 318px;
+    width: 100%;
+    height: 24px;
+  }
+  footer .content .bottom ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  footer .content .bottom ul li {
+    font-family: Roboto, sans-serif;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    color: white;
+  }
   .logo {
     width: 215px;
     display: flex;
