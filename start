@@ -1,6 +1,9 @@
 sass --watch \
-  style/style.scss:style/style.css \
-  style/common.scss:style/common.css \
-  style/header.scss:style/header.css \
-  style/welcome.scss:style/welcome.css \
-  style/visiting.scss:style/visiting.css
+  style/style.scss:style/style.css       \
+  style/common.scss:style/common.css     \
+  style/header.scss:style/header.css     \
+  style/welcome.scss:style/welcome.css   \
+  style/visiting.scss:style/visiting.css \
+  style/explore.scss:style/explore.css   \
+  style/gallery.scss:style/gallery.css   \
+  style/tickets.scss:style/tickets.css

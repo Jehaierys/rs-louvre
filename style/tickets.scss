@@ -1,0 +1,163 @@
+@media (min-width: 1920px) {
+  #tickets {
+    z-index: 10;
+    padding: 75px 0;
+
+    .content {
+      height: 743px;
+
+      .container {
+        border: 2px solid red;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 75px;
+
+        .item {
+          width: 720px;
+          height: 550px;
+          position: relative;
+
+          h5 {
+            font-family: Roboto, sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 100%;
+          }
+
+          label {
+            font-family: Roboto, sans-serif;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 100%;
+          }
+
+          .ticket-type {
+            position: absolute;
+            left: 60px;
+            top: 0;
+            width: 270px;
+            height: 211px;
+
+            ul {
+              margin-top: 50px;
+              list-style: none;
+              height: 128px;
+              display: flex;
+              justify-content: space-between;
+              flex-direction: column;
+
+              li {
+                position: relative;
+                width: 230px;
+                height: 26px;
+                color: black;
+
+                input {
+                  width: 17px;
+                  height: 17px;
+                }
+
+                label {
+                  position: relative;
+                  left: 23px;
+                }
+              }
+            }
+          }
+        }
+
+        .amount {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 150px;
+          height: 341px;
+
+          h5 {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+
+          .basic {
+            top: 58px;
+          }
+
+          .senior {
+            top: 159px;
+          }
+
+          .ticket-pick {
+            width: 150px;
+            height: 91px;
+            position: absolute;
+
+            .counter {
+              display: flex;
+              justify-content: space-evenly;
+              position: absolute;
+              border: 3px solid black;
+              width: 150px;
+              height: 50px;
+              top: 41px;
+
+              button, input {
+                border: none;
+                background-color: white;
+                color: black;
+                width: 30px;
+                text-align: center;
+                display: inline-block;
+                font-family: Roboto, sans-serif;
+                font-size: 22px;
+                line-height: 100%;
+              }
+
+              input {
+                font-weight: 300;
+              }
+
+              button {
+                font-size: 32px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+
+        #total {
+          width: 150px;
+          height: 33px;
+          top: 300px;
+          position: absolute;
+        }
+
+        #buy {
+          width: 175px;
+          height: 50px;
+          top: 393px;
+          right: 0;
+          position: absolute;
+          font-family: Roboto, sans-serif;
+          font-weight: 300;
+          font-size: 22px;
+          line-height: 100%;
+          letter-spacing: 2px;
+          text-align: center;
+          vertical-align: middle;
+          background-color: black;
+          color: white;
+        }
+
+        #buy {
+          transition: color 0.5s ease, background-color 0.5s ease;
+        }
+
+        #buy:hover {
+          background: rgba(157, 134, 101, 1);
+          color: black;
+        }
+      }
+    }
+  }
+}

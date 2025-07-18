@@ -67,11 +67,6 @@ main h2 {
   height: 100%;
 }
 
-#gallery .container .column .item img {
-  width: 100%;
-  height: 100%;
-}
-
 #tickets input[type=number] {
   -moz-appearance: textfield;
 }

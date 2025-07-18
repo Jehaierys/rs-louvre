@@ -78,21 +78,6 @@ main {
   }
 }
 
-
-#gallery {
-  .container {
-    .column {
-      .item {
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-  }
-}
-
-
 #tickets {
   input[type=number] {
     -moz-appearance: textfield;
@@ -103,7 +88,6 @@ main {
     margin: 0;
   }
 }
-
 
 #welcome, #explore, #gallery, footer {
   background: rgba(3, 3, 3, 1);
