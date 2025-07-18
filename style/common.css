@@ -5,50 +5,49 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
 }
 
 @font-face {
   font-family: "Forum";
-  src: url("font/Forum-Regular.ttf") format("truetype");
+  src: url("../font/Forum-Regular.ttf") format("truetype");
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("font/Roboto-ExtraLight.ttf") format("truetype");
+  src: url("../font/Roboto-ExtraLight.ttf") format("truetype");
   font-style: normal;
   font-weight: 200;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("font/Roboto-Light.ttf") format("truetype");
+  src: url("../font/Roboto-Light.ttf") format("truetype");
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("font/Roboto-Regular.ttf") format("truetype");
+  src: url("../font/Roboto-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("font/Roboto-Medium.ttf") format("truetype");
+  src: url("../font/Roboto-Medium.ttf") format("truetype");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("font/Roboto-Bold.ttf") format("truetype");
+  src: url("../font/Roboto-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
 }
-header #line nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
 main {
   display: flex;
   align-items: center;
@@ -57,37 +56,6 @@ main {
 main h2 {
   text-transform: uppercase;
   font-family: Forum, serif;
-}
-
-#welcome h1 {
-  color: white;
-  font-family: Forum, serif;
-}
-#welcome h4 {
-  color: white;
-}
-#welcome button {
-  background: rgb(113, 7, 7);
-  transition: background-color 0.4s ease;
-}
-#welcome button a {
-  text-decoration: none;
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  font-family: Roboto, sans-serif;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 100%;
-  letter-spacing: 2px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#welcome button:hover {
-  background: rgb(157, 134, 101);
-  cursor: pointer;
 }
 
 #video iframe {

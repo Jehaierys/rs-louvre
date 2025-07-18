@@ -1,0 +1,173 @@
+@media (min-width: 1920px) {
+  #welcome {
+    height: 810px;
+    .content {
+      position: relative;
+      .text-content {
+        position: absolute;
+        top: 150px;
+        h1 {
+          position: relative;
+          font-weight: 400;
+          font-size: 80px;
+          line-height: 90px;
+          letter-spacing: 5px;
+          z-index: 2;
+        }
+        h4 {
+          width: 445px;
+          height: 33px;
+          position: absolute;
+          top: 205px;
+          font-family: Roboto, serif;
+          font-weight: 300;
+          font-size: 28px;
+          line-height: 100%;
+          letter-spacing: 2px;
+          z-index: 2;
+        }
+        .discover-button {
+          width: 360px;
+          height: 75px;
+          top: 313px;
+          border-radius: 10px;
+          z-index: 2;
+          font-weight: 300;
+          font-size: 22px;
+          line-height: 100%;
+          letter-spacing: 2px;
+          text-align: center;
+          vertical-align: middle;
+          a {
+            font-weight: 300;
+            font-size: 22px;
+          }
+        }
+        .discover-button:hover {
+          background-color: rgba(157, 134, 101, 1);
+        }
+      }
+
+      img {
+        z-index: 1;
+        width: 1000px;
+        top: 0;
+        right: 0;
+        position: absolute;
+      }
+      .welcome-slider-io {
+        z-index: 100;
+        position: absolute;
+        width: 600px;
+        height: 120px;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: black;
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 40px;
+        vertical-align: middle;
+        text-transform: uppercase;
+        .welcome-slider-io-metadata {
+          width: 76px;
+          height: 40px;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          #welcome-slider-current-picture {
+            width: 25px;
+            height: 40px;
+          }
+          .bar {
+            margin: 0;
+            padding: 0;
+            height: 22px;
+            width: 2px;
+            background-color: white;
+          }
+          #total-pictures {
+            width: 25px;
+            height: 40px;
+          }
+        }
+        .welcome-slider-io-pointer {
+          width: 180px;
+          height: 16px;
+          display: flex;
+          justify-content: space-between;
+          button {
+            width: 16px;
+            height: 100%;
+            background-color: white;
+            transition: background-color ease 0.3s;
+          }
+          button:hover {
+            background-color: rgba(157, 134, 101, 1);
+          }
+        }
+        .welcome-slider-io-swiper {
+          width: 80px;
+          height: 8px;
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+          .welcome-slider-io-right-arrow, .welcome-slider-io-left-arrow {
+            position: relative;
+            width: 30px;
+            height: 8px;
+            object-fit: cover;
+            img {
+              height: 100%;
+              width: 100%;
+            }
+          }
+          .welcome-slider-io-left-arrow {
+            img {
+              transform: scaleX(-1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// common
+#welcome {
+  h1 {
+    color: white;
+    font-family: Forum, serif;
+  }
+  h4 {
+    color: white;
+  }
+  .discover-button {
+    position: absolute;
+    font-family: Roboto, serif;
+    background: rgba(113, 7, 7, 1);
+    transition: background-color 0.5s ease;
+    a {
+      text-decoration: none;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      font-family: Roboto, sans-serif;
+      line-height: 100%;
+      letter-spacing: 2px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .discover-button:hover {
+    background: rgba(157, 134, 101, 1);
+    cursor: pointer;
+  }
+}

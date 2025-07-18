@@ -1,0 +1,61 @@
+header #line nav ul li {
+  height: 100%;
+  width: 100%;
+}
+header #line nav ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+header #line nav ul li a:hover {
+  color: rgb(157, 134, 101);
+}
+header #line nav ul li a:active {
+  color: rgb(126, 108, 81);
+}
+
+@media (min-width: 1920px) {
+  header {
+    height: 150px;
+    width: 100%;
+    background: rgb(3, 3, 3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  header #line {
+    height: 100%;
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header #line nav {
+    height: 100%;
+    width: 775px;
+  }
+  header #line nav ul {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header #line nav ul li a {
+    text-decoration: none;
+    font-family: Roboto, serif;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 2px;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

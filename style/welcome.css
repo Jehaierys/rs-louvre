@@ -1,0 +1,167 @@
+@media (min-width: 1920px) {
+  #welcome {
+    height: 810px;
+  }
+  #welcome .content {
+    position: relative;
+  }
+  #welcome .content .text-content {
+    position: absolute;
+    top: 150px;
+  }
+  #welcome .content .text-content h1 {
+    position: relative;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    z-index: 2;
+  }
+  #welcome .content .text-content h4 {
+    width: 445px;
+    height: 33px;
+    position: absolute;
+    top: 205px;
+    font-family: Roboto, serif;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 2px;
+    z-index: 2;
+  }
+  #welcome .content .text-content .discover-button {
+    width: 360px;
+    height: 75px;
+    top: 313px;
+    border-radius: 10px;
+    z-index: 2;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 2px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #welcome .content .text-content .discover-button a {
+    font-weight: 300;
+    font-size: 22px;
+  }
+  #welcome .content .text-content .discover-button:hover {
+    background-color: rgb(157, 134, 101);
+  }
+  #welcome .content img {
+    z-index: 1;
+    width: 1000px;
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+  #welcome .content .welcome-slider-io {
+    z-index: 100;
+    position: absolute;
+    width: 600px;
+    height: 120px;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+  #welcome .content .welcome-slider-io .welcome-slider-io-metadata {
+    width: 76px;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #welcome .content .welcome-slider-io .welcome-slider-io-metadata #welcome-slider-current-picture {
+    width: 25px;
+    height: 40px;
+  }
+  #welcome .content .welcome-slider-io .welcome-slider-io-metadata .bar {
+    margin: 0;
+    padding: 0;
+    height: 22px;
+    width: 2px;
+    background-color: white;
+  }
+  #welcome .content .welcome-slider-io .welcome-slider-io-metadata #total-pictures {
+    width: 25px;
+    height: 40px;
+  }
+  #welcome .content .welcome-slider-io .welcome-slider-io-pointer {
+    width: 180px;
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #welcome .content .welcome-slider-io .welcome-slider-io-pointer button {
+    width: 16px;
+    height: 100%;
+    background-color: white;
+    transition: background-color ease 0.3s;
+  }
+  #welcome .content .welcome-slider-io .welcome-slider-io-pointer button:hover {
+    background-color: rgb(157, 134, 101);
+  }
+  #welcome .content .welcome-slider-io .welcome-slider-io-swiper {
+    width: 80px;
+    height: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  #welcome .content .welcome-slider-io .welcome-slider-io-swiper .welcome-slider-io-right-arrow, #welcome .content .welcome-slider-io .welcome-slider-io-swiper .welcome-slider-io-left-arrow {
+    position: relative;
+    width: 30px;
+    height: 8px;
+    object-fit: cover;
+  }
+  #welcome .content .welcome-slider-io .welcome-slider-io-swiper .welcome-slider-io-right-arrow img, #welcome .content .welcome-slider-io .welcome-slider-io-swiper .welcome-slider-io-left-arrow img {
+    height: 100%;
+    width: 100%;
+  }
+  #welcome .content .welcome-slider-io .welcome-slider-io-swiper .welcome-slider-io-left-arrow img {
+    transform: scaleX(-1);
+  }
+}
+#welcome h1 {
+  color: white;
+  font-family: Forum, serif;
+}
+#welcome h4 {
+  color: white;
+}
+#welcome .discover-button {
+  position: absolute;
+  font-family: Roboto, serif;
+  background: rgb(113, 7, 7);
+  transition: background-color 0.5s ease;
+}
+#welcome .discover-button a {
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  line-height: 100%;
+  letter-spacing: 2px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#welcome .discover-button:hover {
+  background: rgb(157, 134, 101);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=welcome.css.map */
