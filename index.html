@@ -235,15 +235,15 @@
           <div class="ticket-type">
             <h5>Ticket Type</h5>
             <ul>
-              <li>
+              <li onclick="TicketsFacade.setTicketType('PERMANENT')">
                 <input type="radio" name="ticket-type" id="permanent" value="permanent">
                 <label for="permanent">Permanent exhibition</label>
               </li>
-              <li>
+              <li onclick="TicketsFacade.setTicketType('TEMPORARY')">
                 <input type="radio" name="ticket-type" id="temporary" value="temporary">
                 <label for="temporary">Temporary exhibition</label>
               </li>
-              <li>
+              <li onclick="TicketsFacade.setTicketType('COMBINED')">
                 <input type="radio" name="ticket-type" id="combined" value="combined">
                 <label for="combined">Combined Admission</label>
               </li>
@@ -254,20 +254,20 @@
             <div class="ticket-pick basic">
               <label for="basic-tickets">Basic 18+</label>
               <div class="counter">
-                <button class="decrement">−</button>
-                <input type="number" id="basic-tickets" value="1" min="0" disabled>
-                <button class="increment">+</button>
+                <button class="decrement" onclick="TicketsFacade.decrementBasics()">−</button>
+                <input type="number" id="basic-tickets" value="1" min="0">
+                <button class="increment" onclick="TicketsFacade.incrementBasics()">+</button>
               </div>
             </div>
             <div class="ticket-pick senior">
               <label for="senior-tickets">Senior 65+</label>
               <div class="counter">
-                <button>−</button>
+                <button onclick="TicketsFacade.decrementSeniors()">−</button>
                 <input type="number" id="senior-tickets" value="1" min="0" disabled>
-                <button>+</button>
+                <button onclick="TicketsFacade.incrementSeniors()">+</button>
               </div>
             </div>
-            <h5 id="total">Total €</h5>
+            <h5 id="total-prise">Total €</h5>
             <button id="buy">Buy Now</button>
           </div>
         </div>
@@ -275,8 +275,10 @@
     </div>
   </section>
 
-  <div class="hall">
-    <img src="img/hall.jpg" alt="Hall">
+  <div class="main-gap">
+    <div class="gap-container">
+      <img src="img/hall.jpg" alt="Hall" class="gap-view">
+    </div>
   </div>
 
   <section id="contacts">
@@ -342,5 +344,6 @@
 </footer>
 
 <script src="scrypt/visiting.js"></script>
+<script src="scrypt/tickets.js"></script>
 </body>
 </html>

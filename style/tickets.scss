@@ -97,6 +97,7 @@
           }
 
           .senior {
+            margin-top: 5px;
             top: 159px;
           }
 
@@ -113,6 +114,7 @@
               width: 150px;
               height: 50px;
               top: 41px;
+              right: 0;
 
               button, input {
                 border: none;
@@ -138,10 +140,12 @@
           }
         }
 
-        #total {
-          width: 150px;
+        #total-prise {
+          width: 200px;
+          text-align: right;
           height: 33px;
           top: 300px;
+          right: 0;
           position: absolute;
         }
 
@@ -172,5 +176,17 @@
         }
       }
     }
+  }
+}
+
+
+#tickets {
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }

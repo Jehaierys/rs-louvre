@@ -65,6 +65,38 @@ main {
   }
 }
 
+.main-gap {
+  width: 1920px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  .gap-container {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    .gap-view {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+div.hall {
+  position: relative;
+  overflow: hidden;
+  img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 #video {
   iframe {
     width: 100%;
@@ -78,16 +110,6 @@ main {
   }
 }
 
-#tickets {
-  input[type=number] {
-    -moz-appearance: textfield;
-  }
-  input[type=number]::-webkit-outer-spin-button,
-  input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-}
 
 #welcome, #explore, #gallery, footer {
   background: rgba(3, 3, 3, 1);
