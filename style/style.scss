@@ -44,16 +44,24 @@
         width: 720px;
         margin-left: 105px;
       }
-      div.large {
+      .video-large-container {
+        position: relative;
         height: 735px;
         width: 100%;
         margin-top: 75px;
+        .video-large {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
       }
-      .video-container {
+      .video-petite-container {
         display: flex;
         justify-content: space-between;
         margin-top: 42px;
-        .item {
+        .video-petite-holder {
           width: 452px;
           height: 254px;
         }

@@ -43,17 +43,25 @@
     width: 720px;
     margin-left: 105px;
   }
-  #video div.content div.large {
+  #video div.content .video-large-container {
+    position: relative;
     height: 735px;
     width: 100%;
     margin-top: 75px;
   }
-  #video div.content .video-container {
+  #video div.content .video-large-container .video-large {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #video div.content .video-petite-container {
     display: flex;
     justify-content: space-between;
     margin-top: 42px;
   }
-  #video div.content .video-container .item {
+  #video div.content .video-petite-container .video-petite-holder {
     width: 452px;
     height: 254px;
   }
