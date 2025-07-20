@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     .content {
+      border: 2px solid red;
       height: 715px;
       display: grid;
       grid-template-columns: 660px 720px;
@@ -38,13 +39,14 @@
 
       .meninas-content {
         position: relative;
-        margin-top: 15px;
+        top: 15px;
+        border: 2px solid red;
         .meninas-cleaned-container {
           position: absolute;
           left: 0;
           top: 0;
-          height: 700px;
-          width: 720px;
+          height: 100%;
+          width: 100%;
           z-index: 2;
           .meninas-cleaned {
             width: 100%;
@@ -55,8 +57,8 @@
           position: absolute;
           left: 0;
           top: 0;
-          height: 700px;
-          width: 440px;
+          height: 100%;
+          width: 100%;
           z-index: 2;
           .meninas-yellow {
             display: block;
@@ -65,6 +67,19 @@
             left: 0;
             height: 100%;
             z-index: 1;
+          }
+        }
+        .meninas-branch-container {
+          position: absolute;
+          width: 39px;
+          height: 100%;
+          top: 15px;
+          left: 1141px;
+          z-index: 5;
+          .meninas-branch {
+            position: relative;
+            height: 100%;
+            z-index: 50;
           }
         }
       }
@@ -81,3 +96,12 @@
     }
   }
 }
+
+//.image-bg {
+//  width: 300px;
+//  height: 200px;
+//  background-image: url("photo.jpg");
+//  background-size: 150px 100px; /* ширина и высота фонового изображения */
+//  background-position: center;
+//  background-repeat: no-repeat;
+//}
