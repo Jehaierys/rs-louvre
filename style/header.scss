@@ -1,5 +1,14 @@
 header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(3, 3, 3, 1);
     #line {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         nav {
             ul {
                 li {
@@ -26,26 +35,15 @@ header {
         }
     }
 }
+
 @media (min-width: 1920px) {
     header {
         height: 150px;
-        width: 100%;
-        background: rgba(3, 3, 3, 1);
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
         #line {
-            height: 100%;
             width: 1440px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-
             nav {
                 height: 100%;
                 width: 775px;
-
                 ul {
                     height: 100%;
                     width: 100%;
@@ -69,4 +67,21 @@ header {
             }
         }
     }
+}
+
+@media (min-width: 1024px) and (max-width: 1919px) {
+    header {
+        height: 130px;
+        #line {
+            width: 984px;
+            nav {
+                background: red;
+                width: 100px;
+                ul {
+                    display: none;
+                }
+            }
+        }
+    }
+
 }

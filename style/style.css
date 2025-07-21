@@ -1,22 +1,11 @@
 @media (min-width: 1920px) {
-  main section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  main section div.bar {
-    background-color: rgb(113, 7, 7);
-    height: 3px;
-    width: 100%;
+  main section .bar {
     margin-top: 25px;
   }
   main section .content {
     width: 1440px;
-    height: 100%;
   }
   main section h2 {
-    font-family: Forum, serif;
     font-weight: 400;
     font-size: 80px;
     line-height: 90px;
@@ -27,197 +16,6 @@
     font-weight: 300;
     font-size: 22px;
     line-height: 38.5px;
-  }
-  #video {
-    padding: 75px 0;
-  }
-  #video div.content {
-    height: 1246px;
-  }
-  #video div.content h2 {
-    width: 610px;
-    display: inline-block;
-  }
-  #video div.content p {
-    display: inline-block;
-    width: 720px;
-    margin-left: 105px;
-  }
-  #video div.content .video-large-container {
-    position: relative;
-    height: 735px;
-    width: 100%;
-    margin-top: 75px;
-  }
-  #video div.content .video-large-container .video-large {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #video div.content .video-petite-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 42px;
-  }
-  #video div.content .video-petite-container .video-petite-holder {
-    width: 452px;
-    height: 254px;
-  }
-  #video div.content .scroller-holder {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-  }
-  #video div.content .scroller-holder .scroller {
-    width: 200px;
-    height: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-  }
-  #video div.content .scroller-holder .scroller .arrow-holder {
-    width: 10px;
-    height: 12px;
-    margin-top: 8px;
-  }
-  #video div.content .scroller-holder .scroller .point-holder {
-    width: 12px;
-    height: 12px;
-  }
-  #contacts {
-    padding: 75px 0;
-  }
-  #contacts .content {
-    height: 813px;
-  }
-  #contacts .content .container {
-    padding-top: 75px;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-  }
-  #contacts .content .container .description {
-    width: 282px;
-    height: 244px;
-    position: relative;
-  }
-  #contacts .content .container .description h5 {
-    width: 227px;
-    font-family: Roboto, sans-serif;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 100%;
-  }
-  #contacts .content .container .description ul {
-    position: absolute;
-    top: 116px;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 128px;
-    list-style: none;
-  }
-  #contacts .content .container .description ul li {
-    font-family: Roboto, sans-serif;
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 100%;
-  }
-  #contacts .content .container .map {
-    width: 960px;
-    height: 620px;
-  }
-  footer {
-    display: flex;
-    justify-content: center;
-    height: 392px;
-    width: 100%;
-  }
-  footer .content {
-    width: 1440px;
-    height: 392px;
-    position: relative;
-  }
-  footer .content .logo {
-    position: absolute;
-    top: 75px;
-    left: 0;
-  }
-  footer .content nav {
-    width: 363px;
-    height: 128px;
-    position: absolute;
-    top: 87px;
-    left: 340px;
-  }
-  footer .content nav ul {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    justify-content: space-between;
-    align-content: space-between;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    list-style: none;
-  }
-  footer .content nav ul li a {
-    font-family: Roboto, sans-serif;
-    font-weight: 200;
-    font-size: 22px;
-    line-height: 100%;
-    letter-spacing: 2px;
-    color: white;
-    text-decoration: none;
-    transition: color 0.35s ease;
-  }
-  footer .content nav ul li a:hover {
-    color: rgb(157, 134, 101);
-  }
-  footer .content .social {
-    position: absolute;
-    width: 340px;
-    height: 48px;
-    top: 162px;
-    left: 1100px;
-    display: flex;
-    justify-content: space-between;
-  }
-  footer .content .social img {
-    height: 100%;
-    display: block;
-  }
-  footer .content .bar {
-    height: 3px;
-    width: 1940px;
-    top: 265px;
-    left: -250px;
-    position: absolute;
-    background-color: rgb(102, 102, 102);
-  }
-  footer .content .bottom {
-    position: absolute;
-    top: 318px;
-    width: 100%;
-    height: 24px;
-  }
-  footer .content .bottom ul {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-  }
-  footer .content .bottom ul li {
-    font-family: Roboto, sans-serif;
-    font-weight: 200;
-    font-size: 22px;
-    line-height: 22px;
-    letter-spacing: 2px;
-    color: white;
   }
   .logo {
     width: 215px;
@@ -238,6 +36,14 @@
     line-height: 100%;
     letter-spacing: 5px;
     text-transform: uppercase;
+  }
+}
+@media (min-width: 1024px) {
+  main .bar {
+    margin-top: 20px;
+  }
+  main .content {
+    width: 984px;
   }
 }
 

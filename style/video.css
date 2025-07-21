@@ -1,0 +1,63 @@
+@media (min-width: 1920px) {
+  #video {
+    padding: 75px 0;
+  }
+  #video div.content {
+    height: 1246px;
+  }
+  #video div.content h2 {
+    width: 610px;
+    display: inline-block;
+  }
+  #video div.content p {
+    display: inline-block;
+    width: 720px;
+    margin-left: 105px;
+  }
+  #video div.content .video-large-container {
+    position: relative;
+    height: 735px;
+    width: 100%;
+    margin-top: 75px;
+  }
+  #video div.content .video-large-container .video-large {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #video div.content .video-petite-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 42px;
+  }
+  #video div.content .video-petite-container .video-petite-holder {
+    width: 452px;
+    height: 254px;
+  }
+  #video div.content .scroller-holder {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  #video div.content .scroller-holder .scroller {
+    width: 200px;
+    height: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+  #video div.content .scroller-holder .scroller .arrow-holder {
+    width: 10px;
+    height: 12px;
+    margin-top: 8px;
+  }
+  #video div.content .scroller-holder .scroller .point-holder {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/*# sourceMappingURL=video.css.map */

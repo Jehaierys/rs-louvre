@@ -2,9 +2,7 @@
   #welcome {
     height: 810px;
     .content {
-      position: relative;
       .text-content {
-        position: absolute;
         top: 150px;
         h1 {
           position: relative;
@@ -27,9 +25,6 @@
           width: 360px;
           height: 75px;
           top: 313px;
-          border-radius: 10px;
-          z-index: 2;
-          font-weight: 300;
           font-size: 22px;
           line-height: 100%;
           letter-spacing: 2px;
@@ -46,11 +41,7 @@
       }
 
       img {
-        z-index: 1;
         width: 1000px;
-        top: 0;
-        right: 0;
-        position: absolute;
       }
       .welcome-slider-io {
         width: 600px;
@@ -62,10 +53,6 @@
           transform: translateX(5px);
           width: 76px;
           height: 40px;
-          color: white;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
           #welcome-slider-current-picture {
             width: 25px;
             height: 40px;
@@ -111,69 +98,173 @@
   }
 }
 
+@media (min-width: 1024px) and (max-width: 1919px) {
+  #welcome {
+    height: 585px;
+    .content {
+      .text-content {
+        h1 {
+          width: 398px; // on-change 396
+          height: 180px;
+          top: 50px;
+          left: 20px;
+          font-weight: 400;
+          font-size: 50px;
+          line-height: 90px;
+          letter-spacing: 5px;
+          text-align: left;
+        }
+        h4 {
+          width: 445px;
+          height: 28px;
+          top: 255px;
+          left: 20px;
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 100%;
+          letter-spacing: 2px;
+          text-align: left;
+        }
+        .discover-button {
+          width: 300px;
+          height: 60px;
+          top: 333px;
+          left: 20px;
+          font-size: 20px;
+          line-height: 100%;
+          letter-spacing: 2px;
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+      img {
+        object-fit: cover;
+        height: 525px;
+        width: 700px;
+        left: 304px;
+      }
+      .welcome-slider-io {
+        border: 2px solid red;
+        width: 700px;
+        height: 120px;
+        top: 465px;
+        left: 304px;
+        .welcome-slider-io-metadata {
+          width: 71px;
+          height: 40px;
+          top: 505px;
+          left: 528px;
+          font-family: Roboto, sans-serif;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 40px;
+          vertical-align: middle;
+          text-transform: uppercase;
+
+          .bar {
+            margin: 0;
+            padding: 0;
+            height: 22px;
+            width: 2px;
+            background-color: white;
+          }
+        }
+        .welcome-slider-io-pointer {
+
+        }
+      }
+    }
+  }
+}
+
 
 // common
 #welcome {
-  h1 {
-    color: white;
-    font-family: Forum, serif;
-  }
-  h4 {
-    z-index: 2;
-    font-family: Roboto, serif;
-    position: absolute;
-    color: white;
-  }
-  .discover-button {
-    position: absolute;
-    font-family: Roboto, serif;
-    background: rgba(113, 7, 7, 1);
-    transition: background-color 0.5s ease;
-    a {
-      text-decoration: none;
-      height: 100%;
+  .content {
+    position: relative;
+    .text-content {
+      position: absolute;
       width: 100%;
-      text-align: center;
-      font-family: Roboto, sans-serif;
-      line-height: 100%;
-      letter-spacing: 2px;
-      color: white;
+      height: 100%;
+      h1 {
+        z-index: 2;
+        position: absolute;
+        color: white;
+        font-family: Forum, serif;
+      }
+      h4 {
+        z-index: 2;
+        font-family: Roboto, serif;
+        position: absolute;
+        color: white;
+      }
+      .discover-button {
+        position: absolute;
+        font-family: Roboto, serif;
+        background: rgba(113, 7, 7, 1);
+        transition: background-color 0.5s ease;
+        border-radius: 10px;
+        z-index: 2;
+        font-weight: 300;
+        a {
+          text-decoration: none;
+          height: 100%;
+          width: 100%;
+          text-align: center;
+          font-family: Roboto, sans-serif;
+          line-height: 100%;
+          letter-spacing: 2px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .discover-button:hover {
+        background: rgba(157, 134, 101, 1);
+        cursor: pointer;
+      }
+    }
+    img {
+      z-index: 1;
+      top: 0;
+      right: 0;
+      position: absolute;
+    }
+    .welcome-slider-io {
       display: flex;
+      justify-content: space-evenly;
       align-items: center;
-      justify-content: center;
-    }
-  }
-  .discover-button:hover {
-    background: rgba(157, 134, 101, 1);
-    cursor: pointer;
-  }
-  .welcome-slider-io {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 100;
-    background-color: black;
-    font-family: Roboto, sans-serif;
-    vertical-align: middle;
-    text-transform: uppercase;
-    .welcome-slider-io-pointer {
-      display: flex;
-      justify-content: space-between;
-      .welcome-slider-io-point {
-        height: 100%;
-        background-color: white;
-        transition: background-color ease 0.33s;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 100;
+      background-color: black;
+      font-family: Roboto, sans-serif;
+      vertical-align: middle;
+      text-transform: uppercase;
+      .welcome-slider-io-metadata {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
       }
-      .welcome-slider-io-point:hover {
-        background-color: rgba(157, 134, 101, 1);
+      .welcome-slider-io-pointer {
+        display: flex;
+        justify-content: space-between;
+        .welcome-slider-io-point {
+          height: 100%;
+          background-color: white;
+          transition: background-color ease 0.33s;
+        }
+        .welcome-slider-io-point:hover {
+          background-color: rgba(157, 134, 101, 1);
+        }
       }
-    }
-    .welcome-slider-io-left-arrow {
-      img {
-        transform: scaleX(-1);
+      .welcome-slider-io-left-arrow {
+        img {
+          transform: scaleX(-1);
+        }
       }
     }
   }

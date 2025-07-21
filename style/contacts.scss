@@ -1,0 +1,54 @@
+
+@media (min-width: 1920px) {
+  #contacts {
+    padding: 75px 0;
+
+    .content {
+      height: 813px;
+
+      .container {
+        padding-top: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+
+        .description {
+          width: 282px;
+          height: 244px;
+          position: relative;
+
+          h5 {
+            width: 227px;
+            font-family: Roboto, sans-serif;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 100%;
+          }
+
+          ul {
+            position: absolute;
+            top: 116px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 128px;
+            list-style: none;
+
+            li {
+              font-family: Roboto, sans-serif;
+              font-weight: 300;
+              font-size: 22px;
+              line-height: 100%;
+            }
+          }
+        }
+
+        .map {
+          width: 960px;
+          height: 620px;
+        }
+      }
+    }
+  }
+}

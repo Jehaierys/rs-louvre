@@ -1,9 +1,7 @@
 @media (min-width: 1920px) {
   #visiting {
-    display: flex;
-    justify-content: center;
     padding-bottom: 75px;
-    div.content {
+    .content {
       height: 1116px;
       width: 1440px;
       margin-top: 75px;
@@ -56,11 +54,26 @@
   }
 }
 
+@media (min-width: 1024px) and (max-width: 1919px) {
+  #visiting {
+    padding: 60px 0;
+    .content {
+      height: 1313px;
+    }
+  }
+}
+
+#visiting {
+  display: flex;
+  justify-content: center;
+}
+
 .panorama-bar {
   background-color: rgba(113, 7, 7, 1);
   height: 2px;
   transition: width 0.5s ease;
 }
+
 .panorama-bar-on-hover {
   width: 440px !important;
 }

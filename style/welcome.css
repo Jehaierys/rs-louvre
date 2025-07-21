@@ -2,11 +2,7 @@
   #welcome {
     height: 810px;
   }
-  #welcome .content {
-    position: relative;
-  }
   #welcome .content .text-content {
-    position: absolute;
     top: 150px;
   }
   #welcome .content .text-content h1 {
@@ -30,9 +26,6 @@
     width: 360px;
     height: 75px;
     top: 313px;
-    border-radius: 10px;
-    z-index: 2;
-    font-weight: 300;
     font-size: 22px;
     line-height: 100%;
     letter-spacing: 2px;
@@ -47,11 +40,7 @@
     background-color: rgb(157, 134, 101);
   }
   #welcome .content img {
-    z-index: 1;
     width: 1000px;
-    top: 0;
-    right: 0;
-    position: absolute;
   }
   #welcome .content .welcome-slider-io {
     width: 600px;
@@ -64,10 +53,6 @@
     transform: translateX(5px);
     width: 76px;
     height: 40px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   #welcome .content .welcome-slider-io .welcome-slider-io-metadata #welcome-slider-current-picture {
     width: 25px;
@@ -109,23 +94,106 @@
     width: 100%;
   }
 }
-#welcome h1 {
+@media (min-width: 1024px) and (max-width: 1919px) {
+  #welcome {
+    height: 585px;
+  }
+  #welcome .content .text-content h1 {
+    width: 398px;
+    height: 180px;
+    top: 50px;
+    left: 20px;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-align: left;
+  }
+  #welcome .content .text-content h4 {
+    width: 445px;
+    height: 28px;
+    top: 255px;
+    left: 20px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 2px;
+    text-align: left;
+  }
+  #welcome .content .text-content .discover-button {
+    width: 300px;
+    height: 60px;
+    top: 333px;
+    left: 20px;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 2px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #welcome .content img {
+    object-fit: cover;
+    height: 525px;
+    width: 700px;
+    left: 304px;
+  }
+  #welcome .content .welcome-slider-io {
+    border: 2px solid red;
+    width: 700px;
+    height: 120px;
+    top: 465px;
+    left: 304px;
+  }
+  #welcome .content .welcome-slider-io .welcome-slider-io-metadata {
+    width: 71px;
+    height: 40px;
+    top: 505px;
+    left: 528px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+  #welcome .content .welcome-slider-io .welcome-slider-io-metadata .bar {
+    margin: 0;
+    padding: 0;
+    height: 22px;
+    width: 2px;
+    background-color: white;
+  }
+}
+#welcome .content {
+  position: relative;
+}
+#welcome .content .text-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#welcome .content .text-content h1 {
+  z-index: 2;
+  position: absolute;
   color: white;
   font-family: Forum, serif;
 }
-#welcome h4 {
+#welcome .content .text-content h4 {
   z-index: 2;
   font-family: Roboto, serif;
   position: absolute;
   color: white;
 }
-#welcome .discover-button {
+#welcome .content .text-content .discover-button {
   position: absolute;
   font-family: Roboto, serif;
   background: rgb(113, 7, 7);
   transition: background-color 0.5s ease;
+  border-radius: 10px;
+  z-index: 2;
+  font-weight: 300;
 }
-#welcome .discover-button a {
+#welcome .content .text-content .discover-button a {
   text-decoration: none;
   height: 100%;
   width: 100%;
@@ -138,11 +206,17 @@
   align-items: center;
   justify-content: center;
 }
-#welcome .discover-button:hover {
+#welcome .content .text-content .discover-button:hover {
   background: rgb(157, 134, 101);
   cursor: pointer;
 }
-#welcome .welcome-slider-io {
+#welcome .content img {
+  z-index: 1;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+#welcome .content .welcome-slider-io {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -155,19 +229,25 @@
   vertical-align: middle;
   text-transform: uppercase;
 }
-#welcome .welcome-slider-io .welcome-slider-io-pointer {
+#welcome .content .welcome-slider-io .welcome-slider-io-metadata {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+#welcome .content .welcome-slider-io .welcome-slider-io-pointer {
   display: flex;
   justify-content: space-between;
 }
-#welcome .welcome-slider-io .welcome-slider-io-pointer .welcome-slider-io-point {
+#welcome .content .welcome-slider-io .welcome-slider-io-pointer .welcome-slider-io-point {
   height: 100%;
   background-color: white;
   transition: background-color ease 0.33s;
 }
-#welcome .welcome-slider-io .welcome-slider-io-pointer .welcome-slider-io-point:hover {
+#welcome .content .welcome-slider-io .welcome-slider-io-pointer .welcome-slider-io-point:hover {
   background-color: rgb(157, 134, 101);
 }
-#welcome .welcome-slider-io .welcome-slider-io-left-arrow img {
+#welcome .content .welcome-slider-io .welcome-slider-io-left-arrow img {
   transform: scaleX(-1);
 }
 

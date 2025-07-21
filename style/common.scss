@@ -57,12 +57,23 @@ body {
 
 
 main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  h2 {
-    text-transform: uppercase;
-    font-family: Forum, serif;
+  section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .content {
+      height: 100%;
+    }
+    .bar {
+      background-color: rgba(113, 7, 7, 1);
+      height: 3px;
+      width: 100%;
+    }
+    h2 {
+      text-transform: uppercase;
+      font-family: Forum, serif;
+    }
   }
 }
 

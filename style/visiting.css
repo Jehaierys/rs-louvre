@@ -1,19 +1,17 @@
 @media (min-width: 1920px) {
   #visiting {
-    display: flex;
-    justify-content: center;
     padding-bottom: 75px;
   }
-  #visiting div.content {
+  #visiting .content {
     height: 1116px;
     width: 1440px;
     margin-top: 75px;
   }
-  #visiting div.content h2 {
+  #visiting .content h2 {
     width: 100%;
     height: 90px;
   }
-  #visiting div.content .panorama-container {
+  #visiting .content .panorama-container {
     margin-top: 75px;
     display: grid;
     justify-content: space-between;
@@ -22,11 +20,11 @@
     grid-template-rows: repeat(2, 424px);
     row-gap: 75px;
   }
-  #visiting div.content .panorama-container .panorama img {
+  #visiting .content .panorama-container .panorama img {
     width: 440px;
     height: 285px;
   }
-  #visiting div.content .panorama-container .panorama h3 {
+  #visiting .content .panorama-container .panorama h3 {
     margin-top: 25px;
     font-family: Forum, serif;
     font-weight: 400;
@@ -35,24 +33,37 @@
     letter-spacing: 5px;
     text-transform: uppercase;
   }
-  #visiting div.content .panorama-container .panorama .panorama-bar {
+  #visiting .content .panorama-container .panorama .panorama-bar {
     margin-top: 10px;
     width: 300px;
   }
-  #visiting div.content .panorama-container .panorama p {
+  #visiting .content .panorama-container .panorama p {
     font-family: Roboto, sans-serif;
     line-height: 100%;
     font-weight: 200;
     color: rgb(0, 0, 0);
     margin-top: 10px;
   }
-  #visiting div.content .panorama-container .panorama p.top {
+  #visiting .content .panorama-container .panorama p.top {
     font-size: 22px;
   }
-  #visiting div.content .panorama-container .panorama p.bottom {
+  #visiting .content .panorama-container .panorama p.bottom {
     font-size: 18px;
   }
 }
+@media (min-width: 1024px) and (max-width: 1919px) {
+  #visiting {
+    padding: 60px 0;
+  }
+  #visiting .content {
+    height: 1313px;
+  }
+}
+#visiting {
+  display: flex;
+  justify-content: center;
+}
+
 .panorama-bar {
   background-color: rgb(113, 7, 7);
   height: 2px;
