@@ -71,3 +71,51 @@
     }
   }
 }
+
+
+@media (min-width: 1024px) and (max-width: 1919px) {
+  #video {
+    padding: 60px 0;
+    .content {
+      height: 881px;
+      position: relative;
+      border: 2px solid red;
+      h2 {
+        height: 75px;
+      }
+      p {
+        display: none;
+      }
+      .video-large-container {
+        width: 984px;
+        height: 504px;
+        margin-top: 40px;
+      }
+      .video-petite-container {
+        margin-top: 40px;
+        height: 170px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(1, 170px);
+        justify-content: space-between;
+      }
+      .scroller-holder {
+        position: absolute;
+        bottom: 0;
+        height: 17px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(7, 12px);
+        grid-template-rows: 1fr;
+        column-gap: 20px;
+        border: 2px solid red;
+        z-index: 100;
+        img {
+          height: 12px;
+          width: 12px;
+        }
+      }
+    }
+  }
+}

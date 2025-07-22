@@ -75,7 +75,7 @@ main section h2 {
   overflow: hidden;
 }
 .main-gap .gap-container {
-  z-index: -1;
+  z-index: -4;
   position: fixed;
   top: 0;
   left: 0;

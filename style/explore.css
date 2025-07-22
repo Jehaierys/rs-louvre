@@ -79,7 +79,44 @@
     z-index: 50;
   }
 }
-#explore .content .second .yellow {
+@media (min-width: 1024px) and (max-width: 1919px) {
+  #explore {
+    height: 1149px;
+  }
+  #explore .content .text-content {
+    margin-top: 60px;
+    height: 267px;
+    width: 100%;
+  }
+  #explore .content .text-content p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 38.5px;
+  }
+  #explore .content .text-content .first {
+    height: 39px;
+  }
+  #explore .content .text-content .second {
+    height: 70px;
+  }
+  #explore .content .text-content .third {
+    display: none;
+  }
+  #explore .content .meninas-content {
+    top: 62px;
+    left: 132px;
+    width: 720px;
+    height: 700px;
+    position: relative;
+  }
+  #explore .content .meninas-content .meninas-cleaned-container {
+    display: none;
+  }
+  #explore .content .meninas-content .meninas-branch-container {
+    display: none;
+  }
+}
+#explore .content .text-content .second .yellow {
   color: rgb(157, 134, 101);
 }
 

@@ -24,22 +24,14 @@
           }
           h3 {
             margin-top: 25px;
-            font-family: Forum, serif;
-            font-weight: 400;
             font-size: 32px;
-            line-height: 100%;
             letter-spacing: 5px;
-            text-transform: uppercase;
           }
           .panorama-bar {
             margin-top: 10px;
             width: 300px;
           }
           p {
-            font-family: Roboto, sans-serif;
-            line-height: 100%;
-            font-weight: 200;
-            color: rgba(0, 0, 0, 1);
             margin-top: 10px;
           }
           p.top {
@@ -56,9 +48,52 @@
 
 @media (min-width: 1024px) and (max-width: 1919px) {
   #visiting {
-    padding: 60px 0;
+    padding: 60px 0 0 0;
     .content {
-      height: 1313px;
+      height: 1373px;
+      border: 2px solid red;
+      .panorama-container {
+        padding: 60px 108px;
+        border: 1px solid red;
+        height: 1275px;
+        width: 100%;
+        display: grid;
+        align-content: space-between;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: space-between;
+        justify-items: center;
+        .panorama {
+          border: 1px solid red;
+          width: 330px;
+          height: 345px;
+          img {
+            width: 330px;
+            height: 215px;
+          }
+          h3 {
+            height: 31px;
+            margin-top: 25px;
+            font-size: 28px;
+            letter-spacing: 3px;
+          }
+          .panorama-bar {
+            margin-top: 9px;
+          }
+          p.top {
+            height: 23px;
+            margin-top: 10px;
+            font-size: 20px;
+          }
+          p.bottom {
+            height: 19px;
+            margin-top: 10px;
+            font-size: 16px;
+          }
+        }
+
+      }
     }
   }
 }
@@ -66,6 +101,25 @@
 #visiting {
   display: flex;
   justify-content: center;
+  .content {
+    .panorama-container {
+      .panorama {
+        h3 {
+          width: 100%;
+          font-family: Forum, serif;
+          text-transform: uppercase;
+          line-height: 100%;
+          font-weight: 400;
+        }
+        p {
+          font-family: Roboto, sans-serif;
+          line-height: 100%;
+          font-weight: 200;
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+    }
+  }
 }
 
 .panorama-bar {

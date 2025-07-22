@@ -83,7 +83,7 @@ main {
   position: relative;
   overflow: hidden;
   .gap-container {
-    z-index: -1;
+    z-index: -4;
     position: fixed;
     top: 0;
     left: 0;
@@ -97,6 +97,7 @@ main {
     }
   }
 }
+
 div.hall {
   position: relative;
   overflow: hidden;
