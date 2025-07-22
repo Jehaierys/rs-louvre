@@ -1,92 +1,168 @@
 @media (min-width: 1920px) {
   footer {
-    display: flex;
-    justify-content: center;
     height: 392px;
-    width: 100%;
   }
   footer .content {
     width: 1440px;
-    height: 392px;
-    position: relative;
   }
   footer .content .logo {
-    position: absolute;
     top: 75px;
     left: 0;
   }
   footer .content nav {
     width: 363px;
     height: 128px;
-    position: absolute;
     top: 87px;
     left: 340px;
   }
-  footer .content nav ul {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    justify-content: space-between;
-    align-content: space-between;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    list-style: none;
-  }
-  footer .content nav ul li a {
-    font-family: Roboto, sans-serif;
-    font-weight: 200;
+  footer .content nav li {
     font-size: 22px;
-    line-height: 100%;
     letter-spacing: 2px;
-    color: white;
-    text-decoration: none;
-    transition: color 0.35s ease;
-  }
-  footer .content nav ul li a:hover {
-    color: rgb(157, 134, 101);
   }
   footer .content .social {
-    position: absolute;
     width: 340px;
     height: 48px;
     top: 162px;
     left: 1100px;
-    display: flex;
-    justify-content: space-between;
   }
   footer .content .social img {
     height: 100%;
-    display: block;
   }
   footer .content .bar {
-    height: 3px;
     width: 1940px;
     top: 265px;
     left: -250px;
-    position: absolute;
-    background-color: rgb(102, 102, 102);
   }
   footer .content .bottom {
-    position: absolute;
     top: 318px;
-    width: 100%;
     height: 24px;
   }
-  footer .content .bottom ul {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
+}
+@media (min-width: 1024px) and (max-width: 1919px) {
+  footer {
+    height: 368px;
   }
-  footer .content .bottom ul li {
-    font-family: Roboto, sans-serif;
-    font-weight: 200;
-    font-size: 22px;
-    line-height: 22px;
-    letter-spacing: 2px;
+  footer .content {
+    width: 984px;
+  }
+  footer .content .logo {
+    width: 194px;
+    height: 33px;
+    position: absolute;
+    left: 0;
+    top: 60px;
+  }
+  footer .content .logo .pyramid {
+    width: 49px;
+    height: 26px;
+  }
+  footer .content .logo h3 {
+    font-family: Forum, serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 5px;
+    text-transform: uppercase;
     color: white;
+    display: inline-block;
+    width: 120px;
+    margin-left: 20px;
   }
+  footer .content nav {
+    position: absolute;
+    width: 313px;
+    height: 128px;
+    top: 65px;
+    left: 239px;
+  }
+  footer .content nav ul li a {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+  footer .content .social {
+    width: 340px;
+    height: 48px;
+    top: 145px;
+    left: 644px;
+  }
+  footer .content .bar {
+    width: 100%;
+    top: 243px;
+  }
+  footer .content .bottom {
+    height: 122px;
+    top: 246px;
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+footer .content {
+  position: relative;
+  height: 100%;
+}
+footer .content .logo {
+  position: absolute;
+}
+footer .content nav {
+  position: absolute;
+}
+footer .content nav ul {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+  align-content: space-between;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+}
+footer .content nav ul li a {
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  line-height: 100%;
+  color: white;
+  text-decoration: none;
+  transition: color 0.35s ease;
+}
+footer .content nav ul li a:hover {
+  color: rgb(157, 134, 101);
+}
+footer .content .social {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .social img {
+  width: 48px;
+  height: 48px;
+}
+footer .content .bar {
+  height: 3px;
+  position: absolute;
+  background-color: rgb(102, 102, 102);
+}
+footer .content .bottom {
+  position: absolute;
+  width: 100%;
+}
+footer .content .bottom ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+footer .content .bottom ul li {
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 2px;
+  color: white;
 }
 
 /*# sourceMappingURL=footer.css.map */

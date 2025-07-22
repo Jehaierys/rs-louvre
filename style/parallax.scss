@@ -1,0 +1,32 @@
+@media (min-width: 1920px) {
+  .main-gap {
+    width: 1920px;
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1919px) {
+  .main-gap {
+    width: 1024px;
+  }
+}
+
+.main-gap {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  .gap-container {
+    z-index: -4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    .gap-view {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
