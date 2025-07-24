@@ -8,8 +8,28 @@ header {
         height: 100%;
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: space-between;
+        .logo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            h3 {
+                color: white;
+                font-family: Forum, serif;
+                letter-spacing: 5px;
+                font-weight: 200;
+                line-height: 100%;
+                text-transform: uppercase;
+            }
+        }
         nav {
+            .menu-button {
+                svg {
+                    background-color: black;
+                }
+            }
             ul {
                 li {
                     height: 100%;
@@ -41,9 +61,23 @@ header {
         height: 150px;
         #line {
             width: 1440px;
+            .logo {
+                width: 189px;
+                height: 33px;
+                h3 {
+                    font-size: 28px;
+                }
+                img.pyramid {
+                    width: 49px;
+                    height: 26px;
+                }
+            }
             nav {
                 height: 100%;
                 width: 775px;
+                .menu-button {
+                    display: none;
+                }
                 ul {
                     height: 100%;
                     width: 100%;
@@ -74,14 +108,51 @@ header {
         height: 130px;
         #line {
             width: 984px;
+            .logo {
+                h3 {
+                    margin-left: 25px;
+                    font-size: 28px;
+                }
+            }
             nav {
-                background: red;
-                width: 100px;
+                background: black;
+                .menu-button {
+                    width: 32px;
+                    height: 18px;
+                }
                 ul {
                     display: none;
                 }
             }
         }
     }
+}
 
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        height: 110px;
+        #line {
+            width: 728px;
+            .logo {
+                img {
+                    width: 49px;
+                    height: 26px;
+                }
+                h3 {
+                    margin-left: 25px;
+                    font-size: 28px;
+                }
+            }
+            nav {
+                .menu-button {
+                    width: 32px;
+                    height: 18px;
+                }
+                ul {
+                    display: none;
+                }
+            }
+        }
+    }
 }

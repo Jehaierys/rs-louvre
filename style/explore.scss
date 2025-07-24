@@ -129,6 +129,37 @@
   }
 }
 
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #explore {
+    .content {
+      height: 908px;
+
+      p {
+        display: none;
+      }
+
+      .meninas-content {
+        margin-top: 40px;
+        width: 728px;
+        height: 705px;
+        .meninas-yellow-container {
+          width: 100%;
+          height: 100%;
+        }
+
+        .meninas-branch-container {
+          display: none;
+        }
+
+        .meninas-cleaned-container {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 #explore {
   .content {
     .text-content {

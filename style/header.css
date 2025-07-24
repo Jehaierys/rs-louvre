@@ -9,7 +9,25 @@ header #line {
   height: 100%;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+}
+header #line .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header #line .logo h3 {
+  color: white;
+  font-family: Forum, serif;
+  letter-spacing: 5px;
+  font-weight: 200;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+header #line nav .menu-button svg {
+  background-color: black;
 }
 header #line nav ul li {
   height: 100%;
@@ -39,9 +57,23 @@ header #line nav ul li a:active {
   header #line {
     width: 1440px;
   }
+  header #line .logo {
+    width: 189px;
+    height: 33px;
+  }
+  header #line .logo h3 {
+    font-size: 28px;
+  }
+  header #line .logo img.pyramid {
+    width: 49px;
+    height: 26px;
+  }
   header #line nav {
     height: 100%;
     width: 775px;
+  }
+  header #line nav .menu-button {
+    display: none;
   }
   header #line nav ul {
     height: 100%;
@@ -68,9 +100,39 @@ header #line nav ul li a:active {
   header #line {
     width: 984px;
   }
+  header #line .logo h3 {
+    margin-left: 25px;
+    font-size: 28px;
+  }
   header #line nav {
-    background: red;
-    width: 100px;
+    background: black;
+  }
+  header #line nav .menu-button {
+    width: 32px;
+    height: 18px;
+  }
+  header #line nav ul {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    height: 110px;
+  }
+  header #line {
+    width: 728px;
+  }
+  header #line .logo img {
+    width: 49px;
+    height: 26px;
+  }
+  header #line .logo h3 {
+    margin-left: 25px;
+    font-size: 28px;
+  }
+  header #line nav .menu-button {
+    width: 32px;
+    height: 18px;
   }
   header #line nav ul {
     display: none;

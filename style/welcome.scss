@@ -3,6 +3,9 @@
     height: 810px;
     .content {
       .text-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
         top: 150px;
         h1 {
           position: relative;
@@ -10,11 +13,12 @@
           font-size: 80px;
           line-height: 90px;
           letter-spacing: 5px;
-          z-index: 2;
+          z-index: 3;
         }
         h4 {
           width: 445px;
           height: 33px;
+          position: absolute;
           top: 205px;
           font-weight: 300;
           font-size: 28px;
@@ -39,13 +43,29 @@
           background-color: rgba(157, 134, 101, 1);
         }
       }
-
+      .joconda-holder {
+        position: relative;
+      }
+      .joconda-shadow {
+        position: absolute;
+        background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
+        z-index: 1;
+        top: 0;
+        left: 440px;
+        height: 810px;
+        width: 300px;
+      }
       img {
+        z-index: 0;
+        top: 0;
+        right: 0;
+        position: absolute;
         width: 1000px;
       }
       .welcome-slider-io {
         width: 600px;
         height: 120px;
+        position: absolute;
         font-weight: 400;
         font-size: 22px;
         line-height: 40px;
@@ -103,9 +123,13 @@
     height: 585px;
     .content {
       .text-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
         h1 {
           width: 398px; // on-change 396
           height: 180px;
+          position: absolute;
           top: 50px;
           left: 20px;
           font-weight: 400;
@@ -113,10 +137,12 @@
           line-height: 90px;
           letter-spacing: 5px;
           text-align: left;
+          z-index: 3;
         }
         h4 {
           width: 445px;
           height: 28px;
+          position: absolute;
           top: 255px;
           left: 20px;
           font-weight: 300;
@@ -137,7 +163,23 @@
           vertical-align: middle;
         }
       }
+      .joconda-holder {
+        position: relative;
+      }
+      .joconda-shadow {
+        position: absolute;
+        background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
+        z-index: 1;
+        top: 0;
+        left: 304px;
+        height: 525px;
+        width: 250px;
+      }
       img {
+        z-index: 0;
+        top: 0;
+        right: 0;
+        position: absolute;
         object-fit: cover;
         height: 525px;
         width: 700px;
@@ -147,6 +189,7 @@
         border: 2px solid red;
         width: 700px;
         height: 120px;
+        position: absolute;
         top: 465px;
         left: 304px;
         .welcome-slider-io-metadata {
@@ -177,25 +220,100 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  #welcome {
+    height: 861px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        width: 100%;
+        height: 165px;
+        h1 {
+          width: 338px;
+          height: 120px;
+          font-weight: 400;
+          font-size: 40px;
+          line-height: 60px;
+          letter-spacing: 5px;
+          text-align: center;
+          text-transform: uppercase;
+        }
+        h4 {
+          width: 350px;
+          font-size: 20px;
+          letter-spacing: 2px;
+        }
+        .discover-button {
+          display: none;
+        }
+      }
+      .joconda-holder {
+        width: 728px;
+        height: 546px;
+        object-fit: cover;
+        .joconda-shadow {
+          display: none;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .welcome-slider-io {
+        height: 100px;
+        width: 401px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        .welcome-slider-io-metadata {
+          width: 71px;
+          height: 40px;
+        }
+        .welcome-slider-io-pointer {
+          width: 160px;
+          height: 12px;
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+          .welcome-slider-io-point {
+            width: 12px;
+          }
+        }
+        .welcome-slider-io-swiper {
+          width: 80px;
+          height: 8px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
 
 // common
 #welcome {
   .content {
     position: relative;
     .text-content {
-      position: absolute;
-      width: 100%;
-      height: 100%;
       h1 {
         z-index: 2;
-        position: absolute;
         color: white;
         font-family: Forum, serif;
       }
       h4 {
         z-index: 2;
         font-family: Roboto, serif;
-        position: absolute;
+        font-weight: 300;
+        line-height: 100%;
         color: white;
       }
       .discover-button {
@@ -225,17 +343,10 @@
         cursor: pointer;
       }
     }
-    img {
-      z-index: 1;
-      top: 0;
-      right: 0;
-      position: absolute;
-    }
     .welcome-slider-io {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      position: absolute;
       bottom: 0;
       right: 0;
       z-index: 100;
