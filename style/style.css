@@ -38,6 +38,9 @@
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
+  main section .content {
+    width: 728px;
+  }
   main section h2 {
     margin-top: 40px;
     width: 100%;
@@ -52,8 +55,25 @@
     margin: 20px 0;
     width: 728px;
   }
+}
+@media (min-width: 420px) and (max-width: 767px) {
   main section .content {
-    width: 728px;
+    width: 380px;
+  }
+  main section .bar {
+    margin: 20px 0 40px 0;
+    width: 380px;
+  }
+  main section h2 {
+    margin-top: 40px;
+    height: 40px;
+    width: 100%;
+    font-family: Forum, serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
   }
 }
 

@@ -16,7 +16,6 @@
         }
         .gallery-fogging {
           height: 360px;
-          margin-bottom: 70px;
         }
       }
     }
@@ -39,7 +38,6 @@
         }
         .gallery-fogging {
           height: 239px;
-          margin-bottom: 100px;
         }
       }
     }
@@ -48,13 +46,42 @@
 
 
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  #gallery {
+    height: 1220px;
+    .content {
+      .container {
+        display: none;
+        .column > div:last-child {
+          display: none;
+        }
+      }
+      .container > div:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 420px) and (max-width: 767px) {
+  #gallery {
+    height: 757px;
+    .content {
+      .container {
+
+      }
+    }
+  }
+}
+
+
 #gallery {
   position: relative;
   z-index: -3;
   .container {
     display: flex;
     justify-content: space-between;
-    position: relative;
     z-index: -3;
     .column {
       display: flex;

@@ -216,6 +216,164 @@
 }
 
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  #tickets {
+    padding: 0 0 40px 0;
+    .content {
+      height: 593px;
+      .container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        img {
+          width: 444px;
+          height: 340px;
+        }
+        .ticket-type {
+          display: none;
+        }
+        .amount {
+          position: relative;
+          height: 470px;
+          width: 175px;
+          h5 {
+            font-size: 28px;
+            height: 32px;
+          }
+          .ticket-pick {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            height: 86px;
+            label {
+              font-size: 22px;
+            }
+            .counter {
+              display: flex;
+              align-content: center;
+              align-items: center;
+              justify-content: space-evenly;
+              width: 175px;
+              height: 50px;
+              border-width: 3px;
+              button {
+                height: 38px;
+                width: 41px;
+                font-size: 32px;
+              }
+              input {
+                width: 41px;
+                font-size: 22px;
+              }
+            }
+          }
+          .basic {
+            top: 71px;
+          }
+          .senior {
+            top: 182px;
+          }
+          #total-prise {
+            position: absolute;
+            width: 175px;
+            height: 33px;
+            top: 307px;
+          }
+          #buy {
+            position: absolute;
+            width: 175px;
+            height: 50px;
+            top: 381px;
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 420px) and (max-width: 767px) {
+  #tickets {
+    height: 759px;
+    .content {
+      .container {
+        position: relative;
+        img {
+          width: 100%;
+          height: 160px;
+          object-fit: cover;
+        }
+        .ticket-type {
+          display: none;
+        }
+        .amount {
+          position: absolute;
+          width: 175px;
+          height: 286px;
+          top: 200px;
+          left: 102px;
+          h5 {
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            letter-spacing: 0;
+          }
+          .ticket-pick {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            width: 175px;
+            height: 84px;
+            .counter {
+              display: flex;
+              align-content: center;
+              align-items: center;
+              justify-content: space-evenly;
+              width: 100%;
+              height: 50px;
+              button {
+                height: 38px;
+                width: 41px;
+                font-size: 32px;
+              }
+              input {
+                width: 41px;
+                font-size: 22px;
+              }
+            }
+          }
+          .basic {
+            top: 39px;
+          }
+          .senior {
+            top: 143px;
+          }
+          #total-prise {
+            position: absolute;
+            width: 100%;
+            height: 19px;
+            top: 267px;
+            text-align: center;
+            font-size: 16px;
+          }
+          #buy {
+            position: absolute;
+            top: 326px;
+            width: 100%;
+            height: 50px;
+            font-size: 16px;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
 #tickets {
   .content {
     .container {

@@ -1,15 +1,28 @@
 @media (min-width: 1920px) {
   .main-gap {
+    height: 400px;
     width: 1920px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1919px) {
   .main-gap {
+    height: 400px;
     width: 1024px;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-gap {
+    height: 300px;
+    width: 768px;
+  }
+}
+@media (min-width: 420px) and (max-width: 767px) {
+  .main-gap {
+    height: 300px;
+    width: 420px;
+  }
+}
 .main-gap {
-  height: 400px;
   position: relative;
   overflow: hidden;
 }

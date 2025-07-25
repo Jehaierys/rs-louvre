@@ -149,12 +149,59 @@
   }
 }
 
+
+@media (min-width: 420px) and (max-width: 767px) {
+  #visiting {
+    .content {
+      height: 2153px;
+      .panorama-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 1970px;
+        .panorama {
+          width: 280px;
+          height: 295px;
+          img {
+            height: 180px;
+          }
+          h3 {
+            margin-top: 25px;
+            height: 20px;
+          }
+          .panorama-bar {
+            margin: 10px 0;
+          }
+          p {
+            font-size: 16px;
+            letter-spacing: 0;
+          }
+          p.bottom {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
 #visiting {
   display: flex;
   justify-content: center;
   .content {
     .panorama-container {
       .panorama {
+        img {
+          width: 100%;
+        }
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          color: black;
+        }
         h3 {
           width: 100%;
           font-family: Forum, serif;
@@ -166,7 +213,6 @@
           font-family: Roboto, sans-serif;
           line-height: 100%;
           font-weight: 200;
-          color: rgba(0, 0, 0, 1);
         }
       }
     }

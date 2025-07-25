@@ -62,6 +62,70 @@
     font-size: 20px;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  #contacts .content {
+    height: 858px;
+  }
+  #contacts .content .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #contacts .content .container .description h5 {
+    width: 160px;
+    font-size: 20px;
+  }
+  #contacts .content .container .description ul {
+    height: 93px;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #contacts .content .container .description ul li {
+    font-size: 18px;
+  }
+  #contacts .content .container #map {
+    width: 100%;
+    height: 476px;
+  }
+}
+@media (min-width: 420px) and (max-width: 767px) {
+  #contacts {
+    height: 636px;
+  }
+  #contacts .content .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 453px;
+  }
+  #contacts .content .container .description {
+    height: 165px;
+  }
+  #contacts .content .container .description h5 {
+    width: 124px;
+    height: 38px;
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+  #contacts .content .container .description ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 39px;
+    height: 87px;
+    width: 100%;
+  }
+  #contacts .content .container .description ul li {
+    height: 19px;
+    width: 100%;
+  }
+  #contacts .content .container #map {
+    width: 380px;
+    height: 248px;
+  }
+}
 #contacts .container .description h5 {
   font-family: Roboto, sans-serif;
   font-weight: 500;

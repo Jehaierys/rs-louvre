@@ -1,55 +1,3 @@
-header {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  background: rgb(3, 3, 3);
-}
-header #line {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-header #line .logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-header #line .logo h3 {
-  color: white;
-  font-family: Forum, serif;
-  letter-spacing: 5px;
-  font-weight: 200;
-  line-height: 100%;
-  text-transform: uppercase;
-}
-header #line nav .menu-button svg {
-  background-color: black;
-}
-header #line nav ul li {
-  height: 100%;
-  width: 100%;
-}
-header #line nav ul li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  color: white;
-  text-decoration: none;
-  transition: color 0.4s ease;
-}
-header #line nav ul li a:hover {
-  color: rgb(157, 134, 101);
-}
-header #line nav ul li a:active {
-  color: rgb(126, 108, 81);
-}
-
 @media (min-width: 1920px) {
   header {
     height: 150px;
@@ -137,6 +85,85 @@ header #line nav ul li a:active {
   header #line nav ul {
     display: none;
   }
+}
+@media (min-width: 420px) and (max-width: 767px) {
+  header {
+    height: 90px;
+  }
+  header #line {
+    width: 380px;
+    border: 2px solid red;
+  }
+  header #line .logo {
+    width: 131px;
+    height: 20px;
+  }
+  header #line .logo .pyramid {
+    width: 29px;
+    height: 16px;
+  }
+  header #line .logo h3 {
+    font-size: 16px;
+    letter-spacing: 5px;
+  }
+  header #line nav .menu-button {
+    width: 32px;
+    height: 18px;
+  }
+  header #line nav ul {
+    display: none;
+  }
+}
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background: rgb(3, 3, 3);
+}
+header #line {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+header #line .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header #line .logo h3 {
+  color: white;
+  font-family: Forum, serif;
+  letter-spacing: 5px;
+  font-weight: 200;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+header #line nav .menu-button svg {
+  background-color: black;
+}
+header #line nav ul li {
+  height: 100%;
+  width: 100%;
+}
+header #line nav ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+header #line nav ul li a:hover {
+  color: rgb(157, 134, 101);
+}
+header #line nav ul li a:active {
+  color: rgb(126, 108, 81);
 }
 
 /*# sourceMappingURL=header.css.map */

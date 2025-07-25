@@ -1,61 +1,3 @@
-header {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    background: rgba(3, 3, 3, 1);
-    #line {
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        .logo {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            h3 {
-                color: white;
-                font-family: Forum, serif;
-                letter-spacing: 5px;
-                font-weight: 200;
-                line-height: 100%;
-                text-transform: uppercase;
-            }
-        }
-        nav {
-            .menu-button {
-                svg {
-                    background-color: black;
-                }
-            }
-            ul {
-                li {
-                    height: 100%;
-                    width: 100%;
-                    a {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 100%;
-                        height: 100%;
-                        color: white;
-                        text-decoration: none;
-                        transition: color 0.4s ease;
-                    }
-                    a:hover {
-                        color: rgba(157, 134, 101, 1);
-                    }
-                    a:active {
-                        color: rgba(126, 108, 81, 1);
-                    }
-                }
-            }
-        }
-    }
-}
-
 @media (min-width: 1920px) {
     header {
         height: 150px;
@@ -156,3 +98,95 @@ header {
         }
     }
 }
+
+
+@media (min-width: 420px) and (max-width: 767px) {
+    header {
+        height: 90px;
+        #line {
+            width: 380px;
+            border: 2px solid red;
+
+            .logo {
+                width: 131px;
+                height: 20px;
+                .pyramid {
+                    width: 29px;
+                    height: 16px;
+                }
+                h3 {
+                    font-size: 16px;
+                    letter-spacing: 5px;
+                }
+            }
+            nav {
+                .menu-button {
+                    width: 32px;
+                    height: 18px;
+                }
+                ul {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(3, 3, 3, 1);
+    #line {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            h3 {
+                color: white;
+                font-family: Forum, serif;
+                letter-spacing: 5px;
+                font-weight: 200;
+                line-height: 100%;
+                text-transform: uppercase;
+            }
+        }
+        nav {
+            .menu-button {
+                svg {
+                    background-color: black;
+                }
+            }
+            ul {
+                li {
+                    height: 100%;
+                    width: 100%;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 100%;
+                        color: white;
+                        text-decoration: none;
+                        transition: color 0.4s ease;
+                    }
+                    a:hover {
+                        color: rgba(157, 134, 101, 1);
+                    }
+                    a:active {
+                        color: rgba(126, 108, 81, 1);
+                    }
+                }
+            }
+        }
+    }
+}
+

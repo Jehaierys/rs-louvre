@@ -160,6 +160,34 @@
   }
 }
 
+
+@media (min-width: 420px) and (max-width: 767px) {
+  #explore {
+    height: 551px;
+    .content {
+      position: relative;
+      .text-content {
+        p {
+          display: none;
+        }
+      }
+      .meninas-content {
+        position: absolute;
+        width: 380px;
+        height: 368px;
+        top: 143px;
+        left: 20px;
+        .meninas-cleaned-container {
+          display: none;
+        }
+        .meninas-branch-container {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 #explore {
   .content {
     .text-content {
@@ -168,6 +196,12 @@
         .yellow {
           color: rgba(157, 134, 101, 1);
         }
+      }
+    }
+    .meninas-content {
+      img {
+        width: 100%;
+        height: 100%;
       }
     }
   }

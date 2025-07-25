@@ -80,15 +80,6 @@ div.hall img {
   object-fit: cover;
 }
 
-#video iframe {
-  width: 100%;
-  height: 100%;
-}
-#video .scroller img {
-  width: 100%;
-  height: 100%;
-}
-
 #welcome, #explore, #gallery, footer {
   background: rgb(3, 3, 3);
 }

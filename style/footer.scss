@@ -4,8 +4,22 @@
     .content {
       width: 1440px;
       .logo {
+        width: 195px;
         top: 75px;
         left: 0;
+        .pyramid {
+          position: absolute;
+          top: 9px;
+        }
+        h3 {
+          position: absolute;
+          width: 120px;
+          height: 31px;
+          top: 11px;
+          left: 75px;
+          font-size: 28px;
+          letter-spacing: 5px;
+        }
       }
       nav {
         width: 363px;
@@ -56,13 +70,7 @@
           height: 26px;
         }
         h3 {
-          font-family: Forum,serif;
-          font-weight: 400;
           font-size: 28px;
-          line-height: 100%;
-          letter-spacing: 5px;
-          text-transform: uppercase;
-          color: white;
           display: inline-block;
           width: 120px;
           margin-left: 20px;
@@ -101,6 +109,62 @@
   }
 }
 
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  footer {
+    height: 411px;
+    .content {
+      width: 728px;
+      .logo {
+        width: 205px;
+        height: 41px;
+        top: 40px;
+        .pyramid {
+          width: 49px;
+          height: 26px;
+        }
+        h3 {
+          margin-left: 25px;
+          display: inline-block;
+          font-size: 28px;
+          letter-spacing: 5px;
+        }
+      }
+      nav {
+        width: 393px;
+        height: 121px;
+        top: 57px;
+        left: 279px;
+        ul {
+          li {
+            a {
+              font-size: 18px;
+              letter-spacing: 2px;
+
+            }
+          }
+        }
+      }
+      .social {
+        border: 2px solid red;
+        width: 340px;
+        height: 48px;
+        top: 220px;
+        left: 298px;
+      }
+      .bar {
+        height: 1px;
+        width: 100%;
+        top: 308px;
+      }
+      .bottom {
+        height: 102px;
+        top: 309px;
+      }
+    }
+  }
+}
+
 footer {
   display: flex;
   justify-content: center;
@@ -110,6 +174,15 @@ footer {
     height: 100%;
     .logo {
       position: absolute;
+      h3 {
+        display: inline-block;
+        font-family: Forum,serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: white;
+        line-height: 100%;
+        letter-spacing: 5px;
+      }
     }
     nav {
       position: absolute;
@@ -141,9 +214,27 @@ footer {
       position: absolute;
       display: flex;
       justify-content: space-between;
-      img {
+      a {
         width: 48px;
         height: 48px;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        align-items: center;
+        border: 1px solid rgba(102, 102, 102, 1);
+        border-radius: 50%;
+        transition: all ease 0.4s;
+        svg {
+          fill: white;
+          width: 24px;
+          height: 24px;
+        }
+      }
+      a:hover {
+        border-color: rgba(157, 134, 101, 1);
+      }
+      a:hover svg {
+        fill: rgba(157, 134, 101, 1);
       }
     }
     .bar {
@@ -168,6 +259,95 @@ footer {
           line-height: 22px;
           letter-spacing: 2px;
           color: white;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 420px) and (max-width: 767px) {
+  footer {
+    height: 400px;
+    .content {
+      width: 380px;
+      .logo {
+        position: absolute;
+        width: 136px;
+        height: 20px;
+        top: 40px;
+        .pyramid {
+          position: absolute;
+          width: 29px;
+          height: 16px;
+        }
+        h3 {
+          position: absolute;
+          left: 49px;
+          top: 1px;
+          width: 85px;
+          height: 18px;
+          font-size: 16px;
+          letter-spacing: 5px;
+        }
+      }
+      nav {
+        width: 100%;
+        height: 88px;
+        top: 90px;
+        ul {
+          display: grid;
+          align-content: space-between;
+          justify-content: space-between;
+          grid-template-columns: repeat(3, 77px);
+          grid-template-rows: repeat(2, 44px);
+          li {
+            font-size: 16px;
+            font-weight: 200;
+            line-height: 100%;
+            letter-spacing: 2px;
+          }
+          a {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .social {
+        position: absolute;
+        width: 260px;
+        height: 48px;
+        top: 208px;
+        left: 60px;
+        a {
+          width: 48px;
+          height: 48px;
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+      .bar {
+        width: 420px;
+        height: 2px;
+        top: 296px;
+      }
+      .bottom {
+        top: 338px;
+        ul {
+          height: 22px;
+          li {
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 2px;
+          }
+          li:last-child {
+            display: none;
+          }
         }
       }
     }
