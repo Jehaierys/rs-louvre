@@ -186,7 +186,6 @@
         width: 250px;
       }
       .welcome-slider-io {
-        border: 2px solid red;
         width: 700px;
         height: 120px;
         position: absolute;
@@ -486,7 +485,7 @@
       align-content: center;
       bottom: 0;
       right: 0;
-      z-index: 100;
+      z-index: 3;
       background-color: black;
       font-family: Roboto, sans-serif;
       vertical-align: middle;

@@ -26,9 +26,15 @@
         height: 128px;
         top: 87px;
         left: 340px;
-        li {
-          font-size: 22px;
-          letter-spacing: 2px;
+        ul {
+          display: grid;
+          grid-template-rows: repeat(3, 26px);
+          grid-template-columns: repeat(2, 106px);
+          row-gap: 25px;
+          column-gap: 170px;
+          li {
+            font-size: 22px;
+          }
         }
       }
       .social {
@@ -83,10 +89,14 @@
         top: 65px;
         left: 239px;
         ul {
+          display: grid;
+          grid-template-rows: repeat(3, 26px);
+          grid-template-columns: repeat(2, 106px);
+          row-gap: 25px;
+          column-gap: 100px;
           li {
             a {
               font-size: 22px;
-              letter-spacing: 2px;
             }
           }
         }
@@ -136,17 +146,19 @@
         top: 57px;
         left: 279px;
         ul {
+          display: grid;
+          grid-template-rows: repeat(3, 21px);
+          grid-template-columns: repeat(2, 85px);
+          row-gap: 25px;
+          column-gap: 203px;
           li {
             a {
               font-size: 18px;
-              letter-spacing: 2px;
-
             }
           }
         }
       }
       .social {
-        border: 2px solid red;
         width: 340px;
         height: 48px;
         top: 220px;
@@ -160,111 +172,6 @@
       .bottom {
         height: 102px;
         top: 309px;
-      }
-    }
-  }
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  .content {
-    position: relative;
-    height: 100%;
-    .logo {
-      position: absolute;
-      h3 {
-        display: inline-block;
-        font-family: Forum,serif;
-        font-weight: 400;
-        text-transform: uppercase;
-        color: white;
-        line-height: 100%;
-        letter-spacing: 5px;
-      }
-    }
-    nav {
-      position: absolute;
-      ul {
-        height: 100%;
-        width: 100%;
-        display: grid;
-        justify-content: space-between;
-        align-content: space-between;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-        list-style: none;
-        li {
-          a {
-            font-family: Roboto, sans-serif;
-            font-weight: 200;
-            line-height: 100%;
-            color: white;
-            text-decoration: none;
-            transition: color 0.35s ease;
-          }
-          a:hover {
-            color: rgba(157, 134, 101, 1);
-          }
-        }
-      }
-    }
-    .social {
-      position: absolute;
-      display: flex;
-      justify-content: space-between;
-      a {
-        width: 48px;
-        height: 48px;
-        display: flex;
-        justify-content: space-evenly;
-        align-content: space-evenly;
-        align-items: center;
-        border: 1px solid rgba(102, 102, 102, 1);
-        border-radius: 50%;
-        transition: all ease 0.4s;
-        svg {
-          transition: all ease 0.4s;
-          fill: white;
-          width: 24px;
-          height: 24px;
-        }
-      }
-      .youtube-socials svg {
-        fill: red;
-      }
-      a:hover {
-        border-color: rgba(157, 134, 101, 1);
-      }
-
-      svg:hover {
-        fill: rgba(157, 134, 101, 1);
-      }
-    }
-    .bar {
-      height: 3px;
-      position: absolute;
-      background-color: rgba(102, 102, 102, 1);
-    }
-    .bottom {
-      position: absolute;
-      width: 100%;
-      ul {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none;
-        li {
-          font-family: Roboto, sans-serif;
-          font-weight: 200;
-          font-size: 22px;
-          line-height: 22px;
-          letter-spacing: 2px;
-          color: white;
-        }
       }
     }
   }
@@ -350,9 +257,111 @@ footer {
             line-height: 22px;
             letter-spacing: 2px;
           }
-          li:last-child {
+          .rs-mention {
             display: none;
           }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .content {
+    position: relative;
+    height: 100%;
+    .logo {
+      position: absolute;
+      h3 {
+        display: inline-block;
+        font-family: Forum,serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: white;
+        line-height: 100%;
+        letter-spacing: 5px;
+      }
+    }
+    nav {
+      position: absolute;
+      ul {
+        height: 100%;
+        width: 100%;
+        list-style: none;
+        li {
+          a {
+            letter-spacing: 2px;
+            line-height: 100%;
+            font-family: Roboto, sans-serif;
+            font-weight: 200;
+            color: white;
+            text-decoration: none;
+            transition: color 0.35s ease;
+          }
+          a:hover {
+            color: rgba(157, 134, 101, 1);
+          }
+        }
+      }
+    }
+    .social {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      a {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        align-items: center;
+        border: 1px solid rgba(102, 102, 102, 1);
+        border-radius: 50%;
+        transition: border ease 0.4s;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          path {
+            fill: white;
+            transition: fill ease 0.4s;
+          }
+        }
+      }
+      a:hover {
+        border-color: rgba(157, 134, 101, 1);
+        svg {
+          path {
+            fill: rgba(157, 134, 101, 1);
+          }
+        }
+      }
+    }
+    .bar {
+      height: 3px;
+      position: absolute;
+      background-color: rgba(102, 102, 102, 1);
+    }
+    .bottom {
+      position: absolute;
+      width: 100%;
+      ul {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        li {
+          font-family: Roboto, sans-serif;
+          font-weight: 200;
+          font-size: 22px;
+          line-height: 22px;
+          letter-spacing: 2px;
+          color: white;
         }
       }
     }

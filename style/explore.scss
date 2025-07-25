@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: center;
     .content {
-      border: 2px solid red;
       height: 715px;
       display: grid;
       grid-template-columns: 660px 720px;
@@ -40,7 +39,6 @@
       .meninas-content {
         position: relative;
         top: 15px;
-        border: 2px solid red;
         .meninas-cleaned-container {
           position: absolute;
           left: 0;
@@ -102,6 +100,7 @@
           line-height: 38.5px;
         }
         .first {
+          margin-top: 60px;
           height: 39px;
         }
         .second {
