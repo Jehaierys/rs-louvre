@@ -213,14 +213,18 @@ footer .content .social a {
   transition: all ease 0.4s;
 }
 footer .content .social a svg {
+  transition: all ease 0.4s;
   fill: white;
   width: 24px;
   height: 24px;
 }
+footer .content .social .youtube-socials svg {
+  fill: red;
+}
 footer .content .social a:hover {
   border-color: rgb(157, 134, 101);
 }
-footer .content .social a:hover svg {
+footer .content .social svg:hover {
   fill: rgb(157, 134, 101);
 }
 footer .content .bar {

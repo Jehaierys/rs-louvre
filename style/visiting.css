@@ -33,6 +33,12 @@
     margin-top: 10px;
     width: 300px;
   }
+  #visiting .content .panorama-container .panorama .panorama-bar-non-hover {
+    width: 300px;
+  }
+  #visiting .content .panorama-container .panorama .panorama-bar-hover {
+    width: 440px;
+  }
   #visiting .content .panorama-container .panorama p {
     margin-top: 10px;
   }
@@ -49,11 +55,9 @@
   }
   #visiting .content {
     height: 1373px;
-    border: 2px solid red;
   }
   #visiting .content .panorama-container {
     padding: 60px 108px;
-    border: 1px solid red;
     height: 1275px;
     width: 100%;
     display: grid;
@@ -65,7 +69,6 @@
     justify-items: center;
   }
   #visiting .content .panorama-container .panorama {
-    border: 1px solid red;
     width: 330px;
     height: 345px;
   }
@@ -81,6 +84,12 @@
   }
   #visiting .content .panorama-container .panorama .panorama-bar {
     margin-top: 9px;
+  }
+  #visiting .content .panorama-container .panorama .panorama-bar-non-hover {
+    width: 150px;
+  }
+  #visiting .content .panorama-container .panorama .panorama-bar-hover {
+    width: 330px;
   }
   #visiting .content .panorama-container .panorama p.top {
     height: 23px;
@@ -127,8 +136,11 @@
     height: 2px;
     margin: 10px 0;
   }
-  #visiting .content .panorama-container .panorama .bar-non-hover {
+  #visiting .content .panorama-container .panorama .panorama-bar-non-hover {
     width: 150px;
+  }
+  #visiting .content .panorama-container .panorama .panorama-bar-hover {
+    width: 280px;
   }
   #visiting .content .panorama-container .panorama p.top {
     height: 21px;
@@ -165,6 +177,13 @@
   }
   #visiting .content .panorama-container .panorama .panorama-bar {
     margin: 10px 0;
+    transition: all 0.5s ease;
+  }
+  #visiting .content .panorama-container .panorama .panorama-bar-non-hover {
+    width: 150px;
+  }
+  #visiting .content .panorama-container .panorama .panorama-bar-hover {
+    width: 280px;
   }
   #visiting .content .panorama-container .panorama p {
     font-size: 16px;

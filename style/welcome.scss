@@ -165,6 +165,16 @@
       }
       .joconda-holder {
         position: relative;
+        img {
+          z-index: 0;
+          top: 0;
+          right: 0;
+          position: absolute;
+          object-fit: cover;
+          height: 525px;
+          width: 700px;
+          left: 304px;
+        }
       }
       .joconda-shadow {
         position: absolute;
@@ -174,16 +184,6 @@
         left: 304px;
         height: 525px;
         width: 250px;
-      }
-      img {
-        z-index: 0;
-        top: 0;
-        right: 0;
-        position: absolute;
-        object-fit: cover;
-        height: 525px;
-        width: 700px;
-        left: 304px;
       }
       .welcome-slider-io {
         border: 2px solid red;
@@ -195,15 +195,12 @@
         .welcome-slider-io-metadata {
           width: 71px;
           height: 40px;
-          top: 505px;
-          left: 528px;
           font-family: Roboto, sans-serif;
           font-weight: 400;
           font-size: 20px;
           line-height: 40px;
           vertical-align: middle;
           text-transform: uppercase;
-
           .bar {
             margin: 0;
             padding: 0;
@@ -213,9 +210,39 @@
           }
         }
         .welcome-slider-io-pointer {
-
+          width: 160px;
+          height: 12px;
+          .welcome-slider-io-point {
+            width: 12px;
+          }
+        }
+        .welcome-slider-io-swiper {
+          width: 80px;
+          height: 8px;
+          transform: translateY(-7px);
+          .welcome-slider-io-right-arrow, .welcome-slider-io-left-arrow  {
+            position: relative;
+            width: 30px;
+            height: 100%;
+            object-fit: cover;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
         }
       }
+    }
+  }
+
+  .menu-opened {
+    .text-content {
+      display: none;
+    }
+  }
+  .menu-closed {
+    .text-content {
+      display: block;
     }
   }
 }
@@ -456,6 +483,7 @@
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+      align-content: center;
       bottom: 0;
       right: 0;
       z-index: 100;
@@ -472,6 +500,7 @@
       .welcome-slider-io-pointer {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         .welcome-slider-io-point {
           height: 100%;
           background-color: white;
@@ -485,6 +514,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        align-content: center;
         .welcome-slider-io-left-arrow {
           img {
             transform: scaleX(-1);

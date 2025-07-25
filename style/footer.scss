@@ -225,15 +225,20 @@ footer {
         border-radius: 50%;
         transition: all ease 0.4s;
         svg {
+          transition: all ease 0.4s;
           fill: white;
           width: 24px;
           height: 24px;
         }
       }
+      .youtube-socials svg {
+        fill: red;
+      }
       a:hover {
         border-color: rgba(157, 134, 101, 1);
       }
-      a:hover svg {
+
+      svg:hover {
         fill: rgba(157, 134, 101, 1);
       }
     }
