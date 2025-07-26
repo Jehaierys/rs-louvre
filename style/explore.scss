@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     .content {
-      border: 2px solid red;
+      //border: 2px solid red;
       height: 715px;
       display: grid;
       grid-template-columns: 660px 720px;
@@ -38,7 +38,7 @@
       }
 
       .meninas-content {
-        border: 2px solid red;
+        //border: 2px solid red;
         position: relative;
         top: 15px;
         width: 720px;
@@ -179,7 +179,6 @@
         width: 380px;
         height: 368px;
         top: 143px;
-        left: 20px;
         .meninas-cleaned-container {
           display: none;
         }

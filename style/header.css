@@ -41,7 +41,7 @@
     line-height: 100%;
     letter-spacing: 2px;
   }
-  header #line nav ul li img {
+  header #line nav ul li .header-menu-arrow {
     display: none;
   }
 }

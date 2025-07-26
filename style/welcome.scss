@@ -318,6 +318,12 @@
         .welcome-slider-io-metadata {
           width: 71px;
           height: 40px;
+          font-size: 20px;
+          .bar {
+            width: 2px;
+            height: 20px;
+            background-color: white;
+          }
         }
         .welcome-slider-io-pointer {
           width: 160px;
@@ -361,10 +367,20 @@
       .sunset-holder {
         width: 100%;
         height: 194px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
       .hall-holder, .view-holder {
         width: 319px;
         height: 161px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
   }
@@ -454,11 +470,12 @@
           align-content: center;
           width: 50px;
           height: 40px;
+          font-size: 16px;
           .bar {
             background-color: white;
-            height: 20px;
+            height: 16px;
             width: 2px;
-            transform: translateY(9px);
+            transform: translateY(10px);
           }
         }
         .welcome-slider-io-pointer {

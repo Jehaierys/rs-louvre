@@ -1,36 +1,36 @@
 class NavigationMenuFacade {
     static #opened = false;
 
-    static switchMenuState() {
-        const header = document.getElementsByTagName('header').item(0); // there is only 1 <header>
-        const welcome = document.getElementById('welcome');
-        const footer = document.getElementsByTagName('footer').item(0);
+    static #header = document.getElementsByTagName('header').item(0); // there is only 1 <header>
+    static #welcome = document.getElementById('welcome');
+    static #footer = document.getElementsByTagName('footer').item(0);
 
+    static switchMenuState() {
         if (this.#opened) {
-            this.#closeMenu(header, welcome, footer);
+            this.#closeMenu();
             this.#opened = false;
         } else {
-            this.#openMenu(header, welcome, footer);
+            this.#openMenu();
             this.#opened = true;
         }
     }
 
-    static #closeMenu(header, welcome, footer) {
-        header.classList.remove('menu-opened-header');
-        welcome.classList.remove('menu-opened-welcome');
-        header.classList.add('menu-closed-header');
-        welcome.classList.add('menu-closed-welcome');
-        footer.classList.remove('menu-opened-footer');
-        footer.classList.add('menu-closed-footer');
+    static #closeMenu() {
+        this.#header.classList.remove('menu-opened-header');
+        this.#welcome.classList.remove('menu-opened-welcome');
+        this.#header.classList.add('menu-closed-header');
+        this.#welcome.classList.add('menu-closed-welcome');
+        this.#footer.classList.remove('menu-opened-footer');
+        this.#footer.classList.add('menu-closed-footer');
     }
 
-    static #openMenu(header, welcome, footer) {
-        header.classList.remove('menu-closed-header');
-        welcome.classList.remove('menu-closed-welcome');
-        header.classList.add('menu-opened-header');
-        welcome.classList.add('menu-opened-welcome');
-        footer.classList.remove('menu-closed-footer');
-        footer.classList.add('menu-opened-footer');
+    static #openMenu() {
+        this.#header.classList.remove('menu-closed-header');
+        this.#welcome.classList.remove('menu-closed-welcome');
+        this.#header.classList.add('menu-opened-header');
+        this.#welcome.classList.add('menu-opened-welcome');
+        this.#footer.classList.remove('menu-closed-footer');
+        this.#footer.classList.add('menu-opened-footer');
     }
 
     static addScrollLimiter() {
@@ -56,6 +56,19 @@ class NavigationMenuFacade {
             }
         });
     }
+
+    static addNavButtonClickListeners() {
+        const nav = this.#header.getElementsByTagName('nav').item(0);
+        const ul = nav.getElementsByTagName('ul').item(0);
+        const listItems = ul.getElementsByTagName('li');
+
+        for (let i = 0; i < listItems.length; ++i) {
+            listItems[i].addEventListener('click', function(event) {
+                NavigationMenuFacade.switchMenuState();
+            });
+        }
+    }
+
     static menuOpened() {
         return this.#opened;
     }
