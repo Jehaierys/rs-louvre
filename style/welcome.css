@@ -63,6 +63,10 @@
     width: 1000px;
   }
   #welcome .content .welcome-slider-io {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
     width: 600px;
     height: 120px;
     position: absolute;
@@ -113,6 +117,9 @@
   #welcome .content .welcome-slider-io .welcome-slider-io-swiper .welcome-slider-io-right-arrow img, #welcome .content .welcome-slider-io .welcome-slider-io-swiper .welcome-slider-io-left-arrow img {
     height: 100%;
     width: 100%;
+  }
+  #welcome .content .main-menu-panorama {
+    display: none;
   }
 }
 @media (min-width: 1024px) and (max-width: 1919px) {
@@ -183,6 +190,10 @@
     width: 250px;
   }
   #welcome .content .welcome-slider-io {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
     width: 700px;
     height: 120px;
     position: absolute;
@@ -228,10 +239,13 @@
     width: 100%;
     height: 100%;
   }
-  .menu-opened .text-content {
+  #welcome .content .main-menu-panorama {
     display: none;
   }
-  .menu-closed .text-content {
+  .menu-opened-welcome .text-content {
+    display: none;
+  }
+  .menu-closed-welcome .text-content {
     display: block;
   }
 }
@@ -312,6 +326,45 @@
     display: flex;
     justify-content: space-between;
   }
+  .menu-opened-welcome .text-content {
+    display: none !important;
+  }
+  .menu-opened-welcome .joconda-holder {
+    display: none;
+  }
+  .menu-opened-welcome .welcome-slider-io {
+    display: none !important;
+  }
+  .menu-opened-welcome .main-menu-panorama {
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 333px;
+    width: 658px;
+    height: 376px;
+  }
+  .menu-opened-welcome .main-menu-panorama .sunset-holder {
+    width: 100%;
+    height: 194px;
+  }
+  .menu-opened-welcome .main-menu-panorama .hall-holder, .menu-opened-welcome .main-menu-panorama .view-holder {
+    width: 319px;
+    height: 161px;
+  }
+  .menu-closed-welcome .text-content {
+    display: flex;
+  }
+  .menu-closed-welcome .joconda-holder {
+    display: block;
+  }
+  .menu-closed-welcome .welcome-slider-io {
+    display: flex;
+  }
+  .menu-closed-welcome .main-menu-panorama {
+    display: none;
+  }
 }
 @media (min-width: 420px) and (max-width: 767px) {
   #welcome .content {
@@ -374,7 +427,6 @@
     align-content: center;
     width: 230px;
     height: 40px;
-    border: 2px solid red;
     transform: translateY(-20px);
   }
   #welcome .content .welcome-slider-io .welcome-slider-io-metadata {
@@ -414,6 +466,37 @@
   }
   #welcome .content .welcome-slider-io .welcome-slider-io-swiper div img {
     object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  #welcome .content .main-menu-panorama {
+    display: none;
+  }
+  .menu-opened-welcome .text-content {
+    display: none !important;
+  }
+  .menu-opened-welcome .joconda-holder {
+    display: none;
+  }
+  .menu-opened-welcome .welcome-slider-io {
+    display: none !important;
+  }
+  .menu-opened-welcome .main-menu-panorama {
+    display: flex !important;
+    justify-content: space-between;
+    position: absolute;
+    top: 333px;
+    height: 95px;
+    width: 310px;
+    left: 35px;
+  }
+  .menu-opened-welcome .main-menu-panorama .sunset-holder, .menu-opened-welcome .main-menu-panorama .hall-holder, .menu-opened-welcome .main-menu-panorama .view-holder {
+    object-fit: cover;
+    width: 95px;
+    height: 100%;
+  }
+  .menu-opened-welcome .main-menu-panorama .sunset-holder img, .menu-opened-welcome .main-menu-panorama .hall-holder img, .menu-opened-welcome .main-menu-panorama .view-holder img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
   }
@@ -460,10 +543,6 @@
   cursor: pointer;
 }
 #welcome .content .welcome-slider-io {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  align-content: center;
   bottom: 0;
   right: 0;
   z-index: 3;

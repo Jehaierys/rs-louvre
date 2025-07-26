@@ -6,6 +6,7 @@
     align-items: center;
   }
   #explore .content {
+    border: 2px solid red;
     height: 715px;
     display: grid;
     grid-template-columns: 660px 720px;
@@ -32,8 +33,11 @@
     top: 397px;
   }
   #explore .content .meninas-content {
+    border: 2px solid red;
     position: relative;
     top: 15px;
+    width: 720px;
+    height: 700px;
   }
   #explore .content .meninas-content .meninas-cleaned-container {
     position: absolute;

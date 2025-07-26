@@ -175,6 +175,36 @@
       }
     }
   }
+
+
+  .menu-opened-footer {
+    position: absolute;
+    top: 853px !important;
+    height: 1000px !important;
+    .logo {
+      display: none !important;
+    }
+    nav {
+      display: none !important;
+    }
+    .bottom {
+      display: none !important;
+    }
+    .social {
+      position: absolute !important;
+      top: 35px !important;
+      left: 196px !important;
+    }
+    .bar {
+      height: 1px !important;
+      top: 0 !important;
+      left: 37px !important;
+      width: 658px !important;
+    }
+  }
+  .menu-closed-footer {
+
+  }
 }
 
 
@@ -262,6 +292,33 @@
           }
         }
       }
+    }
+  }
+
+
+  .menu-opened-footer {
+    position: absolute;
+    top: 538px !important;
+    height: 1000px !important;
+    .logo {
+      display: none !important;
+    }
+    nav {
+      display: none !important;
+    }
+    .bottom {
+      display: none !important;
+    }
+    .social {
+      position: absolute !important;
+      top: 35px !important;
+      left: 60px !important;
+    }
+    .bar {
+      height: 1px !important;
+      top: 0 !important;
+      left: 37px !important;
+      width: 310px !important;
     }
   }
 }

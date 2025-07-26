@@ -71,7 +71,7 @@
         }
     }
 
-    .menu-closed {
+    .menu-closed-header {
         .menu-button {
             width: 32px;
             height: 18px;
@@ -87,7 +87,7 @@
         }
     }
 
-    .menu-opened {
+    .menu-opened-header {
         .menu-button {
             width: 25px;
             height: 25px;
@@ -162,30 +162,60 @@
         }
     }
 
-    .menu-closed {
-        header {
-            .pancake {
-                display: block;
-            }
-            .cross {
-                display: none;
-            }
-            ul {
-                display: none;
-            }
+
+    .menu-closed-header {
+        .pancake {
+            display: block;
+        }
+        .cross {
+            display: none;
+        }
+        ul {
+            display: none;
         }
     }
-    .menu-opened {
-        header {
-            .cross {
-                display: block;
-            }
-            .pancake {
-                display: none;
-            }
+    .menu-opened-header {
+        .cross {
+            display: block;
+        }
+        .pancake {
+            display: none;
+        }
+        nav {
+            position: relative;
             ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                position: absolute;
+                width: 122px;
+                height: 263px;
+                top: 105px;
+                left: -662px;
+                z-index: 10;
+                li {
+                    width: 122px;
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        .section {
+                            display: block;
+                            width: 102px;
+                            text-align: left;
+                            font-family: Roboto, sans-serif;
+                            font-weight: 300;
+                            font-size: 20px;
+                            line-height: 100%;
+                            letter-spacing: 2px;
+                        }
+                        img {
+                            display: block;
+                            width: 12px;
+                            height: 12px;
+                        }
+                    }
+                }
             }
-
         }
     }
 }
@@ -196,7 +226,6 @@
         height: 90px;
         #line {
             width: 380px;
-            border: 2px solid red;
 
             .logo {
                 width: 131px;
@@ -222,7 +251,7 @@
         }
     }
 
-    .menu-closed {
+    .menu-closed-header {
         .pancake {
             display: block;
         }
@@ -230,12 +259,44 @@
             display: none;
         }
     }
-    .menu-opened {
+
+    .menu-opened-header {
         .cross {
             display: block;
         }
         .pancake {
             display: none;
+        }
+        nav {
+            position: relative;
+            ul {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: space-between;
+                position: absolute;
+                width: 122px;
+                height: 263px;
+                top: 75px;
+                left: -313px;
+                z-index: 10;
+                li {
+                    width: 100%;
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        .section {
+                            display: block;
+                            width: 102px;
+                            text-align: left;
+                            font-family: Roboto, sans-serif;
+                            font-weight: 300;
+                            font-size: 20px;
+                            line-height: 100%;
+                            letter-spacing: 2px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -271,6 +332,14 @@ header {
                 svg {
                     background-color: black;
                 }
+                rect {
+                    transition: 0.3s ease fill;
+                }
+            }
+            .menu-button:hover {
+                rect {
+                    fill: rgba(157, 134, 101, 1);
+                }
             }
             ul {
                 li {
@@ -284,9 +353,22 @@ header {
                         color: white;
                         text-decoration: none;
                         transition: color 0.4s ease;
+                        svg {
+                            display: block;
+                            width: 12px;
+                            height: 12px;
+                            path {
+                                transition: 0.4s ease fill;
+                            }
+                        }
                     }
                     a:hover {
                         color: rgba(157, 134, 101, 1);
+                        svg {
+                            path {
+                                fill: rgba(157, 134, 101, 1);
+                            }
+                        }
                     }
                     a:active {
                         color: rgba(126, 108, 81, 1);

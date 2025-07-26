@@ -56,6 +56,9 @@ body {
   font-style: normal;
   font-display: swap;
 }
+main {
+  position: relative;
+}
 main section {
   width: 100%;
   display: flex;

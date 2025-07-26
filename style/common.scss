@@ -63,6 +63,7 @@ body {
 }
 
 main {
+  position: relative;
   section {
     width: 100%;
     display: flex;
@@ -82,7 +83,6 @@ main {
     }
   }
 }
-
 
 div.hall {
   position: relative;
