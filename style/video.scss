@@ -140,7 +140,7 @@
 }
 
 
-@media (min-width: 420px) and (max-width: 767px) {
+@media (min-width: 420px) and (max-width: 767px) and (pointer: coarse) {
   #video {
     height: 555px;
     .content {

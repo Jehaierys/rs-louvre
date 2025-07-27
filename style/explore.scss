@@ -164,7 +164,7 @@
 }
 
 
-@media (min-width: 420px) and (max-width: 767px) {
+@media (min-width: 420px) and (max-width: 767px) and (pointer: coarse) {
   #explore {
     height: 551px;
     .content {

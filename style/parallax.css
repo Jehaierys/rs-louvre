@@ -16,7 +16,7 @@
     width: 768px;
   }
 }
-@media (min-width: 420px) and (max-width: 767px) {
+@media (min-width: 420px) and (max-width: 767px) and (pointer: coarse) {
   .main-gap {
     height: 300px;
     width: 420px;

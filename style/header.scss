@@ -221,7 +221,7 @@
 }
 
 
-@media (min-width: 420px) and (max-width: 767px) {
+@media (min-width: 420px) and (max-width: 767px) and (pointer: coarse) {
     header {
         height: 90px;
         #line {
