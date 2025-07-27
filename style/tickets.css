@@ -276,7 +276,7 @@
     font-size: 22px;
   }
 }
-@media (min-width: 420px) and (max-width: 767px) and (pointer: coarse) {
+@media (min-width: 420px) and (max-width: 767px) {
   #tickets {
     height: 759px;
   }

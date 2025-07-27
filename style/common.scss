@@ -84,19 +84,6 @@ main {
   }
 }
 
-div.hall {
-  position: relative;
-  overflow: hidden;
-  img {
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-}
-
-
 #welcome, #explore, #gallery, footer {
   background: rgba(3, 3, 3, 1);
   h2, p {

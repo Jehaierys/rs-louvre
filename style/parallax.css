@@ -16,7 +16,7 @@
     width: 768px;
   }
 }
-@media (min-width: 420px) and (max-width: 767px) and (pointer: coarse) {
+@media (min-width: 420px) and (max-width: 767px) {
   .main-gap {
     height: 300px;
     width: 420px;
@@ -31,9 +31,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
-  object-fit: contain;
+  width: 100vw;
 }
 .main-gap .gap-container .gap-view {
   object-fit: cover;

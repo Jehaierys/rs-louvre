@@ -47,7 +47,7 @@
     height: 189px;
   }
 }
-@media (min-width: 420px) and (max-width: 767px) and (pointer: coarse) {
+@media (min-width: 420px) and (max-width: 767px) {
   #gallery {
     height: 757px;
   }

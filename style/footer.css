@@ -193,7 +193,7 @@
     width: 658px !important;
   }
 }
-@media (min-width: 420px) and (max-width: 767px) and (pointer: coarse) {
+@media (min-width: 420px) and (max-width: 767px) {
   footer {
     height: 400px;
   }

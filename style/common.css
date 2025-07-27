@@ -78,18 +78,6 @@ main section h2 {
   font-family: Forum, serif;
 }
 
-div.hall {
-  position: relative;
-  overflow: hidden;
-}
-div.hall img {
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
 #welcome, #explore, #gallery, footer {
   background: rgb(3, 3, 3);
 }
