@@ -79,7 +79,6 @@ class Gallery {
 
     static initialize() {
         const width = window.innerWidth;
-        alert(width)
         if (width >= 1920) {
             this.currentScale = this.SCALE.PX_1920;
             Gallery.shufflePictures(Gallery.SCALE.PX_1920);

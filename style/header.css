@@ -291,6 +291,9 @@ header #line .logo h3 {
   line-height: 100%;
   text-transform: uppercase;
 }
+header #line nav .menu-button {
+  background-color: black;
+}
 header #line nav .menu-button svg {
   background-color: black;
 }
