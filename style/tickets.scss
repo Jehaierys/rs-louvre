@@ -382,6 +382,7 @@
 #tickets {
   .content {
     .container {
+      user-select: none;
       h5 {
         font-family: Roboto, sans-serif;
         font-weight: 700;

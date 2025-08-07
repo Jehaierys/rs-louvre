@@ -278,16 +278,12 @@
     display: none;
   }
   #welcome .content .picture-holder {
+    position: relative;
     width: 728px;
     height: 546px;
-    object-fit: cover;
   }
   #welcome .content .picture-holder .picture-shadow {
     display: none;
-  }
-  #welcome .content .picture-holder img {
-    width: 100%;
-    height: 100%;
   }
   #welcome .content .welcome-slider-io {
     height: 100px;
@@ -322,6 +318,10 @@
     height: 8px;
     display: flex;
     justify-content: space-between;
+  }
+  #welcome .content .welcome-slider-io .welcome-slider-io-swiper svg {
+    width: 30px;
+    height: 10px;
   }
   .menu-opened-welcome .text-content {
     display: none !important;
@@ -464,18 +464,12 @@
     background-color: white;
   }
   #welcome .content .welcome-slider-io .welcome-slider-io-swiper {
-    width: 55px;
-    height: 8px;
-    transform: translateY(-4px);
-  }
-  #welcome .content .welcome-slider-io .welcome-slider-io-swiper div {
-    width: 20px;
+    width: 60px;
     height: 10px;
   }
-  #welcome .content .welcome-slider-io .welcome-slider-io-swiper div img {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
+  #welcome .content .welcome-slider-io .welcome-slider-io-swiper svg {
+    width: 24px;
+    height: 10px;
   }
   #welcome .content .main-menu-panorama {
     display: none;
@@ -554,17 +548,20 @@
   background: rgb(157, 134, 101);
   cursor: pointer;
 }
+#welcome .content .picture-holder {
+  user-select: none;
+}
 #welcome .content .picture-holder .picture-shadow {
   pointer-events: none;
 }
 #welcome .content .picture-holder img {
-  pointer-events: none;
   position: absolute;
   top: 0;
   right: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  pointer-events: none;
 }
 #welcome .content .picture-holder .picture-inactive {
   opacity: 0;

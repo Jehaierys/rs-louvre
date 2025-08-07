@@ -126,6 +126,9 @@
     height: 248px;
   }
 }
+#contacts .container .description {
+  user-select: none;
+}
 #contacts .container .description h5 {
   font-family: Roboto, sans-serif;
   font-weight: 500;

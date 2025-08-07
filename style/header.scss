@@ -307,6 +307,7 @@ header {
     flex-direction: column;
     width: 100%;
     background: rgba(3, 3, 3, 1);
+    user-select: none;
     #line {
         height: 100%;
         display: flex;

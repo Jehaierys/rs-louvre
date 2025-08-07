@@ -9,6 +9,9 @@ class WelcomeArrowSwiper extends WelcomeSwiper {
     }
 
     async swipeToRight() {
+        if (this.disabler.isDisabled()) {
+            return;
+        }
         this.disabler.disableSwiping();
 
         const current = this.#PICTURES[this.#currentPicture.index];
@@ -16,15 +19,7 @@ class WelcomeArrowSwiper extends WelcomeSwiper {
 
         this.tracker.updateMetadata(this.#currentPicture.index);
 
-        current.classList.add('disappear-to-the-left');
-        next.classList.remove('picture-inactive');
-        next.classList.add('appear-from-the-right');
-
-        await sleep(800);
-
-        current.classList.add('picture-inactive');
-        current.classList.remove('disappear-to-the-left');
-        next.classList.remove('appear-from-the-right');
+        this.switcher.animateRightSwitching(next, current).then();
     }
 
     #nextPicture() {
@@ -37,6 +32,9 @@ class WelcomeArrowSwiper extends WelcomeSwiper {
     }
 
     async swipeToLeft() {
+        if (this.disabler.isDisabled()) {
+            return;
+        }
         this.disabler.disableSwiping();
 
         const current = this.#PICTURES[this.#currentPicture.index];
@@ -44,15 +42,7 @@ class WelcomeArrowSwiper extends WelcomeSwiper {
 
         this.tracker.updateMetadata(this.#currentPicture.index);
 
-        current.classList.add('disappear-to-the-right');
-        previous.classList.remove('picture-inactive');
-        previous.classList.add('appear-from-the-left');
-
-        await sleep(800);
-
-        current.classList.add('picture-inactive');
-        current.classList.remove('disappear-to-the-right');
-        previous.classList.remove('appear-from-the-left');
+        this.switcher.animateLeftSwitching(previous, current).then();
     }
 
     #previousPicture() {

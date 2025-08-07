@@ -98,7 +98,6 @@
   transform: translateY(-50px);
 }
 #gallery .gallery-fogging {
-  border: 1px solid red;
   display: block;
   position: absolute;
   z-index: 10;

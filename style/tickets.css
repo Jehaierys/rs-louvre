@@ -352,6 +352,9 @@
     letter-spacing: 2px;
   }
 }
+#tickets .content .container {
+  user-select: none;
+}
 #tickets .content .container h5 {
   font-family: Roboto, sans-serif;
   font-weight: 700;

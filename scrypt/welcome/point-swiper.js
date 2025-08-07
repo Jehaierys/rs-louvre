@@ -9,6 +9,10 @@ class WelcomePointSwiper extends WelcomeSwiper {
     }
 
     async switchTo(position) {
+
+        if (this.#isDisabled()) {
+            return;
+        }
         if (this.#isSame(position)) {
             return;
         }
@@ -25,6 +29,10 @@ class WelcomePointSwiper extends WelcomeSwiper {
             await this.switcher.animateRightSwitching(appearing, disappearing);
         }
         this.#currentPicture.index = position;
+    }
+
+    #isDisabled() {
+        return this.disabler.isDisabled();
     }
 
     #isSame(position) {
