@@ -43,7 +43,6 @@ class Gallery {
                 const frame = this.#createFrame();
                 this.#assignPicture(frame, schema[i][j]);
                 column.appendChild(frame);
-                // alert('i = ' + i + '/ j = ' + j);
             }
             this.#container.appendChild(column);
         }
@@ -74,6 +73,7 @@ class Gallery {
         let path = 'img/gallery/' + pictureName + this.EXTENSION;
         img.setAttribute('src', path);
         img.classList.add('picture');
+        img.classList.add('gallery__picture-invisible');
         frame.appendChild(img);
     }
 
