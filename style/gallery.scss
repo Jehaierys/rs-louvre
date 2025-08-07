@@ -11,6 +11,7 @@
       }
       .gallery-fogging {
         height: 360px;
+        width: 1440px;
       }
     }
   }
@@ -30,6 +31,7 @@
       }
       .gallery-fogging {
         height: 239px;
+        width: 1000px;
       }
     }
   }
@@ -50,6 +52,7 @@
       }
       .gallery-fogging {
         height: 189px;
+        width: 800px;
       }
     }
   }
@@ -69,6 +72,7 @@
       }
       .gallery-fogging {
         height: 189px;
+        width: 400px;
       }
     }
   }
@@ -103,12 +107,11 @@
       transform: translateY(-50px);
     }
   }
-  .gallery-fogging {
+  .gallery-fogging {border: 1px solid red;
     display: block;
     position: absolute;
     z-index: 10;
     bottom: 0;
-    width: 100%;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
   }
 }

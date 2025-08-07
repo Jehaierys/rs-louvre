@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Louvre Museum Web Site">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Louvre</title>
   <link rel="preload" href="font/Roboto-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
@@ -104,9 +105,13 @@
           </a>
         </button>
       </div>
-      <div class="joconda-holder">
-        <div class="joconda-shadow"></div>
-        <img src="img/joconda.webp" alt="Mona Lisa">
+      <div class="picture-holder">
+        <div class="picture-shadow"></div>
+        <img id="first-slider-picture" src="img/joconda.webp" alt="Mona Lisa">
+        <img id="second-slider-picture" src="img/welcome/castle.jpg" alt="picture" class="picture-inactive">
+        <img id="third-slider-picture" src="img/welcome/mountain.jpg" alt="picture" class="picture-inactive">
+        <img id="fourth-slider-picture" src="img/welcome/palace.jpg" alt="picture" class="picture-inactive">
+        <img id="fifth-slider-picture" src="img/welcome/town.jpg" alt="picture" class="picture-inactive">
       </div>
       <div class="welcome-slider-io">
         <div class="welcome-slider-io-metadata">
@@ -115,19 +120,23 @@
           <div id="total-pictures">05</div>
         </div>
         <div class="welcome-slider-io-pointer">
-          <button class="welcome-slider-io-point"></button>
-          <button class="welcome-slider-io-point"></button>
-          <button class="welcome-slider-io-point"></button>
-          <button class="welcome-slider-io-point"></button>
-          <button class="welcome-slider-io-point"></button>
+          <button onclick="welcomeSlider.switchTo(0)" class="welcome-slider-io-point"></button>
+          <button onclick="welcomeSlider.switchTo(1)" class="welcome-slider-io-point"></button>
+          <button onclick="welcomeSlider.switchTo(2)" class="welcome-slider-io-point"></button>
+          <button onclick="welcomeSlider.switchTo(3)" class="welcome-slider-io-point"></button>
+          <button onclick="welcomeSlider.switchTo(4)" class="welcome-slider-io-point"></button>
         </div>
         <div class="welcome-slider-io-swiper">
-          <div class="welcome-slider-io-left-arrow">
-            <img src="icon/welcome/right-arrow.svg" alt="Go to the Left">
-          </div>
-          <div class="welcome-slider-io-right-arrow">
-            <img src="icon/welcome/right-arrow.svg" alt="Go to the Right">
-          </div>
+          <button class="welcome-slider-io-left-arrow" onclick="welcomeSlider.swipeToLeft()">
+            <svg viewBox="0 0 30 8" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.2775 1.97284e-06C26.0983 1.68661 28.0058 2.91738 30 3.69231L30 4.30769C28.0058 5.10541 26.0983 6.33618 24.2775 8L22.7601 8C23.6272 6.5641 24.4653 5.47009 25.2746 4.71795L3.48964e-07 4.71795L5.01636e-07 3.28205L25.2746 3.28205C24.4653 2.52992 23.6272 1.4359 22.7601 1.86378e-06L24.2775 1.97284e-06Z" fill="white"/>
+            </svg>
+          </button>
+          <button class="welcome-slider-io-right-arrow" onclick="welcomeSlider.swipeToRight()">
+            <svg viewBox="0 0 30 8" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24.2775 1.97284e-06C26.0983 1.68661 28.0058 2.91738 30 3.69231L30 4.30769C28.0058 5.10541 26.0983 6.33618 24.2775 8L22.7601 8C23.6272 6.5641 24.4653 5.47009 25.2746 4.71795L3.48964e-07 4.71795L5.01636e-07 3.28205L25.2746 3.28205C24.4653 2.52992 23.6272 1.4359 22.7601 1.86378e-06L24.2775 1.97284e-06Z" fill="white"/>
+            </svg>
+          </button>
         </div>
       </div>
       <div class="main-menu-panorama">
@@ -431,6 +440,14 @@
 
 <script src="https://www.youtube.com/iframe_api"></script>
 
+<script src="scrypt/welcome/switcher.js"></script>
+<script src="scrypt/welcome/tracker.js"></script>
+<script src="scrypt/welcome/disabler.js"></script>
+<script src="scrypt/welcome/abstraction.js"></script>
+<script src="scrypt/welcome/arrow-swiper.js"></script>
+<script src="scrypt/welcome/point-swiper.js"></script>
+<script src="scrypt/welcome/touch-swiper.js"></script>
+<script src="scrypt/welcome/dispatcher.js"></script>
 <script src="scrypt/gallery.js"></script>
 <script src="scrypt/navigationMenuFacade.js"></script>
 <script src="scrypt/visiting.js"></script>

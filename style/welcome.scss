@@ -44,23 +44,20 @@
         }
       }
       .picture-holder {
-        position: relative;
+        position: absolute;
+        width: 1000px;
+        height: 750px;
+        top: 0;
+        right: 0;
       }
       .picture-shadow {
         position: absolute;
         background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
         z-index: 1;
         top: 0;
-        left: 440px;
+        left: 0;
         height: 810px;
         width: 300px;
-      }
-      img {
-        z-index: 0;
-        top: 0;
-        right: 0;
-        position: absolute;
-        width: 1000px;
       }
       .welcome-slider-io {
         display: flex;
@@ -171,26 +168,20 @@
         }
       }
       .picture-holder {
-        position: relative;
-        img {
-          z-index: 0;
-          top: 0;
-          right: 0;
-          position: absolute;
-          object-fit: cover;
-          height: 525px;
-          width: 700px;
-          left: 304px;
-        }
-      }
-      .picture-shadow {
         position: absolute;
-        background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
-        z-index: 1;
         top: 0;
-        left: 304px;
+        right: 0;
+        width: 700px;
         height: 525px;
-        width: 250px;
+        .picture-shadow {
+          position: absolute;
+          background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
+          z-index: 1;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 250px;
+        }
       }
       .welcome-slider-io {
         display: flex;
@@ -550,6 +541,8 @@
   .content {
     position: relative;
     .text-content {
+      pointer-events: none;
+      user-select: none;
       h1 {
         z-index: 2;
         color: white;
@@ -589,6 +582,23 @@
         cursor: pointer;
       }
     }
+    .picture-holder {
+      .picture-shadow {
+        pointer-events: none;
+      }
+      img {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .picture-inactive {
+        opacity: 0;
+      }
+    }
     .welcome-slider-io {
       bottom: 0;
       right: 0;
@@ -615,18 +625,89 @@
         .welcome-slider-io-point:hover {
           background-color: rgba(157, 134, 101, 1);
         }
+        .welcome-slider-io-point-active {
+          background-color: rgba(126, 108, 81, 1);
+        }
       }
       .welcome-slider-io-swiper {
         display: flex;
         justify-content: space-between;
         align-items: center;
         align-content: center;
+        .welcome-slider-io-right-arrow, .welcome-slider-io-left-arrow {
+          background-color: black;
+          path {
+            transition: 0.3s ease;
+          }
+        }
+        .welcome-slider-io-right-arrow:hover, .welcome-slider-io-left-arrow:hover {
+          path {
+            fill: rgba(157, 134, 101, 1);
+          }
+        }
         .welcome-slider-io-left-arrow {
-          img {
+          svg {
             transform: scaleX(-1);
           }
         }
       }
     }
+  }
+}
+
+.appear-from-the-right {
+  animation: appear-from-the-right-animation 1s ease-out forwards;
+}
+.disappear-to-the-left {
+  animation: disappear-to-the-left-animation 1s ease-out forwards;;
+}
+
+@keyframes appear-from-the-right-animation {
+  from {
+    opacity: 0;
+    transform: translateX(40%) scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes disappear-to-the-left-animation {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-40%) scale(0.7);
+  }
+}
+
+
+.appear-from-the-left {
+  animation: appear-from-the-left-animation 1s ease-out forwards;
+}
+.disappear-to-the-right {
+  animation: disappear-to-the-right-animation 1s ease-out forwards;;
+}
+
+@keyframes appear-from-the-left-animation {
+  from {
+    opacity: 0;
+    transform: translateX(-40%) scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes disappear-to-the-right-animation {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(40%) scale(0.7);
   }
 }

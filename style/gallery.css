@@ -13,6 +13,7 @@
   }
   #gallery .content .gallery-fogging {
     height: 360px;
+    width: 1440px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1919px) {
@@ -28,6 +29,7 @@
   }
   #gallery .content .gallery-fogging {
     height: 239px;
+    width: 1000px;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -45,6 +47,7 @@
   }
   #gallery .content .gallery-fogging {
     height: 189px;
+    width: 800px;
   }
 }
 @media (min-width: 420px) and (max-width: 767px) {
@@ -62,6 +65,7 @@
   }
   #gallery .content .gallery-fogging {
     height: 189px;
+    width: 400px;
   }
 }
 #gallery {
@@ -94,11 +98,11 @@
   transform: translateY(-50px);
 }
 #gallery .gallery-fogging {
+  border: 1px solid red;
   display: block;
   position: absolute;
   z-index: 10;
   bottom: 0;
-  width: 100%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
 
