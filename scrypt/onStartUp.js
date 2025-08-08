@@ -1,11 +1,14 @@
+window.SCALE = {PX_1920: 1920, PX_1024: 1024, PX_768: 768, PX_420: 420};
+
 const welcomeSlider = new WelcomeSlider();
+const galleryArranger = new GalleryArranger();
 const galleryAnimator = new GalleryAnimator();
 
 document.addEventListener('DOMContentLoaded', () => {
     NavigationMenuFacade.addScrollLimiter();
     NavigationMenuFacade.addNavButtonClickListeners();
-    Gallery.initialize();
-    Gallery.addWindowResizeListener();
+    galleryArranger.initialize();
+    galleryArranger.addWindowResizeListener();
     galleryAnimator.prepare();
     galleryAnimator.refreshPictureAnimationOnPageReload();
     welcomeSlider.initializeTouchSwiper();
