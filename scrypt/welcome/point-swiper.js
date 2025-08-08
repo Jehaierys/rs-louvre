@@ -18,7 +18,7 @@ class WelcomePointSwiper extends WelcomeSwiper {
         }
 
         this.#refreshMetadata(position);
-        this.disabler.disableSwiping();
+        this.disabler.disableWelcomeSwiping();
 
         const appearing = this.#PICTURES[position];
         const disappearing = this.#PICTURES[this.#currentPicture.index];
@@ -32,7 +32,7 @@ class WelcomePointSwiper extends WelcomeSwiper {
     }
 
     #isDisabled() {
-        return this.disabler.isDisabled();
+        return this.disabler.isWelcomeSliderDisabled();
     }
 
     #isSame(position) {

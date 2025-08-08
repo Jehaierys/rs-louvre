@@ -10,7 +10,7 @@ class WelcomeTouchSwiper {
 
         pictureHolder.addEventListener('pointerdown', function (event) {
             welcomeSlider.touchStart(event.clientX);
-            this.disabler.disableSwiping();
+            this.disabler.disableWelcomeSwiping();
         }, {
             passive: true,
             capture: true
@@ -18,7 +18,7 @@ class WelcomeTouchSwiper {
 
         pictureHolder.addEventListener('pointerup', function (event) {
             welcomeSlider.touchEnd(event.clientX);
-            this.disabler.disableSwiping();
+            this.disabler.disableWelcomeSwiping();
         }, {
             passive: true,
             capture: true
