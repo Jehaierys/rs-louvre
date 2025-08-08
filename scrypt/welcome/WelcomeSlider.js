@@ -13,16 +13,16 @@ class WelcomeSlider {
     #pointSwiper = new WelcomePointSwiper(this.#currentPicture, this.#PICTURES);
     #touchSwiper = new WelcomeTouchSwiper();
 
-    async swipeToRight() {
-        await this.#arrowSwiper.swipeToRight();
+    swipeToRight() {
+        this.#arrowSwiper.swipeToRight();
     }
 
-    async swipeToLeft() {
-        await this.#arrowSwiper.swipeToLeft();
+    swipeToLeft() {
+        this.#arrowSwiper.swipeToLeft();
     }
 
-    async switchTo(position) {
-        await this.#pointSwiper.switchTo(position);
+    switchTo(position) {
+        this.#pointSwiper.switchTo(position);
     }
 
     initializeTouchSwiper() {
@@ -36,5 +36,9 @@ class WelcomeSlider {
     touchEnd(endX) {
         this.#touchSwiper.setEndX(endX);
         this.#touchSwiper.evaluateAndAct();
+    }
+
+    isDisabled() {
+        return this.#arrowSwiper.isDisabled();
     }
 }

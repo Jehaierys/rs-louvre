@@ -8,22 +8,20 @@ class WelcomeArrowSwiper extends WelcomeSwiper {
         this.#PICTURES = PICTURES;
     }
 
-    async swipeToRight() {
-        if (this.#isDisabled()) {
+    swipeToRight() {
+        if (this.isDisabled()) {
             return;
         }
-        this.disabler.disableWelcomeSwiping();
+        this.disableSwiping();
 
         const current = this.#PICTURES[this.#currentPicture.index];
         const next = this.#nextPicture();
 
+        const script = AnimationScriptGathering.rightAnimationScript(next, current);
+
         this.tracker.updateMetadata(this.#currentPicture.index);
 
-        this.switcher.animateRightSwitching(next, current).then();
-    }
-
-    #isDisabled() {
-        return this.disabler.isWelcomeSliderDisabled();
+        this.switch(script);
     }
 
     #nextPicture() {
@@ -35,18 +33,19 @@ class WelcomeArrowSwiper extends WelcomeSwiper {
         }
     }
 
-    async swipeToLeft() {
-        if (this.#isDisabled()) {
+    swipeToLeft() {
+        if (this.isDisabled()) {
             return;
         }
-        this.disabler.disableWelcomeSwiping();
+        this.disableSwiping();
 
         const current = this.#PICTURES[this.#currentPicture.index];
         const previous = this.#previousPicture();
 
         this.tracker.updateMetadata(this.#currentPicture.index);
 
-        this.switcher.animateLeftSwitching(previous, current).then();
+        const script = AnimationScriptGathering.leftAnimationScript(previous, current);
+        this.switch(script);
     }
 
     #previousPicture() {

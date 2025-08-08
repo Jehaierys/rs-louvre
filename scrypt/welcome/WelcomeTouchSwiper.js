@@ -1,4 +1,4 @@
-class WelcomeTouchSwiper {
+class WelcomeTouchSwiper extends WelcomeSwiper {
 
     static #maxDifToSwipe = 50;
     #touchStart = 0;
@@ -9,21 +9,24 @@ class WelcomeTouchSwiper {
         const pictureHolder = welcome.getElementsByClassName('picture-holder').item(0);
 
         pictureHolder.addEventListener('pointerdown', function (event) {
+            if (welcomeSlider.isDisabled()) {
+                return;
+            }
             welcomeSlider.touchStart(event.clientX);
-            this.disabler.disableWelcomeSwiping();
         }, {
             passive: true,
             capture: true
         });
 
         pictureHolder.addEventListener('pointerup', function (event) {
+            if (welcomeSlider.isDisabled()) {
+                return;
+            }
             welcomeSlider.touchEnd(event.clientX);
-            this.disabler.disableWelcomeSwiping();
         }, {
             passive: true,
             capture: true
         });
-
     }
 
     setStartX(startX) {
@@ -36,15 +39,19 @@ class WelcomeTouchSwiper {
 
     evaluateAndAct() {
         if (Math.abs(this.#touchStart - this.#touchEnd) < WelcomeTouchSwiper.#maxDifToSwipe) {
-            this.#touchStart = 0;
-            this.#touchEnd = 0;
+            this.#clear();
             return;
         }
         if (this.#shouldSwipeRight()) {
-            welcomeSlider.swipeToRight().then();
+            welcomeSlider.swipeToRight();
         } else {
-            welcomeSlider.swipeToLeft().then();
+            welcomeSlider.swipeToLeft();
         }
+    }
+
+    #clear() {
+        this.#touchStart = 0;
+        this.#touchEnd = 0;
     }
 
     #shouldSwipeRight() {

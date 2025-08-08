@@ -1,25 +1,23 @@
 class WelcomeSwitcher {
-    async animateLeftSwitching(appearing, disappearing) {
-        disappearing.classList.add('disappear-to-the-right');
-        appearing.classList.remove('picture-inactive');
-        appearing.classList.add('appear-from-the-left');
 
-        await sleep(800);
+    #animationDuration = 800;
 
-        disappearing.classList.add('picture-inactive');
-        disappearing.classList.remove('disappear-to-the-right');
-        appearing.classList.remove('appear-from-the-left');
-    }
+    animateWelcomeSwitching(script) {
+        const appearing = script.appearingElement;
+        const disappearing = script.disappearingElement;
 
-    async animateRightSwitching(appearing, disappearing) {
-        disappearing.classList.add('disappear-to-the-left');
-        appearing.classList.remove('picture-inactive');
-        appearing.classList.add('appear-from-the-right');
+        const appearingAnimation = script.appearingAnimation;
+        const deactivation = script.deactivation;
+        const disappearingAnimation = script.disappearingAnimation;
 
-        await sleep(800);
+        disappearing.classList.add(disappearingAnimation);
+        appearing.classList.remove(deactivation);
+        appearing.classList.add(appearingAnimation);
 
-        disappearing.classList.add('picture-inactive');
-        disappearing.classList.remove('disappear-to-the-left');
-        appearing.classList.remove('appear-from-the-right');
+        setTimeout(() => {
+            disappearing.classList.add(deactivation);
+            disappearing.classList.remove(disappearingAnimation);
+            appearing.classList.remove(appearingAnimation);
+        }, this.#animationDuration);
     }
 }

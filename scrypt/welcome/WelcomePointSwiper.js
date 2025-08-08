@@ -8,31 +8,30 @@ class WelcomePointSwiper extends WelcomeSwiper {
         this.#PICTURES = PICTURES;
     }
 
-    async switchTo(position) {
-
-        if (this.#isDisabled()) {
-            return;
-        }
-        if (this.#isSame(position)) {
+    switchTo(position) {
+        if (this.#invalid(position)) {
             return;
         }
 
+        this.disableSwiping();
         this.#refreshMetadata(position);
-        this.disabler.disableWelcomeSwiping();
 
         const appearing = this.#PICTURES[position];
         const disappearing = this.#PICTURES[this.#currentPicture.index];
 
+        let script
         if (this.#isPrevious(position)) {
-            await this.switcher.animateLeftSwitching(appearing, disappearing);
+            script = AnimationScriptGathering.leftAnimationScript(appearing, disappearing);
         } else {
-            await this.switcher.animateRightSwitching(appearing, disappearing);
+            script = AnimationScriptGathering.rightAnimationScript(appearing, disappearing);
         }
+
+        this.switch(script);
         this.#currentPicture.index = position;
     }
 
-    #isDisabled() {
-        return this.disabler.isWelcomeSliderDisabled();
+    #invalid(position) {
+        return this.#isSame(position) || this.isDisabled();
     }
 
     #isSame(position) {

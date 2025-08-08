@@ -11,12 +11,6 @@ class Tracker {
 
     #ordinalHolder = document.getElementById('welcome-slider-current-picture');
 
-    // initialize() {
-    //     Array.from(this.#points).map(point => point.addEventListener('mouseover', function (event) {
-    //         event.target
-    //     }))
-    // }
-
     updateMetadata(position) {
         this.#updateOrdinal(position);
         this.#repaintPoints(position);
