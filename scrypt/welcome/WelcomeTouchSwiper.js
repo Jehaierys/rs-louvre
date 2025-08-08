@@ -13,20 +13,19 @@ class WelcomeTouchSwiper extends WelcomeSwiper {
                 return;
             }
             welcomeSlider.touchStart(event.clientX);
-        }, {
-            passive: true,
-            capture: true
-        });
+        }, this.#options);
 
         pictureHolder.addEventListener('pointerup', function (event) {
             if (welcomeSlider.isDisabled()) {
                 return;
             }
             welcomeSlider.touchEnd(event.clientX);
-        }, {
-            passive: true,
-            capture: true
-        });
+        }, this.#options);
+    }
+
+    #options = {
+        passive: true,
+        capture: true
     }
 
     setStartX(startX) {

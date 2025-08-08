@@ -19,7 +19,7 @@ class WelcomeArrowSwiper extends WelcomeSwiper {
 
         const script = AnimationScriptGathering.rightAnimationScript(next, current);
 
-        this.tracker.updateMetadata(this.#currentPicture.index);
+        this.track(this.#currentPicture.index);
 
         this.switch(script);
     }
@@ -42,7 +42,7 @@ class WelcomeArrowSwiper extends WelcomeSwiper {
         const current = this.#PICTURES[this.#currentPicture.index];
         const previous = this.#previousPicture();
 
-        this.tracker.updateMetadata(this.#currentPicture.index);
+        this.track(this.#currentPicture.index);
 
         const script = AnimationScriptGathering.leftAnimationScript(previous, current);
         this.switch(script);

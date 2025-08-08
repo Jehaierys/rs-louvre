@@ -14,7 +14,7 @@ class WelcomePointSwiper extends WelcomeSwiper {
         }
 
         this.disableSwiping();
-        this.#refreshMetadata(position);
+        this.track(position);
 
         const appearing = this.#PICTURES[position];
         const disappearing = this.#PICTURES[this.#currentPicture.index];
@@ -36,10 +36,6 @@ class WelcomePointSwiper extends WelcomeSwiper {
 
     #isSame(position) {
         return position === this.#currentPicture.index;
-    }
-
-    #refreshMetadata(position) {
-        this.tracker.updateMetadata(position);
     }
 
     #isPrevious(position) {

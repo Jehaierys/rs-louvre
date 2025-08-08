@@ -1,19 +1,23 @@
 class WelcomeSwiper {
     #points = document.getElementsByClassName('welcome-slider-io-pointer').item(0).children;
 
-    tracker = new Tracker(this.#points);
-    disabler = new SliderSwipingDisablerVisitor();
-    switcher = new WelcomeSwitcher();
+    #tracker = new Tracker(this.#points);
+    #disabler = new SliderSwipingDisablerVisitor();
+    #switcher = new WelcomeSwitcher();
 
     disableSwiping() {
-        this.disabler.disableWelcomeSwiping();
+        this.#disabler.disableWelcomeSwiping();
     }
 
     isDisabled() {
-        return this.disabler.isWelcomeSliderDisabled();
+        return this.#disabler.isWelcomeSliderDisabled();
     }
 
     switch(scrypt) {
-        this.switcher.animateWelcomeSwitching(scrypt);
+        this.#switcher.animateWelcomeSwitching(scrypt);
+    }
+
+    track(position) {
+        this.#tracker.updateMetadata(position);
     }
 }
