@@ -197,6 +197,17 @@
     button {
       height: 100%;
       background-color: white;
+      path, circle {
+        transition: 0.5s ease;
+      }
+    }
+    button:hover {
+      circle {
+        fill: rgba(113, 7, 7, 1);
+      }
+      path {
+        fill: rgba(113, 7, 7, 1);
+      }
     }
     img {
       height: 100%;

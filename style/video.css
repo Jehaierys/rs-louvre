@@ -188,6 +188,15 @@
   height: 100%;
   background-color: white;
 }
+#video .scroller button path, #video .scroller button circle {
+  transition: 0.5s ease;
+}
+#video .scroller button:hover circle {
+  fill: rgb(113, 7, 7);
+}
+#video .scroller button:hover path {
+  fill: rgb(113, 7, 7);
+}
 #video .scroller img {
   height: 100%;
 }
