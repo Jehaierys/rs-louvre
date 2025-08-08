@@ -1,74 +1,57 @@
-let player;
+class VideoArranger {
+    #currentLayout;
+    #frames = document.getElementById('video')
+        .getElementsByClassName('video__petite-container').item(0)
+        .getElementsByClassName('video__petite-holder');
 
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('large-video-container', {
-            videoId: 'M7lc1UVf-VE', // замени на нужный ID
-            playerVars: {
-                controls: 0,
-                modestbranding: 1,
-                rel: 0,
-                showinfo: 0,
-                fs: 0,
-            },
-        events: {
-            onReady: onPlayerReady,
-            onStateChange: onPlayerStateChange
+    arrange() {
+        if (this.#currentLayout === window.currentScale) {
+            return;
         }
-    });
-}
-
-function onPlayerReady(event) {
-    const playPauseBtn = document.getElementById('play-pause');
-    const progressBar = document.getElementById('progress');
-    const volumeControl = document.getElementById('volume');
-
-    playPauseBtn.addEventListener('click', () => {
-        const state = player.getPlayerState();
-        if (state === YT.PlayerState.PLAYING) {
-            player.pauseVideo();
-            playPauseBtn.textContent = 'Play';
-        } else {
-            player.playVideo();
-            playPauseBtn.textContent = 'Pause';
+        switch (window.currentScale) {
+            case window.SCALE.PX_1920:
+                this.#adapt(3);
+                break;
+            case window.SCALE.PX_1024:
+                this.#adapt(3);
+                break;
+            case window.SCALE.PX_768:
+                this.#adapt(2);
+                break;
+            case window.SCALE.PX_420:
+                this.#adapt(2);
+                break;
         }
-    });
-
-    // Обновление прогресс-бара
-    setInterval(() => {
-        if (player && player.getDuration) {
-            const current = player.getCurrentTime();
-            const duration = player.getDuration();
-            progressBar.value = (current / duration) * 100;
-        }
-    }, 500);
-
-    // Перемотка
-    progressBar.addEventListener('input', () => {
-        const duration = player.getDuration();
-        player.seekTo((progressBar.value / 100) * duration, true);
-    });
-
-    // Громкость
-    volumeControl.addEventListener('input', () => {
-        player.setVolume(volumeControl.value);
-    });
-}
-
-function onPlayerStateChange(event) {
-    if (event.data === YT.PlayerState.PLAYING) {
-        console.log('Видео воспроизводится');
-    } else if (event.data === YT.PlayerState.PAUSED) {
-        console.log('Видео на паузе');
-    } else if (event.data === YT.PlayerState.ENDED) {
-        console.log('Видео закончилось');
+        this.#report();
     }
-}
 
-// Дополнительно: пример программного управления
-function playVideo() {
-    player.playVideo();
-}
+    #adapt(visibleSimultaneously) {
+        this.#activateVideos();
+        this.#hideSomeVideos(visibleSimultaneously);
+        setTimeout(() => {
 
-function pauseVideo() {
-    player.pauseVideo();
+        }, 200);
+    }
+
+    #activateVideos() {
+        Array.from(this.#frames).map((frame) => {
+            frame.classList.remove('inactive');
+        });
+    }
+
+    #hideSomeVideos(visibleSimultaneously) {
+        Array.from(this.#frames).slice(visibleSimultaneously).map((frame) => {
+            frame.classList.add('inactive');
+        });
+    }
+
+    #report() {
+        this.#currentLayout = window.currentScale;
+    }
+
+    addWindowWidthAdapter() {
+        window.addEventListener('resize', function () {
+            videoArranger.arrange();
+        });
+    }
 }

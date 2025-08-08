@@ -2,7 +2,6 @@ class GalleryArranger {
     #EXTENSION = '.webp';
     #gallery = document.getElementById('gallery');
     #container = this.#gallery.getElementsByClassName('container').item(0);
-    #currentScale;
     #SCHEMA = {
         '1920': {
             columns: [
@@ -70,16 +69,16 @@ class GalleryArranger {
     initialize() {
         const width = window.innerWidth;
         if (width >= 1920) {
-            this.#currentScale = SCALE.PX_1920;
+            window.currentScale = SCALE.PX_1920;
             this.shufflePictures(SCALE.PX_1920);
         } else if (width >= 1024) {
-            this.#currentScale = SCALE.PX_1024;
+            window.currentScale = SCALE.PX_1024;
             this.shufflePictures(SCALE.PX_1024);
         } else if (width >= 768) {
-            this.#currentScale = SCALE.PX_768;
+            window.currentScale = SCALE.PX_768;
             this.shufflePictures(SCALE.PX_768);
         } else {
-            this.#currentScale = SCALE.PX_420;
+            window.currentScale = SCALE.PX_420;
             this.shufflePictures(SCALE.PX_420);
         }
     }
@@ -88,19 +87,23 @@ class GalleryArranger {
         window.addEventListener('resize', () => {
             const width = window.innerWidth;
             if (width >= 1920) {
-                if (this.#currentScale !== SCALE.PX_1920) {
+                if (window.currentScale !== SCALE.PX_1920) {
+                    window.currentScale = SCALE.PX_1920;
                     galleryArranger.shufflePictures(SCALE.PX_1920);
                 }
             } else if (width < 1920 && width >= 1024) {
-                if (this.#currentScale !== SCALE.PX_1024) {
+                if (window.currentScale !== SCALE.PX_1024) {
+                    window.currentScale = SCALE.PX_1024;
                     galleryArranger.shufflePictures(SCALE.PX_1024);
                 }
             } else if (width < 1024 && width >= 768) {
-                if (this.#currentScale !== SCALE.PX_768) {
+                if (window.currentScale !== SCALE.PX_768) {
+                    window.currentScale = SCALE.PX_768;
                     galleryArranger.shufflePictures(SCALE.PX_768);
                 }
             } else {
-                if (this.#currentScale !== SCALE.PX_420) {
+                if (window.currentScale !== SCALE.PX_420) {
+                    window.currentScale = SCALE.PX_420;
                     galleryArranger.shufflePictures(SCALE.PX_420);
                 }
             }

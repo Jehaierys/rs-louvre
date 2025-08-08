@@ -242,37 +242,20 @@
       <p>Enter and visit one of the most famous museums in the world and enjoy
         masterpieces such as Mona Lisa or Hammurabi's Code</p>
       <div class="video-large-container" id="large-video-container">
-        <button id="large-video-pause">Play</button>
-        <input type="range" id="large-video-progress" value="0" min="0" max="100">
-        <input type="range" id="large-video-volume" value="100" min="0" max="100">
+<!--        <button id="large-video-pause">Play</button>-->
+<!--        <input type="range" id="large-video-progress" value="0" min="0" max="100">-->
+<!--        <input type="range" id="large-video-volume" value="100" min="0" max="100">-->
       </div>
       <div class="video__petite-container">
-        <div class="video__petite-holder">
-          <iframe
-                  class="video-petite"
-                  src="https://www.youtube.com/embed/NOhDysLnTvY"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen>
-          </iframe>
+        <div class="video__petite-holder" id="first-video">
         </div>
-        <div class="video__petite-holder">
-          <iframe
-                  class="video-petite"
-                  src="https://www.youtube.com/embed/Vi5D6FKhRmo"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen>
-          </iframe>
+        <div class="video__petite-holder" id="second-video">
         </div>
-        <div class="video__petite-holder">
-          <iframe
-                  class="video-petite"
-                  src="https://www.youtube.com/embed/aWmJ5DgyWPI"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen>
-          </iframe>
+        <div class="video__petite-holder" id="third-video">
+        </div>
+        <div class="video__petite-holder" id="fourth-video">
+        </div>
+        <div class="video__petite-holder" id="fifth-video">
         </div>
       </div>
       <div class="scroller">
@@ -478,10 +461,11 @@
 <script src="scrypt/gallery/GalleryPictureBuilder.js"></script>
 <script src="scrypt/gallery/GalleryArranger.js"></script>
 <script src="scrypt/gallery/GalleryAnimator.js"></script>
+<script src="scrypt/video/VideoLoader.js"></script>
 <script src="scrypt/video.js"></script>
 <script src="scrypt/navigationMenuFacade.js"></script>
 <script src="scrypt/visiting.js"></script>
 <script src="scrypt/tickets.js"></script>
-<script src="scrypt/onStartUp.js"></script>
+<script src="scrypt/Bootstrap.js"></script>
 </body>
 </html>

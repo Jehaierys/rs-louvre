@@ -34,7 +34,6 @@
     margin-top: 42px;
   }
   #video .content .video__petite-container .video__petite-holder {
-    transform: translateX(40px);
     width: 452px;
     height: 254px;
   }
@@ -201,6 +200,10 @@
 }
 #video .scroller img {
   height: 100%;
+}
+
+.inactive {
+  display: none;
 }
 
 /*# sourceMappingURL=video.css.map */

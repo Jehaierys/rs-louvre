@@ -31,7 +31,6 @@
         justify-content: space-between;
         margin-top: 42px;
         .video__petite-holder {
-          transform: translateX(40px);
           width: 452px;
           height: 254px;
         }
@@ -215,5 +214,10 @@
       height: 100%;
     }
   }
+}
+
+
+.inactive {
+  display: none;
 }
 
