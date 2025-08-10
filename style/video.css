@@ -179,6 +179,9 @@
   width: 100%;
   height: 100%;
 }
+#video .video__petite-holder {
+  transition: all 0.8s ease;
+}
 #video .scroller {
   display: flex;
   justify-content: space-between;
@@ -204,6 +207,35 @@
 
 .inactive {
   display: none;
+}
+
+.video__appear-left {
+  animation: video__appear-left 1s ease-out forwards;
+}
+
+.video__disappear-left {
+  animation: video__disappear-left 1s ease-out forwards;
+}
+
+@keyframes video__appear-left {
+  from {
+    opacity: 0;
+    transform: translateX(70%) scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes video__disappear-left {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-70%) scale(0.3);
+  }
 }
 
 /*# sourceMappingURL=video.css.map */

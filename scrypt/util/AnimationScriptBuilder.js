@@ -10,6 +10,11 @@ class AnimationScriptBuilder {
         return this;
     }
 
+    shiftingElement(element) {
+        this.#building.shiftingElement = element;
+        return this;
+    }
+
     disappearingElement(element) {
         this.#building.disappearingElement = element;
         return this;
@@ -17,6 +22,11 @@ class AnimationScriptBuilder {
 
     disappearingAnimation(disappearingAnimation) {
         this.#building.disappearingAnimation = disappearingAnimation;
+        return this;
+    }
+
+    shiftingAnimation(animation) {
+        this.#building.shiftingAnimation = animation;
         return this;
     }
 

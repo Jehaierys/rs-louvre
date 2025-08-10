@@ -1,4 +1,4 @@
-class WelcomeArrowSwiper extends WelcomeSwiper {
+class WelcomeArrowSwiper extends AbstractWelcomeSwiper {
     #currentPicture;
     #PICTURES;
 

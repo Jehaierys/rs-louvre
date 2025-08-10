@@ -1,4 +1,4 @@
-class WelcomeTouchSwiper extends WelcomeSwiper {
+class WelcomeTouchSwiper extends AbstractWelcomeSwiper {
 
     static #maxDifToSwipe = 50;
     #touchStart = 0;

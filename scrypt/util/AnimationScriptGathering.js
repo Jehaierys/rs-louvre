@@ -20,4 +20,15 @@ class AnimationScriptGathering {
             .disappearingAnimation('disappear-to-the-right')
             .build();
     }
+
+    static videoLeftAnimation(appearingElement, disappearingElement) {
+        return AnimationScriptBuilder
+            .builder()
+            .appearingElement(appearingElement)
+            .disappearingElement(disappearingElement)
+            .deactivation('inactive')
+            .disappearingAnimation('video__disappear-left') // todo
+            .appearingAnimation('video__appear-left') // todo
+            .build();
+    }
 }

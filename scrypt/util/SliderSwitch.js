@@ -1,8 +1,8 @@
-class WelcomeSwitcher {
+class SliderSwitch {
 
     #animationDuration = 800;
 
-    animateWelcomeSwitching(script) {
+    animateSwitching(script) {
         const appearing = script.appearingElement;
         const disappearing = script.disappearingElement;
 

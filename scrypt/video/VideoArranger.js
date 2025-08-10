@@ -27,9 +27,8 @@ class VideoArranger {
 
     #adapt(visibleSimultaneously) {
         this.#activateVideos();
-        this.#hideSomeVideos(visibleSimultaneously);
         setTimeout(() => {
-
+            this.#hideSomeVideos(visibleSimultaneously);
         }, 200);
     }
 
@@ -51,7 +50,7 @@ class VideoArranger {
 
     addWindowWidthAdapter() {
         window.addEventListener('resize', function () {
-            videoArranger.arrange();
+            videoDispatcher.arrange();
         });
     }
 }
