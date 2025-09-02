@@ -34,5 +34,4 @@ function fetchPanoramas() {
     const visiting = document.getElementById('visiting');
     return visiting.getElementsByClassName('panorama');
 }
-
 arrangeVisitingListeners();

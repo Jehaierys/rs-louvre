@@ -25,7 +25,7 @@ class WelcomeSlider {
         this.#pointSwiper.switchTo(position);
     }
 
-    initializeTouchSwiper() {
+    initialize() {
         this.#touchSwiper.initialize();
     }
 

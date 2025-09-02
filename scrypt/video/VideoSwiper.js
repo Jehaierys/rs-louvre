@@ -40,7 +40,7 @@ class VideoSwiper {
         } else {
             this.#leftVideo.index++;
         }
-        return this.#players[this.#leftVideo.index];
+        // todo
     }
 
     #disappearingLeft() {
@@ -49,6 +49,6 @@ class VideoSwiper {
         } else {
             this.#rightVideo.index++;
         }
-        return this.#players[this.#rightVideo.index];
+        // todo
     }
 }

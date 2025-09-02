@@ -1,6 +1,11 @@
 class GalleryAnimator {
 
-    refreshPictureAnimationOnPageReload() {
+    initialize() {
+        this.#refreshPictureAnimationOnPageReload();
+        this.prepare();
+    }
+
+    #refreshPictureAnimationOnPageReload() {
         document.addEventListener('load', () => {
             galleryAnimator.prepare();
         });

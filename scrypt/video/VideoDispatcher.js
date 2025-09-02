@@ -10,8 +10,8 @@ class VideoDispatcher {
         this.#sliderSwitch,
         this.#disabler,
         this.#leftVideo,
-        this.#rightVideo,
-        this.#bottomVideos
+        this.#rightVideo
+        // this.#bottomVideos
     );
     #videoLoader = new VideoLoader(this.#players);
     #videoArranger = new VideoArranger();

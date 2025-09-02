@@ -5,6 +5,11 @@ class NavigationMenuFacade {
     static #welcome = document.getElementById('welcome');
     static #footer = document.getElementsByTagName('footer').item(0);
 
+
+    static initialize() {
+        this.addScrollLimiter();
+        this.addNavButtonClickListeners();
+    }
     static switchMenuState() {
         if (this.#opened) {
             this.#closeMenu();
