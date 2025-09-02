@@ -72,5 +72,3 @@ class VideoLoader {
             });
     }
 }
-
-shalom();
