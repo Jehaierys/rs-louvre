@@ -1,29 +1,28 @@
 window.TICKET_TYPES = {'PERMANENT': 20, 'TEMPORARY': 25, 'COMBINED': 40};
 
 class Order {
+
     #basics;
     #seniors;
     #type;
     #cardNumber;
 
     constructor(parsed = null) {
-        if (parsed) {
-            this.#basics = parsed.basics ?? 1;
-            this.#seniors = parsed.seniors ?? 1;
-            this.#type = parsed.type ?? TICKET_TYPES.PERMANENT;
-            this.#cardNumber = parsed.cardNumber ?? '';
-        } else {
-            this.#basics = 1;
-            this.#seniors = 1;
-            this.#type = TICKET_TYPES.PERMANENT;
-            this.#cardNumber = '';
-        }
+        this.#basics = parsed.basics ?? 1;
+        this.#seniors = parsed.seniors ?? 1;
+        this.#type = parsed.type ?? TICKET_TYPES.PERMANENT;
+        this.#cardNumber = parsed.cardNumber ?? '';
+
+        this.#refreshBasicTickets();
+        this.#refreshSeniorTickets();
+        this.refreshTotalPrise();
     }
 
     incrementSeniors() {
         this.#validateSeniorIncrementation();
         ++this.#seniors;
         this.#refreshSeniorTickets();
+        localStorage.setItem('order', JSON.stringify(this));
     }
 
     #validateSeniorIncrementation() {
@@ -116,6 +115,19 @@ class Order {
     calculateTotalPrice() {
         return (0.5 * this.#seniors + this.#basics) * TICKET_TYPES[this.#type];
     }
+
+
+    refreshTotalPrise() {
+        const totalPrise = this.calculateTotalPrice();
+        const elem = document.getElementById('total-prise');
+        elem.textContent = `Total € ${totalPrise}`;
+    }
+
+    #refreshDom() {
+        const totalPrise = this.calculateTotalPrice();
+        const elem = document.getElementById('total-prise');
+        elem.textContent = `Total € ${totalPrise}`;
+    }
 }
 
 window.addEventListener('beforeunload', (event) => {
@@ -171,9 +183,17 @@ class TicketsFacade {
         this.#refreshTotalPrise();
     }
 
+    static refreshTotal() {
+        this.#refreshTotalPrise();
+    }
+
     static #refreshTotalPrise() {
         const totalPrise = this.#order.calculateTotalPrice();
         const elem = document.getElementById('total-prise');
         elem.textContent = `Total € ${totalPrise}`;
     }
 }
+
+window.addEventListener('load', () => {
+    TicketsFacade.refreshTotal();
+})

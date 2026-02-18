@@ -10,6 +10,7 @@ class NavigationMenuFacade {
         this.addScrollLimiter();
         this.addNavButtonClickListeners();
     }
+
     static switchMenuState() {
         if (this.#opened) {
             this.#closeMenu();
@@ -50,6 +51,7 @@ class NavigationMenuFacade {
                     }
                 }
             }
+
             if (window.innerWidth > 419 && window.innerWidth < 767) {
                 if (NavigationMenuFacade.menuOpened()) {
                     let height = window.innerHeight;

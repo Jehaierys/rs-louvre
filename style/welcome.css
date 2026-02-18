@@ -40,9 +40,6 @@
     font-weight: 300;
     font-size: 22px;
   }
-  #welcome .content .text-content .discover-button:hover {
-    background-color: rgb(157, 134, 101);
-  }
   #welcome .content .picture-holder {
     position: absolute;
     width: 1000px;
@@ -51,12 +48,13 @@
     right: 0;
   }
   #welcome .content .picture-shadow {
+    border: 1px solid red;
     position: absolute;
     background: linear-gradient(to right, rgb(0, 0, 0), transparent);
     z-index: 1;
     top: 0;
     left: 0;
-    height: 810px;
+    height: 750px;
     width: 300px;
   }
   #welcome .content .welcome-slider-io {
