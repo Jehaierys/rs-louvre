@@ -1,0 +1,43 @@
+@media (min-width: 1920px) {
+  .main-gap {
+    height: 400px;
+    width: 1920px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1919px) {
+  .main-gap {
+    height: 400px;
+    width: 1024px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-gap {
+    height: 300px;
+    width: 768px;
+  }
+}
+@media (min-width: 420px) and (max-width: 767px) {
+  .main-gap {
+    height: 300px;
+    width: 420px;
+  }
+}
+.main-gap {
+  position: relative;
+  overflow: hidden;
+}
+.main-gap .gap-container {
+  z-index: -4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+}
+.main-gap .gap-container .gap-view {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=parallax.css.map */

@@ -2,9 +2,10 @@
   #welcome {
     height: 810px;
     .content {
-      position: relative;
       .text-content {
         position: absolute;
+        width: 100%;
+        height: 100%;
         top: 150px;
         h1 {
           position: relative;
@@ -12,11 +13,12 @@
           font-size: 80px;
           line-height: 90px;
           letter-spacing: 5px;
-          z-index: 2;
+          z-index: 3;
         }
         h4 {
           width: 445px;
           height: 33px;
+          position: absolute;
           top: 205px;
           font-weight: 300;
           font-size: 28px;
@@ -27,9 +29,6 @@
           width: 360px;
           height: 75px;
           top: 313px;
-          border-radius: 10px;
-          z-index: 2;
-          font-weight: 300;
           font-size: 22px;
           line-height: 100%;
           letter-spacing: 2px;
@@ -44,27 +43,37 @@
           background-color: rgba(157, 134, 101, 1);
         }
       }
-
-      img {
-        z-index: 1;
+      .picture-holder {
+        position: absolute;
         width: 1000px;
+        height: 750px;
         top: 0;
         right: 0;
+      }
+      .picture-shadow {
         position: absolute;
+        background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 810px;
+        width: 300px;
       }
       .welcome-slider-io {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
         width: 600px;
         height: 120px;
+        position: absolute;
         font-weight: 400;
         font-size: 22px;
         line-height: 40px;
         .welcome-slider-io-metadata {
+          transform: translateX(5px);
           width: 76px;
           height: 40px;
-          color: white;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
           #welcome-slider-current-picture {
             width: 25px;
             height: 40px;
@@ -106,6 +115,416 @@
           }
         }
       }
+      .main-menu-panorama {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1919px) {
+  #welcome {
+    height: 585px;
+    .content {
+      .text-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        h1 {
+          width: 398px; // on-change 396
+          height: 180px;
+          position: absolute;
+          top: 50px;
+          left: 20px;
+          font-weight: 400;
+          font-size: 50px;
+          line-height: 90px;
+          letter-spacing: 5px;
+          text-align: left;
+          z-index: 3;
+        }
+        h4 {
+          width: 445px;
+          height: 28px;
+          position: absolute;
+          top: 255px;
+          left: 20px;
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 100%;
+          letter-spacing: 2px;
+          text-align: left;
+        }
+        .discover-button {
+          width: 300px;
+          height: 60px;
+          top: 333px;
+          left: 20px;
+          font-size: 20px;
+          line-height: 100%;
+          letter-spacing: 2px;
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+      .picture-holder {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 700px;
+        height: 525px;
+        .picture-shadow {
+          position: absolute;
+          background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
+          z-index: 1;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 250px;
+        }
+      }
+      .welcome-slider-io {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        width: 700px;
+        height: 120px;
+        position: absolute;
+        top: 465px;
+        left: 304px;
+        .welcome-slider-io-metadata {
+          width: 71px;
+          height: 40px;
+          font-family: Roboto, sans-serif;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 40px;
+          vertical-align: middle;
+          text-transform: uppercase;
+          .bar {
+            margin: 0;
+            padding: 0;
+            height: 22px;
+            width: 2px;
+            background-color: white;
+          }
+        }
+        .welcome-slider-io-pointer {
+          width: 160px;
+          height: 12px;
+          .welcome-slider-io-point {
+            width: 12px;
+          }
+        }
+        .welcome-slider-io-swiper {
+          width: 80px;
+          height: 8px;
+          transform: translateY(-7px);
+          .welcome-slider-io-right-arrow, .welcome-slider-io-left-arrow  {
+            position: relative;
+            width: 30px;
+            height: 100%;
+            object-fit: cover;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+      .main-menu-panorama {
+        display: none;
+      }
+    }
+  }
+
+  .menu-opened-welcome {
+    .text-content {
+      display: none;
+    }
+  }
+
+  .menu-closed-welcome {
+    .text-content {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #welcome {
+    height: 861px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        width: 100%;
+        height: 165px;
+        h1 {
+          width: 338px;
+          height: 120px;
+          font-weight: 400;
+          font-size: 40px;
+          line-height: 60px;
+          letter-spacing: 5px;
+          text-align: center;
+          text-transform: uppercase;
+        }
+        h4 {
+          width: 350px;
+          font-size: 20px;
+          letter-spacing: 2px;
+        }
+        .discover-button {
+          display: none;
+        }
+      }
+      .picture-holder {
+        position: relative;
+        width: 728px;
+        height: 546px;
+        .picture-shadow {
+          display: none;
+        }
+      }
+      .welcome-slider-io {
+        height: 100px;
+        width: 401px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        .welcome-slider-io-metadata {
+          width: 71px;
+          height: 40px;
+          font-size: 20px;
+          .bar {
+            width: 2px;
+            height: 20px;
+            background-color: white;
+          }
+        }
+        .welcome-slider-io-pointer {
+          width: 160px;
+          height: 12px;
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+          .welcome-slider-io-point {
+            width: 12px;
+          }
+        }
+        .welcome-slider-io-swiper {
+          width: 80px;
+          height: 8px;
+          display: flex;
+          justify-content: space-between;
+          svg {
+            width: 30px;
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-opened-welcome {
+    .text-content {
+      display: none !important;
+    }
+    .picture-holder {
+      display: none;
+    }
+    .welcome-slider-io {
+      display: none !important;
+    }
+    .main-menu-panorama {
+      display: flex;
+      justify-content: space-between;
+      align-content: space-between;
+      flex-wrap: wrap;
+      position: absolute;
+      top: 333px;
+      width: 658px;
+      height: 376px;
+      .sunset-holder {
+        width: 100%;
+        height: 194px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .hall-holder, .view-holder {
+        width: 319px;
+        height: 161px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .menu-closed-welcome {
+    .text-content {
+      display: flex;
+    }
+    .picture-holder {
+      display: block;
+    }
+    .welcome-slider-io {
+      display: flex;
+    }
+    .main-menu-panorama {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 420px) and (max-width: 767px) {
+  #welcome {
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      height: 544px;
+      .text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 129px;
+        width: 280px;
+        h1 {
+          width: 253px;
+          height: 80px;
+          text-align: center;
+          font-size: 28px;
+          letter-spacing: 5px;
+          font-weight: 400;
+          line-height: 40px;
+          text-transform: uppercase;
+        }
+        h4 {
+          width: 280px;
+          height: 19px;
+          text-align: center;
+          font-size: 16px;
+          letter-spacing: 2px;
+          font-weight: 300;
+          line-height: 100%;
+        }
+        .discover-button {
+          display: none;
+        }
+      }
+      .picture-holder {
+        position: absolute;
+        width: 380px;
+        height: 285px;
+        top: 179px;
+        object-fit: cover;
+        .picture-shadow {
+          display: none;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .welcome-slider-io {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        width: 230px;
+        height: 40px;
+        transform: translateY(-20px);
+        .welcome-slider-io-metadata {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          width: 50px;
+          height: 40px;
+          font-size: 16px;
+          .bar {
+            background-color: white;
+            height: 16px;
+            width: 2px;
+            transform: translateY(10px);
+          }
+        }
+        .welcome-slider-io-pointer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 75px;
+          height: 7px;
+          .welcome-slider-io-point {
+            width: 7px;
+            height: 7px;
+            background-color: white;
+          }
+        }
+        .welcome-slider-io-swiper {
+          width: 60px;
+          height: 10px;
+          svg {
+            width: 24px;
+            height: 10px;
+          }
+        }
+      }
+      .main-menu-panorama {
+        display: none;
+      }
+    }
+  }
+
+
+  .menu-opened-welcome {
+    .text-content {
+      display: none !important;
+    }
+    .picture-holder {
+      display: none;
+    }
+    .welcome-slider-io {
+      display: none !important;
+    }
+    .main-menu-panorama {
+      display: flex !important;
+      justify-content: space-between;
+      position: absolute;
+      top: 333px;
+      height: 95px;
+      width: 310px;
+      left: 35px;
+      .sunset-holder, .hall-holder, .view-holder {
+        object-fit: cover;
+        width: 95px;
+        height: 100%;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
   }
 }
@@ -113,67 +532,177 @@
 
 // common
 #welcome {
-  h1 {
-    color: white;
-    font-family: Forum, serif;
-  }
-  h4 {
-    z-index: 2;
-    font-family: Roboto, serif;
-    position: absolute;
-    color: white;
-  }
-  .discover-button {
-    position: absolute;
-    font-family: Roboto, serif;
-    background: rgba(113, 7, 7, 1);
-    transition: background-color 0.5s ease;
-    a {
-      text-decoration: none;
-      height: 100%;
-      width: 100%;
-      text-align: center;
-      font-family: Roboto, sans-serif;
-      line-height: 100%;
-      letter-spacing: 2px;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-  .discover-button:hover {
-    background: rgba(157, 134, 101, 1);
-    cursor: pointer;
-  }
-  .welcome-slider-io {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 100;
-    background-color: black;
-    font-family: Roboto, sans-serif;
-    vertical-align: middle;
-    text-transform: uppercase;
-    .welcome-slider-io-pointer {
-      display: flex;
-      justify-content: space-between;
-      .welcome-slider-io-point {
-        height: 100%;
-        background-color: white;
-        transition: background-color ease 0.33s;
+  .content {
+    position: relative;
+    .text-content {
+      pointer-events: none;
+      user-select: none;
+      h1 {
+        z-index: 2;
+        color: white;
+        font-family: Forum, serif;
       }
-      .welcome-slider-io-point:hover {
-        background-color: rgba(157, 134, 101, 1);
+      h4 {
+        z-index: 2;
+        font-family: Roboto, serif;
+        font-weight: 300;
+        line-height: 100%;
+        color: white;
+      }
+      .discover-button {
+        position: absolute;
+        font-family: Roboto, serif;
+        background: rgba(113, 7, 7, 1);
+        transition: background-color 0.5s ease;
+        border-radius: 10px;
+        z-index: 2;
+        font-weight: 300;
+        a {
+          text-decoration: none;
+          height: 100%;
+          width: 100%;
+          text-align: center;
+          font-family: Roboto, sans-serif;
+          line-height: 100%;
+          letter-spacing: 2px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .discover-button:hover {
+        background: rgba(157, 134, 101, 1);
+        cursor: pointer;
       }
     }
-    .welcome-slider-io-left-arrow {
+    .picture-holder {
+      user-select: none;
+      .picture-shadow {
+        pointer-events: none;
+      }
       img {
-        transform: scaleX(-1);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+      }
+      .picture-inactive {
+        opacity: 0;
       }
     }
+    .welcome-slider-io {
+      bottom: 0;
+      right: 0;
+      z-index: 3;
+      background-color: black;
+      font-family: Roboto, sans-serif;
+      vertical-align: middle;
+      text-transform: uppercase;
+      .welcome-slider-io-metadata {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+      }
+      .welcome-slider-io-pointer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .welcome-slider-io-point {
+          height: 100%;
+          background-color: white;
+          transition: background-color ease 0.33s;
+        }
+        .welcome-slider-io-point:hover {
+          background-color: rgba(157, 134, 101, 1);
+        }
+        .welcome-slider-io-point-active {
+          background-color: rgba(126, 108, 81, 1);
+        }
+      }
+      .welcome-slider-io-swiper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        .welcome-slider-io-right-arrow, .welcome-slider-io-left-arrow {
+          background-color: black;
+          path {
+            transition: 0.3s ease;
+          }
+        }
+        .welcome-slider-io-right-arrow:hover, .welcome-slider-io-left-arrow:hover {
+          path {
+            fill: rgba(157, 134, 101, 1);
+          }
+        }
+        .welcome-slider-io-left-arrow {
+          svg {
+            transform: scaleX(-1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.appear-from-the-right {
+  animation: appear-from-the-right-animation 1s ease-out forwards;
+}
+.disappear-to-the-left {
+  animation: disappear-to-the-left-animation 1s ease-out forwards;;
+}
+
+@keyframes appear-from-the-right-animation {
+  from {
+    opacity: 0;
+    transform: translateX(40%) scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes disappear-to-the-left-animation {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-40%) scale(0.7);
+  }
+}
+
+
+.appear-from-the-left {
+  animation: appear-from-the-left-animation 1s ease-out forwards;
+}
+.disappear-to-the-right {
+  animation: disappear-to-the-right-animation 1s ease-out forwards;;
+}
+
+@keyframes appear-from-the-left-animation {
+  from {
+    opacity: 0;
+    transform: translateX(-40%) scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes disappear-to-the-right-animation {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(40%) scale(0.7);
   }
 }

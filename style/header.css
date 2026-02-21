@@ -1,43 +1,27 @@
-header #line nav ul li {
-  height: 100%;
-  width: 100%;
-}
-header #line nav ul li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  color: white;
-  text-decoration: none;
-  transition: color 0.4s ease;
-}
-header #line nav ul li a:hover {
-  color: rgb(157, 134, 101);
-}
-header #line nav ul li a:active {
-  color: rgb(126, 108, 81);
-}
-
 @media (min-width: 1920px) {
   header {
     height: 150px;
-    width: 100%;
-    background: rgb(3, 3, 3);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
   }
   header #line {
-    height: 100%;
     width: 1440px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  }
+  header #line .logo {
+    width: 189px;
+    height: 33px;
+  }
+  header #line .logo h3 {
+    font-size: 28px;
+  }
+  header #line .logo img.pyramid {
+    width: 49px;
+    height: 26px;
   }
   header #line nav {
     height: 100%;
     width: 775px;
+  }
+  header #line nav .menu-button {
+    display: none;
   }
   header #line nav ul {
     height: 100%;
@@ -49,6 +33,7 @@ header #line nav ul li a:active {
     justify-content: space-between;
   }
   header #line nav ul li a {
+    justify-content: center;
     text-decoration: none;
     font-family: Roboto, serif;
     font-weight: 200;
@@ -56,6 +41,298 @@ header #line nav ul li a:active {
     line-height: 100%;
     letter-spacing: 2px;
   }
+  header #line nav ul li .header-menu-arrow {
+    display: none;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1919px) {
+  header {
+    height: 130px;
+  }
+  header #line {
+    width: 984px;
+  }
+  header #line .logo h3 {
+    margin-left: 25px;
+    font-size: 28px;
+  }
+  header #line nav {
+    background: black;
+  }
+  header #line nav .menu-button svg {
+    transition: all 1s ease-in-out;
+  }
+  .menu-closed-header .menu-button {
+    width: 32px;
+    height: 18px;
+  }
+  .menu-closed-header .menu-button .pancake {
+    display: block;
+  }
+  .menu-closed-header .menu-button .cross {
+    display: none;
+  }
+  .menu-closed-header ul {
+    display: none;
+  }
+  .menu-opened-header .menu-button {
+    width: 25px;
+    height: 25px;
+  }
+  .menu-opened-header .menu-button .cross {
+    display: block;
+  }
+  .menu-opened-header .menu-button .pancake {
+    display: none;
+  }
+  .menu-opened-header nav {
+    position: relative;
+  }
+  .menu-opened-header nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 130px;
+    height: 263px;
+    top: 120px;
+    left: -935px;
+    z-index: 100;
+  }
+  .menu-opened-header nav ul li {
+    width: 122px;
+  }
+  .menu-opened-header nav ul li a {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu-opened-header nav ul li a .section {
+    display: block;
+    width: 102px;
+    text-align: left;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 2px;
+  }
+  .menu-opened-header nav ul li a img {
+    display: block;
+    width: 12px;
+    height: 12px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    height: 110px;
+  }
+  header #line {
+    width: 728px;
+  }
+  header #line .logo img {
+    width: 49px;
+    height: 26px;
+  }
+  header #line .logo h3 {
+    margin-left: 25px;
+    font-size: 28px;
+  }
+  header #line nav .menu-button {
+    width: 32px;
+    height: 18px;
+  }
+  .menu-closed-header .pancake {
+    display: block;
+  }
+  .menu-closed-header .cross {
+    display: none;
+  }
+  .menu-closed-header ul {
+    display: none;
+  }
+  .menu-opened-header .cross {
+    display: block;
+  }
+  .menu-opened-header .pancake {
+    display: none;
+  }
+  .menu-opened-header nav {
+    position: relative;
+  }
+  .menu-opened-header nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 122px;
+    height: 263px;
+    top: 105px;
+    left: -662px;
+    z-index: 10;
+  }
+  .menu-opened-header nav ul li {
+    width: 122px;
+  }
+  .menu-opened-header nav ul li a {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu-opened-header nav ul li a .section {
+    display: block;
+    width: 102px;
+    text-align: left;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 2px;
+  }
+  .menu-opened-header nav ul li a img {
+    display: block;
+    width: 12px;
+    height: 12px;
+  }
+}
+@media (min-width: 420px) and (max-width: 767px) {
+  header {
+    height: 90px;
+  }
+  header #line {
+    width: 380px;
+  }
+  header #line .logo {
+    width: 131px;
+    height: 20px;
+  }
+  header #line .logo .pyramid {
+    width: 29px;
+    height: 16px;
+  }
+  header #line .logo h3 {
+    font-size: 16px;
+    letter-spacing: 5px;
+  }
+  header #line nav .menu-button {
+    width: 32px;
+    height: 18px;
+  }
+  header #line nav ul {
+    display: none;
+  }
+  .menu-closed-header .pancake {
+    display: block;
+  }
+  .menu-closed-header .cross {
+    display: none;
+  }
+  .menu-opened-header .cross {
+    display: block;
+  }
+  .menu-opened-header .pancake {
+    display: none;
+  }
+  .menu-opened-header nav {
+    position: relative;
+  }
+  .menu-opened-header nav ul {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 122px;
+    height: 263px;
+    top: 75px;
+    left: -313px;
+    z-index: 10;
+  }
+  .menu-opened-header nav ul li {
+    width: 100%;
+  }
+  .menu-opened-header nav ul li a {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu-opened-header nav ul li a .section {
+    display: block;
+    width: 102px;
+    text-align: left;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 2px;
+  }
+}
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background: rgb(3, 3, 3);
+  user-select: none;
+}
+header #line {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+header #line .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header #line .logo h3 {
+  color: white;
+  font-family: Forum, serif;
+  letter-spacing: 5px;
+  font-weight: 200;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+header #line nav .menu-button {
+  background-color: black;
+}
+header #line nav .menu-button svg {
+  background-color: black;
+}
+header #line nav .menu-button rect {
+  transition: 0.3s ease fill;
+}
+header #line nav .menu-button:hover rect {
+  fill: rgb(157, 134, 101);
+}
+header #line nav ul li {
+  height: 100%;
+  width: 100%;
+}
+header #line nav ul li a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+header #line nav ul li a svg {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+header #line nav ul li a svg path {
+  transition: 0.4s ease fill;
+}
+header #line nav ul li a:hover {
+  color: rgb(157, 134, 101);
+}
+header #line nav ul li a:hover svg path {
+  fill: rgb(157, 134, 101);
+}
+header #line nav ul li a:active {
+  color: rgb(126, 108, 81);
 }
 
 /*# sourceMappingURL=header.css.map */

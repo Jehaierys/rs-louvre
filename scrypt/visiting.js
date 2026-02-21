@@ -9,16 +9,8 @@ function arrangeMouseEnterListeners(panoramas) {
         panoramas.item(i).addEventListener('mouseenter', function (event) {
             const panorama = event.currentTarget;
             const bar = fetchBar(panorama);
-            bar.animate(
-                [
-                    { width: '100%' }
-                ],
-                {
-                    duration: 500,
-                    fill: 'forwards',
-                    easing: 'ease'
-                }
-            );
+            bar.classList.remove('panorama-bar-non-hover');
+            bar.classList.add('panorama-bar-hover');
         });
     }
 }
@@ -28,16 +20,8 @@ function arrangeMouseLeaveListeners(panoramas) {
         panoramas.item(i).addEventListener('mouseleave', function (event) {
             const panorama = event.currentTarget;
             const bar = fetchBar(panorama);
-            bar.animate(
-                [
-                    { width: '300px' }
-                ],
-                {
-                    duration: 500,
-                    fill: 'forwards',
-                    easing: 'ease'
-                }
-            );
+            bar.classList.remove('panorama-bar-hover');
+            bar.classList.add('panorama-bar-non-hover');
         });
     }
 }

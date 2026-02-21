@@ -16,17 +16,16 @@
     height: 550px;
     position: relative;
   }
+  #tickets .content .container .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   #tickets .content .container .item h5 {
-    font-family: Roboto, sans-serif;
-    font-weight: 700;
     font-size: 28px;
-    line-height: 100%;
   }
   #tickets .content .container .item label {
-    font-family: Roboto, sans-serif;
-    font-weight: 300;
     font-size: 22px;
-    line-height: 100%;
   }
   #tickets .content .container .item .ticket-type {
     position: absolute;
@@ -102,29 +101,18 @@
     display: flex;
     justify-content: space-evenly;
     position: absolute;
-    border: 3px solid black;
     width: 150px;
     height: 50px;
     top: 41px;
     right: 0;
   }
   #tickets .content .container .amount .ticket-pick .counter button, #tickets .content .container .amount .ticket-pick .counter input {
-    border: none;
-    background-color: white;
-    color: black;
     width: 30px;
-    text-align: center;
     display: inline-block;
-    font-family: Roboto, sans-serif;
     font-size: 22px;
-    line-height: 100%;
-  }
-  #tickets .content .container .amount .ticket-pick .counter input {
-    font-weight: 300;
   }
   #tickets .content .container .amount .ticket-pick .counter button {
     font-size: 32px;
-    font-weight: 400;
   }
   #tickets .content .container #total-prise {
     width: 200px;
@@ -140,23 +128,275 @@
     top: 393px;
     right: 0;
     position: absolute;
-    font-family: Roboto, sans-serif;
-    font-weight: 300;
     font-size: 22px;
-    line-height: 100%;
     letter-spacing: 2px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1919px) {
+  #tickets {
+    padding: 60px 0;
+  }
+  #tickets .content {
+    height: 598px;
+  }
+  #tickets .content h2 {
+    height: 75px;
+  }
+  #tickets .content .container {
+    display: grid;
+    grid-template-columns: 700px 175px;
+    grid-template-rows: 440px;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+  #tickets .content .container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #tickets .content .container h5 {
+    font-size: 28px;
+  }
+  #tickets .content .container .ticket-type {
+    display: none;
+  }
+  #tickets .content .container .amount {
+    position: relative;
+    height: 321px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #tickets .content .container .amount .ticket-pick {
+    width: 175px;
+    height: 90px;
+  }
+  #tickets .content .container .amount .ticket-pick label {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  #tickets .content .container .amount .ticket-pick .counter {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    justify-content: space-between;
+  }
+  #tickets .content .container .amount .ticket-pick .counter input {
+    font-size: 22px;
     text-align: center;
-    vertical-align: middle;
-    background-color: black;
-    color: white;
   }
-  #tickets .content .container #buy {
-    transition: color 0.5s ease, background-color 0.5s ease;
+  #tickets .content .container .amount .ticket-pick .counter button {
+    font-size: 32px;
   }
-  #tickets .content .container #buy:hover {
-    background: rgb(157, 134, 101);
-    color: black;
+  #tickets .content .container .amount #buy {
+    font-size: 22px;
+    position: absolute;
+    bottom: -121px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 100;
   }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #tickets {
+    padding: 0 0 40px 0;
+  }
+  #tickets .content {
+    height: 593px;
+  }
+  #tickets .content .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+  #tickets .content .container img {
+    width: 444px;
+    height: 340px;
+  }
+  #tickets .content .container .ticket-type {
+    display: none;
+  }
+  #tickets .content .container .amount {
+    position: relative;
+    height: 470px;
+    width: 175px;
+  }
+  #tickets .content .container .amount h5 {
+    font-size: 28px;
+    height: 32px;
+  }
+  #tickets .content .container .amount .ticket-pick {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    height: 86px;
+  }
+  #tickets .content .container .amount .ticket-pick label {
+    font-size: 22px;
+  }
+  #tickets .content .container .amount .ticket-pick .counter {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 175px;
+    height: 50px;
+    border-width: 3px;
+  }
+  #tickets .content .container .amount .ticket-pick .counter button {
+    height: 38px;
+    width: 41px;
+    font-size: 32px;
+  }
+  #tickets .content .container .amount .ticket-pick .counter input {
+    width: 41px;
+    font-size: 22px;
+  }
+  #tickets .content .container .amount .basic {
+    top: 71px;
+  }
+  #tickets .content .container .amount .senior {
+    top: 182px;
+  }
+  #tickets .content .container .amount #total-prise {
+    position: absolute;
+    width: 175px;
+    height: 33px;
+    top: 307px;
+  }
+  #tickets .content .container .amount #buy {
+    position: absolute;
+    width: 175px;
+    height: 50px;
+    top: 381px;
+    font-size: 22px;
+  }
+}
+@media (min-width: 420px) and (max-width: 767px) {
+  #tickets {
+    height: 759px;
+  }
+  #tickets .content .container {
+    position: relative;
+  }
+  #tickets .content .container img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  #tickets .content .container .ticket-type {
+    display: none;
+  }
+  #tickets .content .container .amount {
+    position: absolute;
+    width: 175px;
+    height: 286px;
+    top: 200px;
+    left: 102px;
+  }
+  #tickets .content .container .amount h5 {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+  #tickets .content .container .amount .ticket-pick {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 175px;
+    height: 84px;
+  }
+  #tickets .content .container .amount .ticket-pick .counter {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50px;
+  }
+  #tickets .content .container .amount .ticket-pick .counter button {
+    height: 38px;
+    width: 41px;
+    font-size: 32px;
+  }
+  #tickets .content .container .amount .ticket-pick .counter input {
+    width: 41px;
+    font-size: 22px;
+  }
+  #tickets .content .container .amount .basic {
+    top: 39px;
+  }
+  #tickets .content .container .amount .senior {
+    top: 143px;
+  }
+  #tickets .content .container .amount #total-prise {
+    position: absolute;
+    width: 100%;
+    height: 19px;
+    top: 267px;
+    text-align: center;
+    font-size: 16px;
+  }
+  #tickets .content .container .amount #buy {
+    position: absolute;
+    top: 326px;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+}
+#tickets .content .container {
+  user-select: none;
+}
+#tickets .content .container h5 {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+}
+#tickets .content .container label {
+  line-height: 100%;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+#tickets .content .container .ticket-pick .counter {
+  border: 3px solid black;
+}
+#tickets .content .container .ticket-pick .counter button {
+  border: none;
+  color: black;
+  background-color: white;
+  font-weight: 400;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  line-height: 100%;
+}
+#tickets .content .container .ticket-pick .counter input {
+  color: black;
+  font-weight: 300;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  line-height: 100%;
+}
+#tickets .content .container #buy {
+  font-weight: 300;
+  line-height: 100%;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  background-color: black;
+  color: white;
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+#tickets .content .container #buy:hover {
+  background: rgb(157, 134, 101);
+  color: black;
 }
 #tickets input[type=number] {
   -moz-appearance: textfield;

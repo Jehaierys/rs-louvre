@@ -6,4 +6,8 @@ sass --watch \
   style/visiting.scss:style/visiting.css \
   style/explore.scss:style/explore.css   \
   style/gallery.scss:style/gallery.css   \
-  style/tickets.scss:style/tickets.css
+  style/tickets.scss:style/tickets.css   \
+  style/video.scss:style/video.css       \
+  style/contacts.scss:style/contacts.css \
+  style/footer.scss:style/footer.css     \
+  style/parallax.scss:style/parallax.css

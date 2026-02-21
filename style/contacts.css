@@ -1,0 +1,154 @@
+@media (min-width: 1920px) {
+  #contacts {
+    padding: 75px 0;
+  }
+  #contacts .content {
+    height: 813px;
+  }
+  #contacts .content .container {
+    padding-top: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  #contacts .content .container .description {
+    width: 282px;
+    height: 244px;
+    position: relative;
+  }
+  #contacts .content .container .description h5 {
+    width: 227px;
+    font-size: 28px;
+  }
+  #contacts .content .container .description ul {
+    position: absolute;
+    top: 116px;
+    left: 0;
+    height: 128px;
+  }
+  #contacts .content .container .description ul li {
+    font-size: 22px;
+  }
+  #contacts .content .container #map {
+    width: 960px;
+    height: 620px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1919px) {
+  #contacts {
+    padding: 60px 0;
+  }
+  #contacts .content {
+    height: 614px;
+  }
+  #contacts .content .container {
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: 274px 694px;
+    grid-template-rows: 454px;
+    justify-content: space-between;
+  }
+  #contacts .content .container .description h5 {
+    height: 56px;
+    width: 185px;
+    font-size: 24px;
+  }
+  #contacts .content .container .description ul {
+    width: 274px;
+    height: 99px;
+    margin-top: 35px;
+  }
+  #contacts .content .container .description ul li {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #contacts .content {
+    height: 858px;
+  }
+  #contacts .content .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #contacts .content .container .description h5 {
+    width: 160px;
+    font-size: 20px;
+  }
+  #contacts .content .container .description ul {
+    height: 93px;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #contacts .content .container .description ul li {
+    font-size: 18px;
+  }
+  #contacts .content .container #map {
+    width: 100%;
+    height: 476px;
+  }
+}
+@media (min-width: 420px) and (max-width: 767px) {
+  #contacts {
+    height: 636px;
+  }
+  #contacts .content .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 453px;
+  }
+  #contacts .content .container .description {
+    height: 165px;
+  }
+  #contacts .content .container .description h5 {
+    width: 124px;
+    height: 38px;
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+  #contacts .content .container .description ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 39px;
+    height: 87px;
+    width: 100%;
+  }
+  #contacts .content .container .description ul li {
+    height: 19px;
+    width: 100%;
+  }
+  #contacts .content .container #map {
+    width: 380px;
+    height: 248px;
+  }
+}
+#contacts .container .description {
+  user-select: none;
+}
+#contacts .container .description h5 {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  line-height: 100%;
+}
+#contacts .container .description ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+}
+#contacts .container .description ul li {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  line-height: 100%;
+}
+#contacts .container #map .map-frame {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=contacts.css.map */

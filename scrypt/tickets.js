@@ -126,11 +126,14 @@ class OrderDto {
 }
 
 class TicketsFacade {
+
     static #order = Order.load();
+
     static incrementBasics() {
         this.#order.incrementBasics();
         this.#refreshTotalPrise();
     }
+
     static decrementBasics() {
         try {
             this.#order.decrementBasics();
@@ -139,10 +142,12 @@ class TicketsFacade {
         }
         this.#refreshTotalPrise();
     }
+
     static incrementSeniors() {
         this.#order.incrementSeniors();
         this.#refreshTotalPrise();
     }
+
     static decrementSeniors() {
         try {
             this.#order.decrementSeniors();
@@ -151,6 +156,7 @@ class TicketsFacade {
         }
         this.#refreshTotalPrise();
     }
+
     static setTicketType(type) {
         try {
             this.#order.setTicketType(type);
@@ -159,10 +165,12 @@ class TicketsFacade {
         }
         this.#refreshTotalPrise();
     }
+
     static flushOrder() {
         this.#order.flush();
         this.#refreshTotalPrise();
     }
+
     static #refreshTotalPrise() {
         const totalPrise = this.#order.calculateTotalPrice();
         const elem = document.getElementById('total-prise');

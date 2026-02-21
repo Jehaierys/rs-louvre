@@ -1,22 +1,13 @@
 @media (min-width: 1920px) {
   main {
     section {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      div.bar {
-        background-color: rgba(113, 7, 7, 1);
-        height: 3px;
-        width: 100%;
+      .bar {
         margin-top: 25px;
       }
       .content {
         width: 1440px;
-        height: 100%;
       }
       h2 {
-        font-family: Forum, serif;
         font-weight: 400;
         font-size: 80px;
         line-height: 90px;
@@ -30,213 +21,79 @@
       }
     }
   }
+}
 
-  #video {
-    padding: 75px 0;
-    div.content {
-      height: 1246px;
-      h2 {
-        width: 610px;
-        display: inline-block;
-      }
-      p {
-        display: inline-block;
-        width: 720px;
-        margin-left: 105px;
-      }
-      div.large {
-        height: 735px;
+@media (min-width: 1024px) and (max-width: 1919px) {
+  main {
+    section {
+      .bar {
+        margin-top: 20px;
         width: 100%;
-        margin-top: 75px;
       }
-      .video-container {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 42px;
-        .item {
-          width: 452px;
-          height: 254px;
-        }
+      h2 {
+        width: 100%;
+        height: 75px;
+        font-family: Forum, serif;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 75px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
       }
-      .scroller-holder {
-        display: flex;
-        justify-content: center;
+      .content{
+        width: 984px;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    section {
+      .content {
+        width: 728px;
+      }
+      h2 {
         margin-top: 40px;
-        .scroller {
-          width: 200px;
-          height: 12px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          align-content: center;
-          .arrow-holder {
-            width: 10px;
-            height: 12px;
-            margin-top: 8px;
-          }
-          .point-holder {
-            width: 12px;
-            height: 12px;
-          }
-        }
-      }
-    }
-  }
-
-  #contacts {
-    padding: 75px 0;
-    .content {
-      height: 813px;
-      .container {
-        padding-top: 75px;
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
-        .description {
-          width: 282px;
-          height: 244px;
-          position: relative;
-          h5 {
-            width: 227px;
-            font-family: Roboto, sans-serif;
-            font-weight: 500;
-            font-size: 28px;
-            line-height: 100%;
-          }
-          ul {
-            position: absolute;
-            top: 116px;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 128px;
-            list-style: none;
-            li {
-              font-family: Roboto, sans-serif;
-              font-weight: 300;
-              font-size: 22px;
-              line-height: 100%;
-            }
-          }
-        }
-        .map {
-          width: 960px;
-          height: 620px;
-        }
-      }
-    }
-  }
-
-  footer {
-    display: flex;
-    justify-content: center;
-    height: 392px;
-    width: 100%;
-    .content {
-      width: 1440px;
-      height: 392px;
-      position: relative;
-      .logo {
-        position: absolute;
-        top: 75px;
-        left: 0;
-      }
-      nav {
-        width: 363px;
-        height: 128px;
-        position: absolute;
-        top: 87px;
-        left: 340px;
-        ul {
-          height: 100%;
-          width: 100%;
-          display: grid;
-          justify-content: space-between;
-          align-content: space-between;
-          grid-template-rows: repeat(3, 1fr);
-          grid-template-columns: repeat(2, 1fr);
-          list-style: none;
-          li {
-            a {
-              font-family: Roboto, sans-serif;
-              font-weight: 200;
-              font-size: 22px;
-              line-height: 100%;
-              letter-spacing: 2px;
-              color: white;
-              text-decoration: none;
-              transition: color 0.35s ease;
-            }
-            a:hover {
-              color: rgba(157, 134, 101, 1);
-            }
-          }
-        }
-      }
-      .social {
-        position: absolute;
-        width: 340px;
-        height: 48px;
-        top: 162px;
-        left: 1100px;
-        display: flex;
-        justify-content: space-between;
-        img {
-          height: 100%;
-          display: block;
-        }
+        width: 100%;
+        font-family: Forum, serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: 5px;
       }
       .bar {
-        height: 3px;
-        width: 1940px;
-        top: 265px;
-        left: -250px;
-        position: absolute;
-        background-color: rgba(102, 102, 102, 1)
-      }
-      .bottom {
-        position: absolute;
-        top: 318px;
-        width: 100%;
-        height: 24px;
-        ul {
-          height: 100%;
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          list-style: none;
-          li {
-            font-family: Roboto, sans-serif;
-            font-weight: 200;
-            font-size: 22px;
-            line-height: 22px;
-            letter-spacing: 2px;
-            color: white;
-          }
-        }
+        margin: 20px 0; // 40px indeed
+        width: 728px;
       }
     }
   }
+}
 
-  .logo {
-    width: 215px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    img.pyramid {
-      width: 49px;
-      height: 26px;
-    }
-    h3 {
-      color: white;
-      font-family: Forum, serif;
-      font-weight: 200;
-      font-size: 28px;
-      line-height: 100%;
-      letter-spacing: 5px;
-      text-transform: uppercase;
+
+@media (min-width: 420px) and (max-width: 767px) {
+  main {
+    section {
+      .content {
+        width: 380px;
+      }
+      .bar {
+        margin: 20px 0 40px 0;
+        width: 380px;
+      }
+      h2 {
+        margin-top: 40px;
+        height: 40px;
+        width: 100%;
+        font-family: Forum, serif;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+      }
     }
   }
 }
