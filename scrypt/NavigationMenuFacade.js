@@ -1,7 +1,7 @@
 class NavigationMenuFacade {
     static #opened = false;
 
-    static #header = document.getElementsByTagName('header').item(0); // there is only 1 <header>
+    static #header = document.getElementsByTagName('header').item(0);
     static #welcome = document.getElementById('welcome');
     static #footer = document.getElementsByTagName('footer').item(0);
 
@@ -23,18 +23,22 @@ class NavigationMenuFacade {
 
     static #closeMenu() {
         this.#header.classList.remove('menu-opened-header');
-        this.#welcome.classList.remove('menu-opened-welcome');
         this.#header.classList.add('menu-closed-header');
+
+        this.#welcome.classList.remove('menu-opened-welcome');
         this.#welcome.classList.add('menu-closed-welcome');
+
         this.#footer.classList.remove('menu-opened-footer');
         this.#footer.classList.add('menu-closed-footer');
     }
 
     static #openMenu() {
         this.#header.classList.remove('menu-closed-header');
-        this.#welcome.classList.remove('menu-closed-welcome');
         this.#header.classList.add('menu-opened-header');
+
+        this.#welcome.classList.remove('menu-closed-welcome');
         this.#welcome.classList.add('menu-opened-welcome');
+
         this.#footer.classList.remove('menu-closed-footer');
         this.#footer.classList.add('menu-opened-footer');
     }

@@ -5,9 +5,11 @@ class VideoArranger {
         .getElementsByClassName('video__petite-holder');
 
     arrange() {
+
         if (this.#currentLayout === window.currentScale) {
             return;
         }
+
         switch (window.currentScale) {
             case window.SCALE.PX_1920:
                 this.#adapt(3);
@@ -22,6 +24,7 @@ class VideoArranger {
                 this.#adapt(2);
                 break;
         }
+
         this.#report();
     }
 

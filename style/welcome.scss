@@ -48,7 +48,6 @@
         right: 0;
       }
       .picture-shadow {
-        border: 1px solid red;
         position: absolute;
         background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
         z-index: 1;
@@ -554,7 +553,7 @@
         transition: background-color 0.5s ease;
         border-radius: 10px;
         z-index: 2;
-        font-weight: 300;
+        font-weight: 300;;
         a {
           text-decoration: none;
           height: 100%;
@@ -567,6 +566,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          //pointer-events: none;
         }
       }
       .discover-button:hover {
