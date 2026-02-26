@@ -1,7 +1,12 @@
 window.TICKET_TYPES = {'PERMANENT': 20, 'TEMPORARY': 25, 'COMBINED': 40};
 
 class OrderData {
-    constructor(basics, seniors, type, cardNumber) {
+    constructor(
+        basics = 1,
+        seniors = 1,
+        type = TICKET_TYPES.PERMANENT,
+        cardNumber = null
+    ) {
         this.basics = basics;
         this.seniors = seniors;
         this.type = type;
@@ -15,14 +20,16 @@ class Order {
 
     #basicsField  = document.getElementById('basic-tickets');
     #seniorsField = document.getElementById('senior-tickets');
+    #typeRadios = Array.from(document.getElementsByName('tickets__type-radio'));
 
 
     constructor(parsed = null) {
-        this.#data.basics = parsed.basics ?? 1;
-        this.#data.seniors = parsed.seniors ?? 1;
-        this.#data.type = parsed.type ?? TICKET_TYPES.PERMANENT;
-        this.#data.cardNumber = parsed.cardNumber ?? '';
+        this.#data.basics = parsed?.basics ?? 1;
+        this.#data.seniors = parsed?.seniors ?? 1;
+        this.#data.type = parsed?.type ?? TICKET_TYPES.PERMANENT;
+        this.#data.cardNumber = parsed?.cardNumber ?? '';
 
+        this.setTicketType(this.#data.type);
         this.#refreshBasic();
         this.#refreshSeniorField();
         this.refreshTotalPrise();
@@ -98,6 +105,9 @@ class Order {
     setTicketType(value) {
         if (value in TICKET_TYPES) {
             this.#data.type = value;
+            this.#typeRadios
+                .filter(input => input.value.contains(value.toLowerCase()))
+                .forEach(input => input.checked = true);
             this.#save();
         } else {
             throw new Error('Wrong Ticket Type');
