@@ -40,9 +40,6 @@
     font-weight: 300;
     font-size: 22px;
   }
-  #welcome .content .text-content .discover-button:hover {
-    background-color: rgb(157, 134, 101);
-  }
   #welcome .content .picture-holder {
     position: absolute;
     width: 1000px;
@@ -56,7 +53,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    height: 810px;
+    height: 750px;
     width: 300px;
   }
   #welcome .content .welcome-slider-io {
@@ -617,17 +614,17 @@
 }
 
 .appear-from-the-right {
-  animation: appear-from-the-right-animation 1s ease-out forwards;
+  animation: appear-from-the-right-animation 1.5s ease forwards;
 }
 
 .disappear-to-the-left {
-  animation: disappear-to-the-left-animation 1s ease-out forwards;
+  animation: disappear-to-the-left-animation 1.5s ease forwards;
 }
 
 @keyframes appear-from-the-right-animation {
   from {
     opacity: 0;
-    transform: translateX(40%) scale(0.7);
+    transform: translateX(120%) scale(1);
   }
   to {
     opacity: 1;
@@ -641,21 +638,21 @@
   }
   to {
     opacity: 0;
-    transform: translateX(-40%) scale(0.7);
+    transform: translateX(-120%) scale(1);
   }
 }
 .appear-from-the-left {
-  animation: appear-from-the-left-animation 1s ease-out forwards;
+  animation: appear-from-the-left-animation 1.8s ease-out forwards;
 }
 
 .disappear-to-the-right {
-  animation: disappear-to-the-right-animation 1s ease-out forwards;
+  animation: disappear-to-the-right-animation 1.8s ease-out forwards;
 }
 
 @keyframes appear-from-the-left-animation {
   from {
     opacity: 0;
-    transform: translateX(-40%) scale(0.7);
+    transform: translateX(-120%) scale(1);
   }
   to {
     opacity: 1;
@@ -669,7 +666,7 @@
   }
   to {
     opacity: 0;
-    transform: translateX(40%) scale(0.7);
+    transform: translateX(120%) scale(1);
   }
 }
 

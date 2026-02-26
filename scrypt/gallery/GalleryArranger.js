@@ -81,9 +81,10 @@ class GalleryArranger {
             window.currentScale = SCALE.PX_420;
             this.shufflePictures(SCALE.PX_420);
         }
+        this.#addWindowResizeListener();
     }
 
-    addWindowResizeListener() {
+    #addWindowResizeListener() {
         window.addEventListener('resize', () => {
             const width = window.innerWidth;
             if (width >= 1920) {
