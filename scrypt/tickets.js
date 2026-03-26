@@ -18,27 +18,31 @@ class Order {
 
     #data = new OrderData();
 
-    #basicsField  = document.getElementById('basic-tickets');
-    #seniorsField = document.getElementById('senior-tickets');
-    #typeRadios = Array.from(document.getElementsByName('tickets__type-radio'));
-
+    #basic;
+    #senior;
+    #typeRadios;
 
     constructor(parsed = null) {
-        this.#data.basics = parsed?.basics ?? 1;
-        this.#data.seniors = parsed?.seniors ?? 1;
-        this.#data.type = parsed?.type ?? TICKET_TYPES.PERMANENT;
-        this.#data.cardNumber = parsed?.cardNumber ?? '';
+        document.addEventListener('DOMContentLoaded', () => {
+            this.#basic = document.getElementById('basic-tickets');
+            this.#senior = document.getElementById('senior-tickets');
+            this.#typeRadios = Array.from(document.getElementsByClassName('tickets__type-radio'));
 
-        this.setTicketType(this.#data.type);
-        this.#refreshBasic();
-        this.#refreshSeniorField();
-        this.refreshTotalPrise();
+            this.#data.basics = parsed?.basics ?? 1;
+            this.#data.seniors = parsed?.seniors ?? 1;
+            this.#data.type = parsed?.type ?? TICKET_TYPES.PERMANENT;
+            this.#data.cardNumber = parsed?.cardNumber ?? '';
+
+            this.setTicketType(this.#data.type);
+            this.#refresh();
+            this.refreshTotalPrise();
+        });
     }
 
     incrementSeniors() {
         this.#validateSeniorIncrementation();
         ++this.#data.seniors;
-        this.#refreshSeniorField();
+        this.#refresh();
         this.#save();
     }
 
@@ -51,7 +55,7 @@ class Order {
     decrementSeniors() {
         this.#validateSeniorDecrementation();
         --this.#data.seniors;
-        this.#refreshSeniorField();
+        this.#refresh();
         this.#save();
     }
 
@@ -61,16 +65,15 @@ class Order {
         }
     }
 
-    #refreshSeniorField() {
-        this.#seniorsField.value = this.#data.seniors.toString();
-        this.#seniorsField.textContent = this.#data.seniors.toString();
+    #refresh() {
+        this.#senior.value = this.#data.seniors;
+        this.#basic.value = this.#data.basics;
     }
-
 
     incrementBasics() {
         this.#validateBasicIncrementation();
         ++this.#data.basics;
-        this.#refreshBasic();
+        this.#refresh();
         this.#save();
     }
 
@@ -83,7 +86,7 @@ class Order {
     decrementBasics() {
         this.#validateBasicDecrementation();
         --this.#data.basics;
-        this.#refreshBasic();
+        this.#refresh();
         this.#save();
     }
 
@@ -91,11 +94,6 @@ class Order {
         if (this.#data.basics < 1) {
             throw new Error('At least 0');
         }
-    }
-
-    #refreshBasic() {
-        this.#basicsField.value = this.#data.basics.toString();
-        this.#basicsField.textContent = this.#data.basics.toString();
     }
 
     #save() {
@@ -106,7 +104,7 @@ class Order {
         if (value in TICKET_TYPES) {
             this.#data.type = value;
             this.#typeRadios
-                .filter(input => input.value.contains(value.toLowerCase()))
+                .filter(input => input.value.includes(value.toLowerCase()))
                 .forEach(input => input.checked = true);
             this.#save();
         } else {
