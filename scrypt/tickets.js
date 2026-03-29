@@ -1,5 +1,101 @@
 window.TICKET_TYPES = {'PERMANENT': 20, 'TEMPORARY': 25, 'COMBINED': 40};
 
+
+class TicketsValidator {
+
+    #data;
+
+    constructor(orderData) {
+        this.#data = orderData;
+    }
+
+    ticketType() {
+        if (!(this.#data.type in TICKET_TYPES)) {
+            throw new Error('Wrong Ticket Type');
+        }
+    }
+
+    seniorsIncrementation() {
+        if (this.#data.seniors > 49) {
+            throw new Error('No more than 50');
+        }
+    }
+
+    seniorsDecrementation() {
+        if (this.#data.seniors < 1) {
+            throw new Error('At least 0');
+        }
+    }
+
+    basicsIncrementation() {
+        if (this.#data.basics > 49) {
+            throw new Error('No more than 50');
+        }
+    }
+
+    basicsDecrementation() {
+        if (this.#data.basics < 1) {
+            throw new Error('At least 0');
+        }
+    }
+}
+
+class TicketsRefresher {
+
+    #data;
+
+    #totalPriceHolder;
+    #basicCountHolder;
+    #seniorCountHolder;
+
+    #typesHolder;
+
+    constructor(orderData) {
+
+        this.#data = orderData;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            this.#basicCountHolder = document.getElementById('basic-tickets');
+            this.#seniorCountHolder = document.getElementById('senior-tickets');
+            this.#typesHolder = Array.from(document.getElementsByClassName('tickets__type-radio'));
+
+            this.#totalPriceHolder = document.getElementById('total-prise');
+        });
+
+        window.addEventListener('load', () => {
+            this.totalPrice();
+        });
+    }
+
+    totalPrice() {
+        this.#totalPriceHolder.textContent = `Total € ${this.#calculateTotalPrice()}`;
+        return this;
+    }
+
+    seniors() {
+        this.#seniorCountHolder.value = this.#data.seniors;
+        return this;
+    }
+
+    basics() {
+        this.#basicCountHolder.value = this.#data.basics;
+        return this;
+    }
+
+    ticketType() {
+        const type = this.#data.type.toLowerCase();
+        this.#typesHolder
+            .filter(input => input.value.includes(type))
+            .forEach(input => input.checked = true);
+        return this;
+    }
+
+    #calculateTotalPrice() {
+        return (0.5 *  this.#data.seniors + this.#data.basics) * TICKET_TYPES[this.#data.type];
+    }
+}
+
+
 class OrderData {
     constructor(
         basics = 1,
@@ -14,19 +110,16 @@ class OrderData {
     }
 }
 
+
 class Order {
 
     #data = new OrderData();
-
-    #basic;
-    #senior;
-    #typeRadios;
+    #refresher = new TicketsRefresher(this.#data);
+    #validator = new TicketsValidator(this.#data);
 
     constructor(parsed = null) {
+
         document.addEventListener('DOMContentLoaded', () => {
-            this.#basic = document.getElementById('basic-tickets');
-            this.#senior = document.getElementById('senior-tickets');
-            this.#typeRadios = Array.from(document.getElementsByClassName('tickets__type-radio'));
 
             this.#data.basics = parsed?.basics ?? 1;
             this.#data.seniors = parsed?.seniors ?? 1;
@@ -34,90 +127,19 @@ class Order {
             this.#data.cardNumber = parsed?.cardNumber ?? '';
 
             this.setTicketType(this.#data.type);
-            this.#refresh();
-            this.refreshTotalPrise();
+
+            this.#refresher.totalPrice().basics().seniors().ticketType();
         });
     }
 
-    incrementSeniors() {
-        this.#validateSeniorIncrementation();
-        ++this.#data.seniors;
-        this.#refresh();
-        this.#save();
-    }
-
-    #validateSeniorIncrementation() {
-        if (this.#data.seniors > 49) {
-            throw new Error('No more than 50');
-        }
-    }
-
-    decrementSeniors() {
-        this.#validateSeniorDecrementation();
-        --this.#data.seniors;
-        this.#refresh();
-        this.#save();
-    }
-
-    #validateSeniorDecrementation() {
-        if (this.#data.seniors < 1) {
-            throw new Error('At least 0');
-        }
-    }
-
-    #refresh() {
-        this.#senior.value = this.#data.seniors;
-        this.#basic.value = this.#data.basics;
-    }
-
-    incrementBasics() {
-        this.#validateBasicIncrementation();
-        ++this.#data.basics;
-        this.#refresh();
-        this.#save();
-    }
-
-    #validateBasicIncrementation() {
-        if (this.#data.basics > 49) {
-            throw new Error('No more than 50');
-        }
-    }
-
-    decrementBasics() {
-        this.#validateBasicDecrementation();
-        --this.#data.basics;
-        this.#refresh();
-        this.#save();
-    }
-
-    #validateBasicDecrementation() {
-        if (this.#data.basics < 1) {
-            throw new Error('At least 0');
-        }
-    }
-
-    #save() {
-        localStorage.setItem('order', JSON.stringify(this.#data));
-    }
-
-    setTicketType(value) {
-        if (value in TICKET_TYPES) {
-            this.#data.type = value;
-            this.#typeRadios
-                .filter(input => input.value.includes(value.toLowerCase()))
-                .forEach(input => input.checked = true);
-            this.#save();
-        } else {
-            throw new Error('Wrong Ticket Type');
-        }
-    }
-
     static load() {
+
         const raw = localStorage.getItem('order');
+
         if (raw) {
             try {
                 const parsed = JSON.parse(raw);
-                return new Order(parsed);
+                return  new Order(parsed);
             } catch (e) {
                 console.error('Error occurred trying to read data from local storage:', e);
             }
@@ -125,14 +147,43 @@ class Order {
         return new Order();
     }
 
-    calculateTotalPrice() {
-        return (0.5 *  this.#data.seniors + this.#data.basics) * TICKET_TYPES[this.#data.type];
+    incrementSeniors() {
+        this.#validator.seniorsIncrementation();
+        ++this.#data.seniors;
+        this.#refresher.seniors().totalPrice();
+        this.#save();
     }
 
-    refreshTotalPrise() {
-        const totalPrise = this.calculateTotalPrice();
-        const elem = document.getElementById('total-prise');
-        elem.textContent = `Total € ${totalPrise}`;
+    decrementSeniors() {
+        this.#validator.seniorsDecrementation();
+        --this.#data.seniors;
+        this.#refresher.seniors().totalPrice();
+        this.#save();
+    }
+
+    incrementBasics() {
+        this.#validator.basicsIncrementation();
+        ++this.#data.basics;
+        this.#refresher.basics().totalPrice();
+        this.#save();
+    }
+
+    decrementBasics() {
+        this.#validator.basicsDecrementation();
+        --this.#data.basics;
+        this.#refresher.basics().totalPrice();
+        this.#save();
+    }
+
+    setTicketType(type) {
+        this.#validator.ticketType();
+        this.#data.type = type;
+        this.#refresher.ticketType().totalPrice();
+        this.#save();
+    }
+
+    #save() {
+        localStorage.setItem('order', JSON.stringify(this.#data));
     }
 }
 
@@ -147,7 +198,6 @@ class TicketsFacade {
         } catch (e) {
             alert(e.message);
         }
-        this.#refreshTotalPrise();
     }
 
     static decrementBasics() {
@@ -156,7 +206,6 @@ class TicketsFacade {
         } catch (e) {
             alert(e.message);
         }
-        this.#refreshTotalPrise();
     }
 
     static incrementSeniors() {
@@ -165,7 +214,6 @@ class TicketsFacade {
         } catch (e) {
             alert(e.message);
         }
-        this.#refreshTotalPrise();
     }
 
     static decrementSeniors() {
@@ -174,7 +222,6 @@ class TicketsFacade {
         } catch (e) {
             alert(e.message);
         }
-        this.#refreshTotalPrise();
     }
 
     static setTicketType(type) {
@@ -183,20 +230,6 @@ class TicketsFacade {
         } catch (e) {
             alert(e.message);
         }
-        this.#refreshTotalPrise();
-    }
-
-    static refreshTotal() {
-        this.#refreshTotalPrise();
-    }
-
-    static #refreshTotalPrise() {
-        const totalPrise = this.#order.calculateTotalPrice();
-        const elem = document.getElementById('total-prise');
-        elem.textContent = `Total € ${totalPrise}`;
     }
 }
 
-window.addEventListener('load', () => {
-    TicketsFacade.refreshTotal();
-})
