@@ -325,15 +325,15 @@
           <div class="ticket-type">
             <h5>Ticket Type</h5>
             <ul>
-              <li onclick="TicketsFacade.setTicketType('PERMANENT')">
+              <li onclick="ticketsFacade.setTicketType('PERMANENT')">
                 <input class="tickets__type-radio" type="radio" name="ticket-type" id="permanent" value="permanent" checked>
                 <label for="permanent">Permanent exhibition</label>
               </li>
-              <li onclick="TicketsFacade.setTicketType('TEMPORARY')">
+              <li onclick="ticketsFacade.setTicketType('TEMPORARY')">
                 <input class="tickets__type-radio" type="radio" name="ticket-type" id="temporary" value="temporary">
                 <label for="temporary">Temporary exhibition</label>
               </li>
-              <li onclick="TicketsFacade.setTicketType('COMBINED')">
+              <li onclick="ticketsFacade.setTicketType('COMBINED')">
                 <input class="tickets__type-radio" type="radio" name="ticket-type" id="combined" value="combined">
                 <label for="combined">Combined Admission</label>
               </li>
@@ -344,17 +344,17 @@
             <div class="ticket-pick basic">
               <label for="basic-tickets">Basic 18+</label>
               <div class="counter">
-                <button class="decrement" onclick="TicketsFacade.decrementBasics()">−</button>
+                <button class="decrement" onclick="ticketsFacade.decrementBasics()">−</button>
                 <input type="number" id="basic-tickets" value="1" min="0">
-                <button class="increment" onclick="TicketsFacade.incrementBasics()">+</button>
+                <button class="increment" onclick="ticketsFacade.incrementBasics()">+</button>
               </div>
             </div>
             <div class="ticket-pick senior">
               <label for="senior-tickets">Senior 65+</label>
               <div class="counter">
-                <button onclick="TicketsFacade.decrementSeniors()">−</button>
+                <button onclick="ticketsFacade.decrementSeniors()">−</button>
                 <input type="number" id="senior-tickets" value="1" min="0">
-                <button onclick="TicketsFacade.incrementSeniors()">+</button>
+                <button onclick="ticketsFacade.incrementSeniors()">+</button>
               </div>
             </div>
             <h5 id="total-prise">Total €</h5>

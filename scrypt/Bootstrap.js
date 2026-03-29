@@ -2,7 +2,7 @@
 welcomeSlider = new WelcomeSlider();
 const galleryArranger = new GalleryArranger();
 const galleryAnimator = new GalleryAnimator();
-
+const ticketsFacade = new TicketsFacade();
 // window.onYouTubeIframeAPIReady = videoDispatcher.onYouTubeIframeAPIReady.bind(videoDispatcher);
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -4,6 +4,13 @@ window.TICKET_TYPES = {'PERMANENT': 20, 'TEMPORARY': 25, 'COMBINED': 40};
 class TicketsValidator {
 
     #data;
+    #errors = Object.freeze({
+        TICKET_TYPE: 'Wrong Ticket Type',
+        SENIORS_INCREMENTATION: 'No more than 50',
+        SENIORS_DECREMENTATION: 'At least 0',
+        BASICS_INCREMENTATION: 'No more than 50',
+        BASICS_DECREMENTATION: 'At least 0'
+    });
 
     constructor(orderData) {
         this.#data = orderData;
@@ -11,32 +18,37 @@ class TicketsValidator {
 
     ticketType() {
         if (!(this.#data.type in TICKET_TYPES)) {
-            throw new Error('Wrong Ticket Type');
+            this.#interrupt(this.#errors.TICKET_TYPE);
         }
     }
 
     seniorsIncrementation() {
         if (this.#data.seniors > 49) {
-            throw new Error('No more than 50');
+            this.#interrupt(this.#errors.SENIORS_INCREMENTATION);
         }
     }
 
     seniorsDecrementation() {
         if (this.#data.seniors < 1) {
-            throw new Error('At least 0');
+            this.#interrupt(this.#errors.SENIORS_DECREMENTATION);
         }
     }
 
     basicsIncrementation() {
         if (this.#data.basics > 49) {
-            throw new Error('No more than 50');
+            this.#interrupt(this.#errors.BASICS_INCREMENTATION);
         }
     }
 
     basicsDecrementation() {
         if (this.#data.basics < 1) {
-            throw new Error('At least 0');
+            this.#interrupt(this.#errors.BASICS_DECREMENTATION);
         }
+    }
+
+    #interrupt(message) {
+        alert(message);
+        throw new Error(message);
     }
 }
 
@@ -97,6 +109,7 @@ class TicketsRefresher {
 
 
 class OrderData {
+
     constructor(
         basics = 1,
         seniors = 1,
@@ -190,46 +203,30 @@ class Order {
 
 class TicketsFacade {
 
-    static #order = Order.load();
+    #order;
 
-    static incrementBasics() {
-        try {
-            this.#order.incrementBasics();
-        } catch (e) {
-            alert(e.message);
-        }
+    constructor() {
+        this.#order = Order.load();
     }
 
-    static decrementBasics() {
-        try {
-            this.#order.decrementBasics();
-        } catch (e) {
-            alert(e.message);
-        }
+    incrementBasics() {
+        this.#order.incrementBasics();
     }
 
-    static incrementSeniors() {
-        try {
-            this.#order.incrementSeniors();
-        } catch (e) {
-            alert(e.message);
-        }
+    decrementBasics() {
+        this.#order.decrementBasics();
     }
 
-    static decrementSeniors() {
-        try {
-            this.#order.decrementSeniors();
-        } catch (e) {
-            alert(e.message);
-        }
+    incrementSeniors() {
+        this.#order.incrementSeniors();
     }
 
-    static setTicketType(type) {
-        try {
-            this.#order.setTicketType(type);
-        } catch (e) {
-            alert(e.message);
-        }
+    decrementSeniors() {
+        this.#order.decrementSeniors();
+    }
+
+    setTicketType(type) {
+        this.#order.setTicketType(type);
     }
 }
 
