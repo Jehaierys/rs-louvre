@@ -198,6 +198,26 @@ class Order {
     #save() {
         localStorage.setItem('order', JSON.stringify(this.#data));
     }
+
+    async sendOrder() {
+        try {
+            const response = await fetch('http://localhost:8080/orders', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(this.#data)
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error: ${response.status}`);
+            }
+
+        } catch (error) {
+            console.error('Error:', error);
+            throw error;
+        }
+    }
 }
 
 
@@ -227,6 +247,12 @@ class TicketsFacade {
 
     setTicketType(type) {
         this.#order.setTicketType(type);
+    }
+
+    sendOrder() {
+        this.#order.sendOrder()
+            .then(() => alert('Order sent successfully!'))
+            .catch(() => alert('Failed to send order. Please try again later.'));
     }
 }
 
